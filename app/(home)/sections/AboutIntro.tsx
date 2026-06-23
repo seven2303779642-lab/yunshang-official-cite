@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import BrandButton from "@/components/BrandButton";
 import { useEffect, useState } from "react";
 
 const VIDEO_EMBED_URL =
@@ -32,16 +32,13 @@ export default function AboutIntro() {
   return (
     <section className="relative grid overflow-hidden bg-[var(--color-red)] text-white min-[1025px]:min-h-[560px] min-[1025px]:grid-cols-2">
       <div className="relative z-20 flex flex-col items-center justify-center px-[50px] py-[68px] text-center min-[1025px]:items-start min-[1025px]:justify-start min-[1025px]:p-[100px] min-[1025px]:text-left">
-        <h2
-          className="text-[40px] font-medium leading-[1.25] !text-white min-[768px]:text-[48px]"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
+        <h2 className="type-display-title !text-white">
           一碗有温度的米线，
           <br />
           从匠心开始
         </h2>
 
-        <p className="mt-8 max-w-[920px] text-base font-semibold leading-8 min-[1025px]:max-w-[476px] min-[1025px]:text-lg min-[1025px]:leading-9">
+        <p className="type-body-copy mt-8 max-w-[920px] text-white min-[1025px]:max-w-[476px]">
           云尚米线，传承云南百年米线文化，以滚烫鲜骨浓汤激发食材本味，
           醇厚鲜香，一口暖心！严选央企华润五丰米线，100%纯大米研磨，
           0胶添加，爽滑Q弹，吸汁入味。高汤精选优质鲜骨，慢熬12小时以上，
@@ -56,38 +53,9 @@ export default function AboutIntro() {
           draggable={false}
         />
 
-        <Link
-          href="/about"
-          className="group relative mt-12 block h-[46px] w-fit min-w-[168px] bg-white"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          <div
-            aria-hidden="true"
-            className="absolute inset-[4px] bg-[var(--color-red)]"
-          />
-
-          <div className="absolute inset-[7px] z-20 flex items-center justify-center bg-transparent text-lg font-bold leading-none text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[var(--color-red)]">
-            关于云尚
-          </div>
-
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 168 46"
-            preserveAspectRatio="none"
-            className="pointer-events-none absolute inset-0 z-30 h-full w-full overflow-visible"
-          >
-            <g
-              stroke="var(--color-red)"
-              strokeLinecap="butt"
-              className="transition-all duration-300 [stroke-width:1] group-hover:[stroke-width:2]"
-            >
-              <line x1="-4" y1="-4" x2="6" y2="6" />
-              <line x1="172" y1="-4" x2="162" y2="6" />
-              <line x1="-4" y1="50" x2="6" y2="40" />
-              <line x1="172" y1="50" x2="162" y2="40" />
-            </g>
-          </svg>
-        </Link>
+        <BrandButton href="/about" className="mt-12 w-fit">
+          关于云尚
+        </BrandButton>
       </div>
 
       <img

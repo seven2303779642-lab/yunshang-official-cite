@@ -57,10 +57,7 @@ export default function FeatureCards() {
             </div>
 
             <div className="grid grid-rows-[52px_auto_1fr] px-9 pb-10 pt-5 min-[1025px]:px-10">
-              <h3
-                className="flex items-center justify-center text-center text-[40px] font-medium leading-none"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
+              <h3 className="type-feature-title flex items-center justify-center text-center">
                 {feature.title}
               </h3>
 
@@ -74,7 +71,7 @@ export default function FeatureCards() {
                   draggable={false}
                 />
 
-                <p className="text-[16px] font-semibold leading-[1.8]">
+                <p className="type-body-copy-emphasis text-white">
                   {feature.lines.map((line) => (
                     <span key={line} className="block">
                       {line}

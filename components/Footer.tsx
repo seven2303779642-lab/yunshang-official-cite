@@ -35,7 +35,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
     <Link
       href={href}
       className="
-        relative isolate px-4 py-1 text-[18px] font-normal leading-none text-white
+        type-footer-link relative isolate px-4 py-1 text-white
         transition-colors duration-300
         before:pointer-events-none before:absolute before:inset-x-[-8px] before:inset-y-[-4px]
         before:-z-10 before:scale-x-50 before:scale-y-75 before:bg-white before:opacity-0
@@ -54,10 +54,7 @@ function FooterLinkColumn({
   links: Array<{ href: string; label: string }>;
 }) {
   return (
-    <div
-      className="flex flex-col items-center gap-7"
-      style={{ fontFamily: "var(--font-display)" }}
-    >
+    <div className="flex flex-col items-center gap-7">
       <Image
         src="/images/云-白字.svg"
         alt=""
@@ -141,11 +138,8 @@ export default function Footer() {
             <FooterLinkColumn links={footerLinksRight} />
           </div>
 
-          <div
-            className="flex flex-col items-center"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            <div className="mb-4 text-[16px] font-normal leading-none">微信小客服</div>
+          <div className="flex flex-col items-center">
+            <div className="type-footer-support mb-4 text-white">微信小客服</div>
             <Image
               src="/images/footer/service-barcode.png"
               alt="WeChat customer service QR code"
@@ -167,10 +161,7 @@ export default function Footer() {
           aria-hidden="true"
         />
 
-        <p
-          className="w-[706px] max-w-full text-center text-[17px] font-normal leading-[17px] tracking-normal"
-          style={{ fontFamily: "var(--font-serif)" }}
-        >
+        <p className="type-footer-copyright w-[706px] max-w-full text-center text-[var(--color-red)]">
           <span>© 2023 YUNSHANG RICE NOODLE.</span>
           <span className="max-[767px]:block"> ALL RIGHTS RESERVED.</span>
         </p>

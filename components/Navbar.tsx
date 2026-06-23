@@ -1,5 +1,6 @@
 "use client";
 
+import BrandButton from "@/components/BrandButton";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -57,7 +58,7 @@ export default function Navbar() {
 
   const navBaseClass = useMemo(
     () =>
-      "relative isolate px-3 py-1 font-bold leading-none " +
+      "type-nav-link relative isolate px-3 py-1 " +
       "before:pointer-events-none before:absolute before:inset-x-[-6px] before:inset-y-[-2px] before:-z-10 before:bg-white",
     [],
   );
@@ -76,7 +77,7 @@ export default function Navbar() {
 
   function getMobileNavItemClass(active = false) {
     return cn(
-      "px-4 py-1 text-lg font-bold leading-none transition-colors duration-300",
+      "type-nav-link px-4 py-1 transition-colors duration-300",
       active
         ? "bg-white text-[var(--color-red)]"
         : "text-white hover:bg-white hover:text-[var(--color-red)]",
@@ -110,53 +111,6 @@ export default function Navbar() {
     setMenuOpen(false);
   }
 
-  function OrderButton({ className = "" }: { className?: string }) {
-    return (
-      <Link
-        href="/order"
-        onClick={() => setMenuOpen(false)}
-        className={cn(
-          "group relative block h-[46px] min-w-[168px] bg-[var(--color-red)]",
-          className,
-        )}
-        style={{ fontFamily: "var(--font-display)" }}
-      >
-        <div
-          aria-hidden="true"
-          className="absolute inset-[3px] bg-white"
-        />
-
-        <div
-          aria-hidden="true"
-          className="absolute inset-[6px] bg-[var(--color-red)]"
-        />
-
-        <div className="absolute inset-[9px] z-20 flex items-center justify-center bg-transparent text-lg font-bold leading-none text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[var(--color-red)]">
-          {currentCopy.order}
-        </div>
-
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 168 46"
-          preserveAspectRatio="none"
-          className="pointer-events-none absolute inset-0 z-30 h-full w-full overflow-visible"
-        >
-          <g
-            stroke="var(--color-red)"
-            strokeLinecap="butt"
-            className="transition-all duration-300 [stroke-width:1] group-hover:[stroke-width:2]"
-          >
-            <line x1="-4" y1="-4" x2="6" y2="6" />
-            <line x1="172" y1="-4" x2="162" y2="6" />
-            <line x1="-4" y1="50" x2="6" y2="40" />
-            <line x1="172" y1="50" x2="162" y2="40" />
-          </g>
-        </svg>
-      </Link>
-    );
-  }
-
-
   return (
     <nav className="sticky top-0 z-50 w-full bg-[var(--color-red)]">
       <div className="mx-auto flex min-h-[76px] w-full max-w-[1440px] items-center justify-between px-5 min-[1025px]:min-h-[100px] min-[1025px]:px-10">
@@ -176,10 +130,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <div
-          className="hidden items-center gap-[54px] text-white min-[1025px]:flex"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
+        <div className="hidden items-center gap-[54px] text-white min-[1025px]:flex">
           <div className="grid grid-flow-col auto-cols-max items-center gap-7">
             {navItems.map((item) => {
               const active = isActive(item.href);
@@ -208,7 +159,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center">
-            <OrderButton />
+            <BrandButton href="/order">{currentCopy.order}</BrandButton>
           </div>
         </div>
 
@@ -248,7 +199,6 @@ export default function Navbar() {
           "bg-[var(--color-red)] transition-transform duration-500 ease-in-out min-[1025px]:hidden",
           menuOpen ? "translate-x-0" : "translate-x-full",
         )}
-        style={{ fontFamily: "var(--font-display)" }}
       >
         <div className="flex flex-col items-center gap-6 px-8 pt-16 text-white">
           {navItems.map((item) => {
@@ -277,7 +227,13 @@ export default function Navbar() {
             {currentCopy.language}
           </button>
 
-          <OrderButton className="mt-2" />
+          <BrandButton
+            href="/order"
+            className="mt-2"
+            onClick={() => setMenuOpen(false)}
+          >
+            {currentCopy.order}
+          </BrandButton>
         </div>
       </div>
     </nav>

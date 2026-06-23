@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import BrandButton from "@/components/BrandButton";
+import { useEffect, useRef } from "react";
 
 const menus = [
   {
@@ -24,41 +24,118 @@ const menus = [
   },
 ];
 
+
+type MotionTransforms = {
+  backgroundX: number;
+  leftY: number;
+  rightY: number;
+};
+
+const DESKTOP_INITIAL: MotionTransforms = {
+  backgroundX: -400,
+  leftY: 0,
+  rightY: 400,
+};
+
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
 
+function rangeProgress(value: number, start: number, end: number) {
+  return clamp((value - start) / (end - start), 0, 1);
+}
+
+function lerp(start: number, end: number, progress: number) {
+  return start + (end - start) * progress;
+}
+
+function getMotionTransforms(
+  sectionRect: DOMRect,
+  sectionHeight: number,
+  viewportHeight: number,
+  viewportWidth: number,
+): MotionTransforms {
+  const rawProgress = clamp(
+    (viewportHeight - sectionRect.top) / (viewportHeight + sectionHeight),
+    0,
+    1,
+  );
+
+  if (viewportWidth < 768) {
+    return {
+      backgroundX: 0,
+      leftY: 0,
+      rightY: 400,
+    };
+  }
+
+  const backgroundProgress = rangeProgress(rawProgress, 0.25, 0.9);
+  const backgroundX = lerp(-400, -525, backgroundProgress);
+
+  if (viewportWidth <= 1024) {
+    return {
+      backgroundX,
+      leftY: 0,
+      rightY: 400,
+    };
+  }
+
+  const leftProgress = rangeProgress(rawProgress, 0.12, 0.95);
+  const rightProgress = rangeProgress(rawProgress, 0.05, 0.85);
+
+  return {
+    backgroundX,
+    leftY: lerp(0, 400, leftProgress),
+    rightY: lerp(400, -160, rightProgress),
+  };
+}
+
 export default function MenuShowcase() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const [scrollOffset, setScrollOffset] = useState(0);
+  const backgroundRef = useRef<HTMLImageElement | null>(null);
+  const leftLabelRef = useRef<HTMLImageElement | null>(null);
+  const rightLabelRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     let frameId = 0;
 
-    const updateOffset = () => {
+    const applyTransforms = () => {
       const section = sectionRef.current;
       if (!section) return;
 
-      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-      const rawOffset = window.scrollY - sectionTop + window.innerHeight * 0.18;
-      const nextOffset = clamp(rawOffset * 0.18, 0, 260);
+      const transforms = getMotionTransforms(
+        section.getBoundingClientRect(),
+        section.offsetHeight,
+        window.innerHeight,
+        window.innerWidth,
+      );
 
-      setScrollOffset(nextOffset);
+      if (backgroundRef.current) {
+        backgroundRef.current.style.transform = `translate3d(${transforms.backgroundX}px, 0, 0)`;
+      }
+
+      if (leftLabelRef.current) {
+        leftLabelRef.current.style.transform = `translate3d(0, ${transforms.leftY}px, 0)`;
+      }
+
+      if (rightLabelRef.current) {
+        rightLabelRef.current.style.transform = `translate3d(0, ${transforms.rightY}px, 0)`;
+      }
     };
 
-    const handleScroll = () => {
+    const scheduleUpdate = () => {
       window.cancelAnimationFrame(frameId);
-      frameId = window.requestAnimationFrame(updateOffset);
+      frameId = window.requestAnimationFrame(applyTransforms);
     };
 
-    updateOffset();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll);
+    applyTransforms();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
 
     return () => {
       window.cancelAnimationFrame(frameId);
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
     };
   }, []);
 
@@ -68,27 +145,32 @@ export default function MenuShowcase() {
       className="relative overflow-hidden bg-[#fff4ec] px-6 py-20 min-[1025px]:px-12 min-[1025px]:py-28"
     >
       <img
-        src="/images/menushowcase/背景层.png"
+        ref={backgroundRef}
+        src="/images/menushowcase/背景云.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-[-10%] h-full w-[120%] max-w-none select-none object-cover"
-        style={{ transform: `translateX(${-scrollOffset * 0.65}px)` }}
+        className="pointer-events-none absolute inset-y-0 left-[-10%] z-0 h-full w-[120%] max-w-none select-none object-cover will-change-transform"
+        style={{
+          transform: `translate3d(${DESKTOP_INITIAL.backgroundX}px, 0, 0)`,
+        }}
         draggable={false}
       />
 
       <img
+        ref={leftLabelRef}
         src="/images/menushowcase/一碗好米线.png"
         alt="一碗好米线"
-        className="pointer-events-none absolute left-7 top-24 z-10 hidden w-[116px] select-none min-[1280px]:block"
-        style={{ transform: `translateY(${scrollOffset}px)` }}
+        className="pointer-events-none absolute left-7 top-24 z-10 hidden w-[116px] select-none will-change-transform min-[1025px]:block"
+        style={{ transform: `translate3d(0, ${DESKTOP_INITIAL.leftY}px, 0)` }}
         draggable={false}
       />
 
       <img
+        ref={rightLabelRef}
         src="/images/menushowcase/半碗都是料.png"
         alt="半碗都是料"
-        className="pointer-events-none absolute bottom-20 right-7 z-10 hidden w-[116px] select-none min-[1280px]:block"
-        style={{ transform: `translateY(${-scrollOffset}px)` }}
+        className="pointer-events-none absolute bottom-20 right-7 z-10 hidden w-[116px] select-none will-change-transform min-[1025px]:block"
+        style={{ transform: `translate3d(0, ${DESKTOP_INITIAL.rightY}px, 0)` }}
         draggable={false}
       />
 
@@ -115,30 +197,25 @@ export default function MenuShowcase() {
                 />
               </div>
 
-              <div className="mt-7 flex items-center justify-center gap-3">
+              <div className="mt-7 flex items-center justify-center gap-3 leading-none">
                 <img
                   src="/images/云-红字.svg"
                   alt=""
                   aria-hidden="true"
-                  className="h-6 w-6 select-none"
+                  className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
                   draggable={false}
                 />
-                <h3
-                  className="text-[36px] font-medium leading-none text-[var(--color-red)] min-[1025px]:text-[40px]"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  {item.title}
-                </h3>
+                <h3 className="type-menu-category-title !text-[var(--color-red)] !leading-none">{item.title}</h3>
                 <img
                   src="/images/云-红字.svg"
                   alt=""
                   aria-hidden="true"
-                  className="h-6 w-6 rotate-180 select-none"
+                  className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
                   draggable={false}
                 />
               </div>
 
-              <p className="mx-auto mt-5 max-w-[360px] text-[16px] font-semibold leading-[2] text-[#202020]">
+              <p className="type-body-copy mx-auto mt-5 max-w-[360px] text-[#202020]">
                 {item.text}
               </p>
             </article>
@@ -146,41 +223,7 @@ export default function MenuShowcase() {
         </div>
 
         <div className="mt-14 flex justify-center">
-          <Link
-            href="/menu"
-            className="group relative block h-[50px] min-w-[220px] bg-[var(--color-red)]"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            <div
-              aria-hidden="true"
-              className="absolute inset-[4px] bg-white"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-[7px] bg-[var(--color-red)]"
-            />
-            <div className="absolute inset-[10px] z-20 flex items-center justify-center bg-transparent text-[20px] font-bold leading-none text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[var(--color-red)]">
-              查看菜单
-            </div>
-
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 220 50"
-              preserveAspectRatio="none"
-              className="pointer-events-none absolute inset-0 z-30 h-full w-full overflow-visible"
-            >
-              <g
-                stroke="var(--color-red)"
-                strokeLinecap="butt"
-                className="transition-all duration-300 [stroke-width:1] group-hover:[stroke-width:2]"
-              >
-                <line x1="-4" y1="-4" x2="8" y2="8" />
-                <line x1="224" y1="-4" x2="212" y2="8" />
-                <line x1="-4" y1="54" x2="8" y2="42" />
-                <line x1="224" y1="54" x2="212" y2="42" />
-              </g>
-            </svg>
-          </Link>
+          <BrandButton href="/menu">查看菜单</BrandButton>
         </div>
       </div>
     </section>
