@@ -8,6 +8,7 @@
   - Implemented and refined the main homepage sections, including `HeroSlider`, `AboutIntro`, `FeatureCards`, `StoreBanner`, `MenuShowcase`, and `OrderBanner`.
   - Updated typography, reusable button styling, responsive behavior, mobile layout fixes, spacing, image positioning, and section-level visual details.
   - Remaining issues: a few minor visual polish items and English-version asset/link issues.
+- 修复了一些小视觉问题。: 1 hour
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

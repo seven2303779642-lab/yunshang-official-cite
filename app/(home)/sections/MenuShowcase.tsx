@@ -178,11 +178,18 @@ export default function MenuShowcase() {
       />
 
       <div className="relative z-20 mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-1 gap-14 min-[900px]:grid-cols-3 min-[1025px]:gap-16">
-          {menus.map((item) => (
-            <article key={item.title} className="text-center">
-              <div className="relative mx-auto max-w-[360px] overflow-visible">
-                <div className="aspect-[304/390] overflow-hidden">
+        <div className="grid grid-cols-1 gap-14 min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:flex-col min-[768px]:max-[1024px]:gap-16 min-[1025px]:grid min-[1025px]:grid-cols-3 min-[1025px]:gap-16">
+          {menus.map((item, index) => (
+            <article
+              key={item.title}
+              className={`text-center min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:items-stretch min-[768px]:max-[1024px]:gap-10 min-[768px]:max-[1024px]:text-center ${
+                index % 2 === 1
+                  ? "min-[768px]:max-[1024px]:flex-row-reverse"
+                  : "min-[768px]:max-[1024px]:flex-row"
+              }`}
+            >
+              <div className="relative mx-auto w-full max-w-[360px] shrink-0 overflow-visible min-[768px]:max-[1024px]:mx-0 min-[768px]:max-[1024px]:w-[46%] min-[768px]:max-[1024px]:max-w-[400px] min-[1025px]:mx-auto min-[1025px]:w-auto">
+                <div className="aspect-[304/390] w-full overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -200,32 +207,50 @@ export default function MenuShowcase() {
                 />
               </div>
 
-              <div className="mt-2 flex items-center justify-center gap-3 leading-none">
-                <img
-                  src="/images/云-红字.svg"
-                  alt=""
-                  aria-hidden="true"
-                  className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
-                  draggable={false}
-                />
-                <h3 className="type-menu-category-title !text-[var(--color-red)] !leading-none">{item.title}</h3>
-                <img
-                  src="/images/云-红字.svg"
-                  alt=""
-                  aria-hidden="true"
-                  className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
-                  draggable={false}
-                />
-              </div>
+              <div className="relative min-[768px]:max-[1024px]:min-h-0 min-[768px]:max-[1024px]:flex-1 min-[768px]:max-[1024px]:self-stretch">
+                <div
+                  className={`min-[768px]:max-[1024px]:absolute min-[768px]:max-[1024px]:inset-x-0 min-[768px]:max-[1024px]:top-0 min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:items-center ${
+                    index === menus.length - 1
+                      ? "min-[768px]:max-[1024px]:bottom-[62px]"
+                      : "min-[768px]:max-[1024px]:bottom-0"
+                  }`}
+                >
+                  <div className="w-full">
+                    <div className="mt-2 flex items-center justify-center gap-3 leading-none min-[768px]:max-[1024px]:mt-0 min-[768px]:max-[1024px]:justify-center min-[1025px]:justify-center">
+                      <img
+                        src="/images/云-红字.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
+                        draggable={false}
+                      />
+                      <h3 className="type-menu-category-title !text-[var(--color-red)] !leading-none">{item.title}</h3>
+                      <img
+                        src="/images/云-红字.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
+                        draggable={false}
+                      />
+                    </div>
 
-              <p className="type-body-copy mx-auto mt-4 max-w-[360px] text-[#202020]">
-                {item.text}
-              </p>
+                    <p className="type-body-copy mx-auto mt-4 max-w-[360px] text-[#202020] min-[768px]:max-[1024px]:mx-auto min-[768px]:max-[1024px]:max-w-none">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+
+                {index === menus.length - 1 && (
+                  <div className="mt-8 hidden min-[768px]:max-[1024px]:absolute min-[768px]:max-[1024px]:bottom-0 min-[768px]:max-[1024px]:left-0 min-[768px]:max-[1024px]:mt-0 min-[768px]:max-[1024px]:block">
+                    <BrandButton href="/menu">查看菜单</BrandButton>
+                  </div>
+                )}
+              </div>
             </article>
           ))}
         </div>
 
-        <div className="mt-14 flex justify-center">
+        <div className="mt-14 flex justify-center min-[768px]:max-[1024px]:hidden">
           <BrandButton href="/menu">查看菜单</BrandButton>
         </div>
       </div>
