@@ -1,12 +1,6 @@
-import PlaceholderPage from "@/components/layout/PlaceholderPage";
+import { EventsPage } from "@/components/events/EventsPage";
 import { zhContent } from "@/data/siteContent";
 
-export default function EventsPage() {
-  return (
-    <PlaceholderPage
-      title={zhContent.placeholderPages.events.title}
-      subtitle={zhContent.placeholderPages.events.subtitle}
-      comingSoon={zhContent.placeholderPages.comingSoon}
-    />
-  );
+export default function Page() {
+  return <EventsPage content={zhContent.events} locale="zh" />;
 }

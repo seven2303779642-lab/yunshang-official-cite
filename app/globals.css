@@ -403,3 +403,115 @@ button {
     line-height: 27px;
   }
 }
+
+.menu-category-btn {
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 18px;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  background: white;
+  cursor: default;
+}
+
+.menu-category-btn--active {
+  background: var(--color-red);
+  color: white;
+}
+
+.menu-item-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  background: #fff4ec;
+}
+
+.stores-filter-btn {
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 18px;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  background: white;
+  cursor: default;
+}
+
+.stores-filter-btn--active {
+  background: var(--color-red);
+  color: white;
+}
+
+.stores-location-meta {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.stores-location-label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-red);
+}
+
+.stores-directions-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 18px;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  background: white;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.stores-directions-link:hover {
+  background: var(--color-red);
+  color: white;
+}
+
+.events-card-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  background: #fff4ec;
+}
+
+.events-card-date {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.events-card-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 18px;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  background: white;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.events-card-link:hover {
+  background: var(--color-red);
+  color: white;
+}

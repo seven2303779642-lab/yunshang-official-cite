@@ -1,12 +1,6 @@
-import PlaceholderPage from "@/components/layout/PlaceholderPage";
+import { EventsPage } from "@/components/events/EventsPage";
 import { enContent } from "@/data/siteContent";
 
-export default function EnglishEventsPage() {
-  return (
-    <PlaceholderPage
-      title={enContent.placeholderPages.events.title}
-      subtitle={enContent.placeholderPages.events.subtitle}
-      comingSoon={enContent.placeholderPages.comingSoon}
-    />
-  );
+export default function Page() {
+  return <EventsPage content={enContent.events} locale="en" />;
 }

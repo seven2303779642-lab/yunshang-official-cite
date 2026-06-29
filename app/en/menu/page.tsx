@@ -1,12 +1,6 @@
-import PlaceholderPage from "@/components/layout/PlaceholderPage";
+import { MenuPage } from "@/components/menu/MenuPage";
 import { enContent } from "@/data/siteContent";
 
-export default function EnglishMenuPage() {
-  return (
-    <PlaceholderPage
-      title={enContent.placeholderPages.menu.title}
-      subtitle={enContent.placeholderPages.menu.subtitle}
-      comingSoon={enContent.placeholderPages.comingSoon}
-    />
-  );
+export default function Page() {
+  return <MenuPage content={enContent.menu} locale="en" />;
 }

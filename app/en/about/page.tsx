@@ -1,12 +1,6 @@
-import PlaceholderPage from "@/components/layout/PlaceholderPage";
+import { AboutPage } from "@/components/about/AboutPage";
 import { enContent } from "@/data/siteContent";
 
-export default function EnglishAboutPage() {
-  return (
-    <PlaceholderPage
-      title={enContent.placeholderPages.about.title}
-      subtitle={enContent.placeholderPages.about.subtitle}
-      comingSoon={enContent.placeholderPages.comingSoon}
-    />
-  );
+export default function Page() {
+  return <AboutPage content={enContent.about} locale="en" />;
 }

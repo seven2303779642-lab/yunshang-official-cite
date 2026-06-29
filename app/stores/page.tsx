@@ -1,12 +1,6 @@
-import PlaceholderPage from "@/components/layout/PlaceholderPage";
+import { StoresPage } from "@/components/stores/StoresPage";
 import { zhContent } from "@/data/siteContent";
 
-export default function StoresPage() {
-  return (
-    <PlaceholderPage
-      title={zhContent.placeholderPages.stores.title}
-      subtitle={zhContent.placeholderPages.stores.subtitle}
-      comingSoon={zhContent.placeholderPages.comingSoon}
-    />
-  );
+export default function Page() {
+  return <StoresPage content={zhContent.stores} locale="zh" />;
 }

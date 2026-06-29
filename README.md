@@ -20,6 +20,20 @@
   - 将中文图片文件名改为英文路径，同步更新所有图片引用路径，并清理移动后的空目录。
   - 页面检查正常，首页图片、Navbar Logo、Footer 图片均正常显示；`npm run build` 通过。
   - 备注：未修改视觉样式、布局、动画、文案或业务逻辑。
+- Menu / Stores / Events 页面 MVP wireframe 与素材整理: 2 hours
+  - 下载并整理 menu、stores、events 页面素材。
+  - 完成 Menu 页面 MVP wireframe。
+  - 完成 Stores 页面 MVP wireframe。
+  - 完成 Events 页面 MVP wireframe。
+  - 接入中英文 content 数据。
+  - 保留 Order 页面为占位页。
+  - 所有主要路由 build 通过。
+  - 备注：
+    - 本轮只完成最低可行页面骨架。
+    - About / Menu / Stores / Events 仍需后续视觉精修与内容校对。
+    - Stores 门店详情目前部分使用占位信息。
+    - Events 详情页暂未实现，卡片链接暂为 `#`。
+    - Order 页面仍为 PlaceholderPage。
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
