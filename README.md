@@ -15,6 +15,11 @@
   - 接入轻量级多语言文案数据层（`zhContent` / `enContent`），首页 section 从 content 读取文案。
   - Navbar / Footer 支持中英文路径与文案切换，占位页同步接入。
   - 首页视觉效果、布局、动画与业务逻辑保持不变；`npm run build` 全部页面通过。
+- 图片素材目录整理: 0.5 hour
+  - 整理 `public/images` 目录结构，区分全站公共素材（`common`）与首页专用素材（`home`）。
+  - 将中文图片文件名改为英文路径，同步更新所有图片引用路径，并清理移动后的空目录。
+  - 页面检查正常，首页图片、Navbar Logo、Footer 图片均正常显示；`npm run build` 通过。
+  - 备注：未修改视觉样式、布局、动画、文案或业务逻辑。
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
