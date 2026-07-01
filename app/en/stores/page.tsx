@@ -1,6 +1,5 @@
-import { StoresPage } from "@/components/stores/StoresPage";
-import { enContent } from "@/data/siteContent";
+import { redirect } from "next/navigation";
 
-export default function Page() {
-  return <StoresPage content={enContent.stores} locale="en" />;
+export default function StoresRedirectPage() {
+  redirect("/en/locations");
 }

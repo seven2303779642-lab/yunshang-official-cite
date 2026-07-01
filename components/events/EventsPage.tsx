@@ -9,13 +9,13 @@ type EventsPageProps = {
   locale: Locale;
 };
 
-export function EventsPage({ content }: EventsPageProps) {
+export function EventsPage({ content, locale }: EventsPageProps) {
   return (
     <>
       <Navbar />
       <main>
         <EventsHero content={content.hero} />
-        <EventsList content={content.list} />
+        <EventsList content={content.list} locale={locale} />
       </main>
       <Footer />
     </>

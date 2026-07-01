@@ -15,7 +15,7 @@ const NAV_ITEM_CONFIG = [
   { key: "home", zhHref: "/", enHref: "/en", labelKey: "home" as const },
   { key: "about", zhHref: "/about", enHref: "/en/about", labelKey: "about" as const },
   { key: "menu", zhHref: "/menu", enHref: "/en/menu", labelKey: "menu" as const },
-  { key: "stores", zhHref: "/stores", enHref: "/en/stores", labelKey: "stores" as const },
+  { key: "locations", zhHref: "/locations", enHref: "/en/locations", labelKey: "stores" as const },
   { key: "events", zhHref: "/events", enHref: "/en/events", labelKey: "events" as const },
 ];
 

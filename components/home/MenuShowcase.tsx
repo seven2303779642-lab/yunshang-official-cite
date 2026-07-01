@@ -2,7 +2,10 @@
 
 import BrandButton from "@/components/ui/BrandButton";
 import type { SiteContent } from "@/data/siteContent";
-import { useEffect, useRef } from "react";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
+
+const SCROLL_SPRING = { stiffness: 80, damping: 22, mass: 0.4 };
 
 const MENU_IMAGES = [
   {
@@ -19,159 +22,55 @@ const MENU_IMAGES = [
   },
 ];
 
-type MotionTransforms = {
-  backgroundX: number;
-  leftY: number;
-  rightY: number;
-};
-
-const DESKTOP_INITIAL: MotionTransforms = {
-  backgroundX: 0,
-  leftY: 0,
-  rightY: 520,
-};
-
-function clamp(value: number, min: number, max: number) {
-  return Math.min(Math.max(value, min), max);
-}
-
-function rangeProgress(value: number, start: number, end: number) {
-  return clamp((value - start) / (end - start), 0, 1);
-}
-
-function lerp(start: number, end: number, progress: number) {
-  return start + (end - start) * progress;
-}
-
-function getMotionTransforms(
-  sectionRect: DOMRect,
-  sectionHeight: number,
-  viewportHeight: number,
-  viewportWidth: number,
-): MotionTransforms {
-  const rawProgress = clamp(
-    (viewportHeight - sectionRect.top) / (viewportHeight + sectionHeight),
-    0,
-    1,
-  );
-
-  if (viewportWidth < 768) {
-    return {
-      backgroundX: 0,
-      leftY: 0,
-      rightY: 520,
-    };
-  }
-
-  const backgroundProgress = rangeProgress(rawProgress, 0.18, 0.9);
-  const backgroundX = lerp(0, -160, backgroundProgress);
-
-  if (viewportWidth <= 1024) {
-    return {
-      backgroundX,
-      leftY: 0,
-      rightY: 520,
-    };
-  }
-
-  const leftProgress = rangeProgress(rawProgress, 0.08, 0.92);
-  const rightProgress = rangeProgress(rawProgress, 0.08, 0.92);
-
-  return {
-    backgroundX,
-    leftY: lerp(0, 520, leftProgress),
-    rightY: lerp(520, 0, rightProgress),
-  };
-}
-
 type MenuShowcaseProps = {
   content: SiteContent["home"]["menuShowcase"];
 };
 
 export default function MenuShowcase({ content }: MenuShowcaseProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const backgroundRef = useRef<HTMLImageElement | null>(null);
-  const leftLabelRef = useRef<HTMLImageElement | null>(null);
-  const rightLabelRef = useRef<HTMLImageElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
 
-  useEffect(() => {
-    let frameId = 0;
+  const rawBackgroundX = useTransform(scrollYProgress, [0.18, 0.9], [0, -240]);
+  const backgroundX = useSpring(rawBackgroundX, SCROLL_SPRING);
 
-    const applyTransforms = () => {
-      const section = sectionRef.current;
-      if (!section) return;
+  const rawLeftY = useTransform(scrollYProgress, [0.08, 0.92], [0, 520]);
+  const leftY = useSpring(rawLeftY, SCROLL_SPRING);
 
-      const viewportWidth = window.innerWidth;
-
-      const transforms = getMotionTransforms(
-        section.getBoundingClientRect(),
-        section.offsetHeight,
-        window.innerHeight,
-        viewportWidth,
-      );
-
-      if (backgroundRef.current) {
-        const backgroundY = viewportWidth < 768 ? "-50%" : "-30%";
-        backgroundRef.current.style.transform = `translate3d(calc(-50% + ${transforms.backgroundX}px), ${backgroundY}, 0)`;
-      }
-
-      if (leftLabelRef.current) {
-        leftLabelRef.current.style.transform = `translate3d(0, ${transforms.leftY}px, 0)`;
-      }
-
-      if (rightLabelRef.current) {
-        rightLabelRef.current.style.transform = `translate3d(0, ${transforms.rightY}px, 0)`;
-      }
-    };
-
-    const scheduleUpdate = () => {
-      window.cancelAnimationFrame(frameId);
-      frameId = window.requestAnimationFrame(applyTransforms);
-    };
-
-    applyTransforms();
-    window.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", scheduleUpdate);
-
-    return () => {
-      window.cancelAnimationFrame(frameId);
-      window.removeEventListener("scroll", scheduleUpdate);
-      window.removeEventListener("resize", scheduleUpdate);
-    };
-  }, []);
+  const rawRightY = useTransform(scrollYProgress, [0.08, 0.92], [520, 0]);
+  const rightY = useSpring(rawRightY, SCROLL_SPRING);
 
   return (
     <section
       ref={sectionRef}
       className="relative overflow-hidden bg-[#fff4ec] px-6 pt-20 pb-28 min-[1025px]:px-12 min-[1025px]:pt-28 min-[1025px]:pb-36"
     >
-      <img
-        ref={backgroundRef}
-        src="/images/home/menu-showcase/背景云.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-full z-0 w-[280vw] max-w-none select-none will-change-transform min-[768px]:w-[220vw]"
-        style={{
-          transform: `translate3d(calc(-50% + ${DESKTOP_INITIAL.backgroundX}px), -50%, 0)`,
-        }}
-        draggable={false}
-      />
+      <div className="pointer-events-none absolute left-1/2 top-full z-0 -translate-x-1/2 translate-y-[-30%] overflow-visible min-[768px]:max-[1024px]:translate-y-[-40%] max-[767px]:translate-y-[-55%]">
+        <motion.img
+          src="/images/home/menu-showcase/背景云.png"
+          alt=""
+          aria-hidden="true"
+          className="w-[2600px] max-w-none select-none max-[767px]:w-[1800px]"
+          style={{ x: backgroundX }}
+          draggable={false}
+        />
+      </div>
 
-      <img
-        ref={leftLabelRef}
+      <motion.img
         src="/images/home/menu-showcase/一碗好米线.png"
         alt={content.leftLabelAlt}
-        className="pointer-events-none absolute left-7 top-28 z-10 hidden w-[116px] select-none will-change-transform min-[1025px]:block"
-        style={{ transform: `translate3d(0, ${DESKTOP_INITIAL.leftY}px, 0)` }}
+        className="pointer-events-none absolute left-7 top-28 z-10 hidden w-[116px] select-none min-[1025px]:block"
+        style={{ y: leftY }}
         draggable={false}
       />
 
-      <img
-        ref={rightLabelRef}
+      <motion.img
         src="/images/home/menu-showcase/半碗都是料.png"
         alt={content.rightLabelAlt}
-        className="pointer-events-none absolute right-7 top-28 z-10 hidden w-[116px] select-none will-change-transform min-[1025px]:block"
-        style={{ transform: `translate3d(0, ${DESKTOP_INITIAL.rightY}px, 0)` }}
+        className="pointer-events-none absolute right-7 top-28 z-10 hidden w-[116px] select-none min-[1025px]:block"
+        style={{ y: rightY }}
         draggable={false}
       />
 
