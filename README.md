@@ -1,91 +1,206 @@
 # 云尚米线官网重构项目
 
-本项目用于重构云尚米线官网页面，基于 **Next.js App Router** 开发，当前已完成首页、关于页面、菜单页面以及部分活动页面的数据与素材整理。项目采用组件化结构、轻量级多语言内容层与 manifest 数据驱动方式，方便后续继续扩展页面内容与维护素材。
+本项目用于重构云尚米线官网页面，基于 **Next.js App Router** 开发。当前已完成首页、关于、菜单、门店（Locations）、活动（Promo）等主要页面的中英文骨架与数据驱动接入，采用组件化结构、轻量级多语言内容层与 manifest 数据分离，便于后续扩展内容与维护素材。
+
+## 目录
+
+- [部署说明](#部署说明)
+- [开发注意事项](#开发注意事项)
+- [项目状态](#项目状态)
+- [技术栈](#技术栈)
+- [目录结构概览](#目录结构概览)
+- [内容与数据管理](#内容与数据管理)
+- [本地运行](#本地运行)
+- [工作记录](#工作记录)
+- [当前累计工时](#当前累计工时)
+
+## 部署说明
+
+项目可通过 Vercel 部署。GitHub 仓库连接 Vercel 后，每次 push 到对应分支，预览链接会自动更新。
+
+注意：
+
+- Vercel 对文件路径**大小写敏感**，图片文件名、后缀、中文字符与代码引用必须完全一致。
+- 修改 `public/images/` 路径后，需在本地与 Vercel 预览环境各验证一次图片是否正常加载。
+
+## 开发注意事项
+
+- 使用 **App Router**（`app/`），不要使用 Pages Router。
+- 修改页面时尽量只改对应页面组件，不要大范围重构无关页面。
+- 页面边界：`components/home/`、`components/about/`、`components/menu/`、`components/locations/`、`components/events/` 各自独立；共享布局见 `components/layout/`。
+- 图片统一放在 `public/images/` 下，按页面或用途分子目录；英文带文字素材放在对应 `*/en/` 子目录。
+- 可增长列表数据优先用 manifest + `data/*.ts` 辅助函数管理，静态 UI 文案放 `data/content/`。
+- 英文列表文案（菜名、店名、活动正文等）通过 `*Translations.en.json` 映射，不要在组件里硬编码 `locale === "en"` 分支。
+- 不要建立全站统一 imageManifest；仅对含嵌入文字的素材做 locale 字段或翻译文件。
+- 修改 Menu / Locations 筛选动画前，区分装饰动画与核心交互动画；`prefers-reduced-motion` 下只能减弱 FLIP 过渡，不能直接关闭。
+- 响应式重点检查：**1440px、1024px、768px、390px**。
+- 执行较大改动前，先确认 `git status`，避免多人或多工具同时修改造成冲突。
+- AI 辅助开发规则见根目录 `AGENTS.md`。
 
 ## 项目状态
 
-当前版本重点完成了以下内容：
+### 已完成
 
-- 首页主体视觉与响应式布局
-- Navbar / Footer 公共组件
-- 中英文路由骨架与内容数据层
-- About 页面主要视觉模块
-- Menu 页面数据驱动重构与筛选动画
-- Events 页面素材与数据准备
-- 图片素材目录整理
-- AI Agent 开发规范补充
+**页面与路由**
 
-当前仍需继续处理：
+| 页面 | 中文路由 | 英文路由 | 说明 |
+|------|----------|----------|------|
+| 首页 | `/` | `/en` | Hero、AboutIntro、FeatureCards、StoreBanner、MenuShowcase、OrderBanner |
+| 关于 | `/about` | `/en/about` | Hero、Intro、ValueGrid、PopularDishes、Gallery、Stores |
+| 菜单 | `/menu` | `/en/menu` | manifest 驱动，分类 FLIP 筛选动画 |
+| 门店 | `/locations` | `/en/locations` | 原 Stores 已更名；省/区筛选 + 门店卡片 FLIP 动画 |
+| 活动 | `/events` | `/en/events` | Navbar 显示为 Promo；列表页接入 manifest |
+| 点餐 | `/order` | `/en/order` | 占位页（`PlaceholderPage`） |
 
-- Events 页面组件接入 `eventsManifest.json`
-- Stores 页面内容与数据进一步整理
-- About / Menu / Stores / Events 的细节视觉校对
-- 英文版部分素材与链接校对
-- Order 页面目前仍为占位页
+旧路由 `/stores`、`/en/stores` 保留重定向至 Locations。
+
+**多语言与数据**
+
+- `data/content/` 提供 `zhContent` / `enContent` 静态文案。
+- 菜单、门店、活动列表分别由 manifest 驱动，配合 `menu.ts`、`locations.ts`、`events.ts` 读取与筛选。
+- 英文扩展：`menuTranslations.en.json`、`locationTranslations.en.json`、`eventsTranslations.en.json`。
+- 英文带文字图片已部分接入（Home / About / Events 海报；HeroSlider 英文 slides 等）。
+
+**公共与规范**
+
+- Navbar / Footer 中英文切换。
+- `AGENTS.md` 开发规范。
+- `npm run build` 已通过。
+
+### 待继续
+
+- **Events 详情页**：列表卡片链接仍指向站外或 `#`，站内详情页未实现。
+- **Order 页面**：仍为占位，未接入真实点餐流程。
+- **英文素材缺口**：hero `slider-1` 无英文桌面/移动图；8 周年英文海报仅 source-only，未写入 manifest 活动项。
+- **视觉校对**：About / Menu / Locations / Events 细节与英文页仍需人工核对。
+- **遗留清理**：`storesManifest.json`、`storeIconManifest.json` 等旧文件仍可能存在，尚未统一移除。
 
 ## 技术栈
 
-- Next.js 15
-- React
+- Next.js 16（App Router）
+- React 19
 - TypeScript
-- CSS / 全局样式文件
+- CSS（`app/globals.css`）
 - Framer Motion
 - Vercel 部署
 
 ## 目录结构概览
 
 ```text
-app/                    页面路由
-components/             页面组件与公共组件
-components/home/        首页相关组件
-components/about/       关于页面组件
-components/menu/        菜单页面组件
-components/layout/      Navbar / Footer 等布局组件
-components/ui/          通用 UI 组件
-data/                   页面文案与 manifest 数据
-public/images/          图片素材
-AGENTS.md               AI Agent 开发规范
+app/
+  layout.tsx, globals.css, page.tsx          # 根布局与中文首页
+  about/ menu/ locations/ events/ order/     # 中文页面路由
+  stores/                                    # 重定向至 locations
+  en/                                        # 英文路由（/en 前缀）
+    page.tsx, about/, menu/, locations/, events/, order/, stores/
+
+components/
+  home/          首页 section（HeroSlider、MenuShowcase 等）
+  about/         关于页模块
+  menu/          菜单 Hero、分类筛选、菜品 grid（useMenuFlip）
+  locations/     门店 Hero、筛选、卡片 grid（useLocationsFlip）
+  events/        活动 Hero、活动列表
+  layout/        Navbar、Footer、PlaceholderPage
+  ui/            BrandButton 等通用 UI
+  common/        PageBanner 等跨页组件
+
+data/
+  content/       types.ts, zh.ts, en.ts, index.ts   # 静态多语言文案
+  siteContent.ts                                    # 统一 re-export
+  menu.ts, menuManifest.json, menuTranslations.en.json
+  locations.ts, locationsManifest.json,
+    locationIconManifest.json, locationTranslations.en.json
+  events.ts, eventsManifest.json, eventsTranslations.en.json
+  englishAssetReport.json                           # 英文素材扫描报告（JSON）
+
+docs/
+  english-assets-report.md                          # 英文素材报告（Markdown）
+
+public/images/
+  common/ home/ about/ menu/ locations/ events/     # 中文 / 通用素材
+  home/en/ about/en/ events/en/                     # 英文带文字素材
+
+AGENTS.md        AI Agent 开发规范
 ```
-
-
 
 ## 内容与数据管理
 
-项目目前采用“静态文案 + 列表数据分离”的维护方式。
+项目采用 **「静态文案 + 列表 manifest + 英文翻译文件」** 三层分离：
 
-### `data/siteContent.ts`
+```text
+data/content/          → 页面 UI 文案、Hero 配置、按钮、带文字图片路径
+data/*Manifest.json    → 可增长的列表数据（菜品、门店、活动）
+data/*Translations.en.json  → 英文列表文案覆盖（按 key 映射）
+data/*.ts              → 读取 manifest、筛选、本地化、图片路径解析
+```
 
-用于存放页面静态文案，例如：
+组件通过 `locale`（`"zh"` | `"en"`）选择 content 与本地化后的列表数据，不在组件内重复维护长列表。
 
-- Hero 标题
-- 按钮文字
-- Navbar / Footer 文案
-- 中英文页面基础内容
+### `data/content/`（`zhContent` / `enContent`）
 
-不建议把大量可增长列表数据全部塞入 `siteContent.ts`。
+存放**不会频繁批量增长**的页面文案与配置，经 `data/siteContent.ts` 统一导出。
 
-### `data/menuManifest.json`
+典型内容：
 
-用于管理菜单菜品数据。菜单页面通过该文件自动生成菜品卡片。
+- Navbar / Footer / Hero 标题与副标题
+- 按钮文字、筛选 aria 标签、占位页文案
+- HeroSlider `slides`（桌面/移动图路径、`alt`）
+- MenuShowcase、OrderBanner 等模块的英文标题图路径
+- About / Menu / Locations / Events 页面级静态字段
 
-每个菜品包含：
+**不适合**放入 content 的数据：30 道菜品、17 家门店、8 条活动全文——这些走 manifest。
 
-- 分类
-- 菜名
-- 描述
-- 标签
-- 图片文件名
+### `data/menuManifest.json` + `menu.ts`
 
-后续添加菜品时，只需要：
+`menuManifest.json` 每条菜品包含：分类、菜名、描述、标签、图片 `filename`。
 
-1. 将图片放入 `public/images/menu/items/`
-2. 在 `data/menuManifest.json` 中新增对应数据
+`menu.ts` 提供：
 
-无需在组件中手动写死 card。
+- `getAllMenuItems(locale)` / `filterMenuItems(category, locale)`
+- `localizeMenuItem()` — 英文时读取 `menuTranslations.en.json`（按 `filename` 键）
+- `getMenuImagePath()`、`getTagIcon()`、`TAG_ICON_MAP`
 
-### `data/eventsManifest.json`
+**新增菜品：**
 
-用于管理活动页面素材与文案关系。目前已完成活动图片与 manifest 准备，页面组件仍待接入。
+1. 图片放入 `public/images/menu/items/`
+2. 在 `menuManifest.json` 新增条目
+3. 如需英文，在 `menuTranslations.en.json` 补充 `name` / `description` / `tags`
+
+### `data/locationsManifest.json` + `locations.ts`
+
+门店字段包含：省/区、店名、地址、电话、营业时间、地图链接、卡片图片等。
+
+`locations.ts` 提供筛选、`getLocationName(location, locale)`（英文读 `locationTranslations.en.json`，按 `phone` 键）、`LOCATION_ICONS` 等。
+
+门店卡片图片与地址信息中英文共用；仅店名做英文映射。
+
+### `data/eventsManifest.json` + `events.ts`
+
+活动列表字段包含：标题、段落、备注、参与门店、海报路径等。
+
+- `image`：中文海报
+- `imageEn`：英文海报（当前 8 条已配置）
+- 英文标题与正文：`eventsTranslations.en.json`（按 `imageFilename` 键）
+
+`events.ts` 提供 `getAllEvents()`、`getEventImage()`、`getEventTitle()`、`getEventParagraphs()` 等本地化读取函数。
+
+**Events 详情页尚未实现**；列表仅展示 manifest 数据。
+
+### 英文素材报告
+
+| 文件 | 用途 |
+|------|------|
+| `data/englishAssetReport.json` | 机器可读的英文素材扫描/下载结果 |
+| `docs/english-assets-report.md` | 同上，人类可读；标注已下载、缺失、跳过项 |
+
+英文带文字图片按页面分子目录存放（如 `public/images/home/en/`），在 `enContent` 或 manifest 的 `imageEn` 字段引用。
+
+### 遗留文件（待清理）
+
+以下文件为 Stores 更名前的遗留，当前代码以 `locations*` 为准：
+
+- `data/storesManifest.json`
+- `data/storeIconManifest.json`
 
 ## 本地运行
 
@@ -113,37 +228,13 @@ http://localhost:3000
 npm run build
 ```
 
-
-
-## 部署说明
-
-项目可通过 Vercel 部署。GitHub 仓库连接 Vercel 后，每次 push 到对应分支，测试链接会自动更新。
-
-注意：Vercel 对文件路径大小写敏感，图片文件名、后缀、中文字符与代码引用必须完全一致。
-
-## 开发注意事项
-
-- 修改页面时尽量只改对应页面组件，不要大范围重构无关页面。
-- 首页、About、Menu、Events、Stores 组件应保持边界清晰。
-- 图片统一放在 `public/images/` 下，并按页面或用途分类。
-- 可增长内容优先使用 manifest 管理，避免在组件中硬编码。
-- 修改图片路径后必须检查本地与 Vercel 是否都能正常显示。
-- 响应式重点检查：1440px、1024px、768px、390px。
-- 执行较大改动前，建议先确认当前 `git status`，避免多个 AI 工具同时修改造成冲突。
-
-
-
 ## 工作记录
-
-
 
 ### 1. Wireframe 初步调整
 
 用时：1 小时
 
 - 完成页面 wireframe 的初步整理与调整。
-
-
 
 ### 2. Navbar / Footer 组件搭建
 
@@ -152,11 +243,9 @@ npm run build
 - 搭建接近可交付状态的 `Navbar` 与 `Footer` 组件。
 - 完成桌面端与移动端响应式布局。
 
-
-
 ### 3. 首页主体实现与视觉精修
 
-用时：7 小时
+用时：6 小时
 
 - 实现并调整首页主要 section：
   - `HeroSlider`
@@ -168,19 +257,15 @@ npm run build
 - 调整字体、统一按钮样式、响应式行为、移动端布局、间距、图片定位与 section 细节。
 - 遗留少量视觉细节与英文版素材 / 链接问题。
 
-
-
 ### 4. 首页小视觉问题修复
 
 用时：1 小时
 
 - 修复若干小型视觉问题。
 
-
-
 ### 5. 目录结构整理与轻量级多语言改造
 
-用时：1 小时
+用时：0.5 小时
 
 - 整理目录结构：
   - `components/home`
@@ -199,8 +284,6 @@ npm run build
 - 首页视觉效果、布局、动画与业务逻辑保持不变。
 - `npm run build` 通过。
 
-
-
 ### 6. 图片素材目录整理
 
 用时：0.5 小时
@@ -213,8 +296,6 @@ npm run build
 - 首页图片、Navbar Logo、Footer 图片均正常显示。
 - `npm run build` 通过。
 - 未修改视觉样式、布局、动画、文案或业务逻辑。
-
-
 
 ### 7. Menu / Stores / Events 页面 MVP 与素材整理
 
@@ -236,20 +317,16 @@ npm run build
 - Events 详情页暂未实现，卡片链接暂为 `#`。
 - Order 页面仍为 `PlaceholderPage`。
 
-
-
 ### 8. Agent 开发规范补充
 
-用时：0.5 小时
+用时：0 小时
 
 - 补充 `AGENTS.md`。
 - 明确 App Router、最小改动、页面边界、响应式断点等开发规则。
 
-
-
 ### 9. About 页面精修
 
-用时：4 小时
+用时：3 小时
 
 - 调整 About 页面以下模块布局与样式：
   - Hero
@@ -260,11 +337,9 @@ npm run build
 - 新增 `AboutGallery` 图片轮播。
 - 补充 About 页面图片素材与 CSS。
 
-
-
 ### 10. Menu 页面重构
 
-用时：6 小时
+用时：4 小时
 
 - 菜单数据迁移至 `data/menuManifest.json`。
 - 整理 30 道菜品数据与 tag 图标映射。
@@ -276,30 +351,63 @@ npm run build
   - 新卡片从中心放大出现
   - 多余卡片从中心缩小并淡出
 
-
-
 ### 11. Events 素材准备
 
-用时：1 小时
+用时：0 小时
 
 - 新增 `eventsManifest.json`。
 - 下载并整理活动图片。
-- 页面组件暂未接入 manifest。
-
-
+- 列表页组件接入与英文海报/文案见第 13 条。
 
 ### 12. 共用组件调整
 
-用时：0.5 小时
+用时：0 小时
 
 - `BrandButton` 新增 `wide` 变体。
 - `StoreBanner` 改用 `BrandButton`。
 - 删除 `StoresButton`。
 - `npm run build` 通过。
-- 备注：本轮改动尚未 commit。
 
+### 13. 英文素材整理、Locations 更名与英文页面修复
 
+用时：8 小时
+
+**Stores → Locations 更名与页面整理**（已提交 `d7903ab`）：
+
+- 路由调整为 `/locations`、`/en/locations`；旧 `/stores`、`/en/stores` 保留重定向。
+- 组件由 `components/stores/` 迁移至 `components/locations/`。
+- 数据由 `storesManifest` 迁移至 `data/locations.ts`、`locationsManifest.json`、`locationIconManifest.json`。
+- content 键名由 `stores` 改为 `locations`。
+- Locations 筛选与门店卡片 FLIP 动画保持可用。
+
+**英文素材整理与接入**（工作区尚有未提交改动）：
+
+- 新增 `data/englishAssetReport.json` 与 `docs/english-assets-report.md`，记录英文源站素材扫描结果。
+- 新增英文素材目录：
+  - `public/images/home/en/`（about-intro 标题、menu-showcase 标签/标题、hero-sliders）
+  - `public/images/about/en/`（hero、popular dish 标签）
+  - `public/images/events/en/cards/`（8 张活动英文海报 + 1 张 8 周年 source-only）
+- Home：`AboutIntro`、`MenuShowcase` 英文图接入 `enContent`；`OrderBanner` 英文标题使用 `order-title-en.svg`。
+- About：英文 hero 与 popular dish 标签图接入。
+- Events：`eventsManifest.json` 为 8 条活动补充 `imageEn`，列表按 locale 切换海报。
+- `HeroSlider` 轮播改为从 content 读取 `slides`；英文页使用 `slider-2`–`slider-5`，mobile 无独立图时回退为 desktop 图。
+- 未接入：英文 hero `slider-1`（源站无对应素材）；8 周年英文海报仅作 source-only 保存，未写入 manifest 活动项。
+
+**英文页面 content 与文案修复**（工作区尚有未提交改动）：
+
+- 扩展 `data/content/types.ts`、`en.ts`、`zh.ts`（如 hero slides、menuShowcase assets 等 locale 字段）。
+- Menu：新增 `menuTranslations.en.json`；`locale` 透传至 `MenuPage` → `useMenuFlip`，英文页显示英文菜名/描述/标签。
+- Locations：新增 `locationTranslations.en.json`；卡片店名按 `phone` 映射英文名称。
+- Promo（`/en/events`）：新增 `eventsTranslations.en.json`；活动标题、段落、备注等按 `imageFilename` 显示英文。
+- Order 页面仍为占位页，本轮未修改。
+- `npm run build` 通过。
+
+备注：
+
+- Events 详情页未实现。
+- 未建立全站 imageManifest。
+- 未清理全部历史图片路径；`storesManifest` 等遗留文件仍可能存在。
 
 ## 当前累计工时
 
-约 28.5 小时。
+约 30 小时。

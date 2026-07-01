@@ -1,31 +1,39 @@
 import {
   getAllEvents,
-  getDescriptionParagraphs,
+  getEventCompactLines,
+  getEventCompactLinesTitle,
+  getEventImage,
   getEventKey,
+  getEventNote,
+  getEventParagraphs,
+  getEventParticipatingStores,
+  getEventParticipatingStoresTitle,
+  getEventTitle,
   isEventLinkClickable,
   type EventItem,
 } from "@/data/events";
-import type { EventsContent, Locale } from "@/data/siteContent";
+import type { Locale } from "@/data/siteContent";
 
 type EventsListProps = {
-  content: EventsContent["list"];
   locale: Locale;
 };
 
-type ContentEventItem = EventsContent["list"]["items"][number];
-
 function EventCardImage({
   event,
+  locale,
   clickable,
+  title,
 }: {
   event: EventItem;
+  locale: Locale;
   clickable: boolean;
+  title: string;
 }) {
   const image = (
     <div className="event-card-image-hover-layer">
       <img
-        src={event.image}
-        alt={event.title}
+        src={getEventImage(event, locale)}
+        alt={title}
         className="event-card__image"
         draggable={false}
       />
@@ -46,104 +54,60 @@ function EventCardImage({
 }
 
 function EventCardTitle({
-  event,
+  title,
+  link,
   clickable,
 }: {
-  event: EventItem;
+  title: string;
+  link?: string;
   clickable: boolean;
 }) {
   if (clickable) {
     return (
       <h2 className="event-card__title">
-        <a href={event.link} className="event-card__title-link">
-          {event.title}
+        <a href={link} className="event-card__title-link">
+          {title}
         </a>
       </h2>
     );
   }
 
-  return <h2 className="event-card__title">{event.title}</h2>;
+  return <h2 className="event-card__title">{title}</h2>;
 }
 
-function ContentEventCard({
-  item,
-}: {
-  item: ContentEventItem;
-}) {
-  const clickable = isEventLinkClickable(item.href);
-
-  return (
-    <article className="event-card">
-      <div className="event-card__layout">
-        <div className="event-card-image-wrap">
-          {clickable ? (
-            <a href={item.href} className="event-card-image-link">
-              <div className="event-card-image-hover-layer">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  className="event-card__image"
-                  draggable={false}
-                />
-              </div>
-            </a>
-          ) : (
-            <div className="event-card-image-hover-layer">
-              <img
-                src={item.image}
-                alt={item.imageAlt}
-                className="event-card__image"
-                draggable={false}
-              />
-            </div>
-          )}
-        </div>
-
-        <div className="event-card__content">
-          {clickable ? (
-            <h2 className="event-card__title">
-              <a href={item.href} className="event-card__title-link">
-                {item.title}
-              </a>
-            </h2>
-          ) : (
-            <h2 className="event-card__title">{item.title}</h2>
-          )}
-
-          {item.date ? <p className="event-card__date">{item.date}</p> : null}
-
-          {item.tag ? (
-            <p className="event-card__subtitle">{item.tag}</p>
-          ) : null}
-
-          {item.excerpt ? (
-            <p className="event-card__text">{item.excerpt}</p>
-          ) : null}
-        </div>
-      </div>
-    </article>
-  );
-}
-
-function EventCard({ event }: { event: EventItem }) {
+function EventCard({ event, locale }: { event: EventItem; locale: Locale }) {
   const clickable = isEventLinkClickable(event.link);
-  const paragraphs =
-    event.paragraphs && event.paragraphs.length > 0
-      ? event.paragraphs
-      : getDescriptionParagraphs(event.description);
+  const title = getEventTitle(event, locale);
+  const paragraphs = getEventParagraphs(event, locale);
+  const participatingStoresTitle = getEventParticipatingStoresTitle(
+    event,
+    locale,
+  );
+  const participatingStores = getEventParticipatingStores(event, locale);
+  const compactLinesTitle = getEventCompactLinesTitle(event, locale);
+  const compactLines = getEventCompactLines(event, locale);
+  const note = getEventNote(event, locale);
   const hasParticipatingStores =
-    Boolean(event.participatingStoresTitle) ||
-    Boolean(event.participatingStores?.length);
+    Boolean(participatingStoresTitle) || Boolean(participatingStores?.length);
   const hasCompactLines =
-    Boolean(event.compactLinesTitle) || Boolean(event.compactLines?.length);
+    Boolean(compactLinesTitle) || Boolean(compactLines?.length);
 
   return (
     <article className="event-card">
       <div className="event-card__layout">
-        <EventCardImage event={event} clickable={clickable} />
+        <EventCardImage
+          event={event}
+          locale={locale}
+          clickable={clickable}
+          title={title}
+        />
 
         <div className="event-card__content">
-          <EventCardTitle event={event} clickable={clickable} />
+          <EventCardTitle
+            title={title}
+            link={event.link}
+            clickable={clickable}
+          />
 
           {event.date ? (
             <p className="event-card__date">{event.date}</p>
@@ -165,16 +129,15 @@ function EventCard({ event }: { event: EventItem }) {
 
           {hasParticipatingStores ? (
             <div className="event-card__line-block">
-              {event.participatingStoresTitle ? (
+              {participatingStoresTitle ? (
                 <p className="event-card__text event-card__line-heading">
-                  {event.participatingStoresTitle}
+                  {participatingStoresTitle}
                 </p>
               ) : null}
 
-              {event.participatingStores &&
-              event.participatingStores.length > 0 ? (
+              {participatingStores && participatingStores.length > 0 ? (
                 <div className="event-card__compact-lines">
-                  {event.participatingStores.map((store) => (
+                  {participatingStores.map((store) => (
                     <p key={store} className="event-card__text">
                       {store}
                     </p>
@@ -186,15 +149,15 @@ function EventCard({ event }: { event: EventItem }) {
 
           {hasCompactLines ? (
             <div className="event-card__line-block">
-              {event.compactLinesTitle ? (
+              {compactLinesTitle ? (
                 <p className="event-card__text event-card__line-heading">
-                  {event.compactLinesTitle}
+                  {compactLinesTitle}
                 </p>
               ) : null}
 
-              {event.compactLines && event.compactLines.length > 0 ? (
+              {compactLines && compactLines.length > 0 ? (
                 <div className="event-card__compact-lines">
-                  {event.compactLines.map((line) => (
+                  {compactLines.map((line) => (
                     <p key={line} className="event-card__text">
                       {line}
                     </p>
@@ -204,8 +167,8 @@ function EventCard({ event }: { event: EventItem }) {
             </div>
           ) : null}
 
-          {event.note ? (
-            <p className="event-card__text event-card__note">{event.note}</p>
+          {note ? (
+            <p className="event-card__text event-card__note">{note}</p>
           ) : null}
 
           {event.bullets && event.bullets.length > 0 ? (
@@ -233,23 +196,7 @@ function EventCard({ event }: { event: EventItem }) {
   );
 }
 
-export default function EventsList({ content, locale }: EventsListProps) {
-  if (locale === "en") {
-    return (
-      <section className="events-list bg-[#fff4ec] px-[18px] pb-[120px] pt-8 min-[768px]:px-10 min-[768px]:pb-[160px] min-[768px]:pt-10">
-        <div className="mx-auto max-w-[1320px]">
-          <ul className="event-card-list">
-            {content.items.map((item) => (
-              <li key={`${item.title}-${item.image}`}>
-                <ContentEventCard item={item} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-    );
-  }
-
+export default function EventsList({ locale }: EventsListProps) {
   const events = getAllEvents();
 
   return (
@@ -258,7 +205,7 @@ export default function EventsList({ content, locale }: EventsListProps) {
         <ul className="event-card-list">
           {events.map((event) => (
             <li key={getEventKey(event)}>
-              <EventCard event={event} />
+              <EventCard event={event} locale={locale} />
             </li>
           ))}
         </ul>

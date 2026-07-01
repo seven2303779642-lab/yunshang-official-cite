@@ -15,7 +15,7 @@ export function EventsPage({ content, locale }: EventsPageProps) {
       <Navbar />
       <main>
         <EventsHero content={content.hero} />
-        <EventsList content={content.list} locale={locale} />
+        <EventsList locale={locale} />
       </main>
       <Footer />
     </>

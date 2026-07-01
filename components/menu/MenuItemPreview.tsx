@@ -8,6 +8,7 @@ import {
   getTagIcon,
   type MenuItem,
 } from "@/data/menu";
+import type { Locale } from "@/data/siteContent";
 import { motion } from "framer-motion";
 
 const MENU_ITEM_EASE = [0.22, 1, 0.36, 1] as const;
@@ -122,7 +123,15 @@ function ExitingMenuCard({
   );
 }
 
-export default function MenuItemPreview() {
+type MenuItemPreviewProps = {
+  categoryLabels: string[];
+  locale: Locale;
+};
+
+export default function MenuItemPreview({
+  categoryLabels,
+  locale,
+}: MenuItemPreviewProps) {
   const {
     activeCategory,
     changeCategory,
@@ -134,12 +143,13 @@ export default function MenuItemPreview() {
     removeExitingCard,
     disabled,
     isInstantFlip,
-  } = useMenuFlip();
+  } = useMenuFlip(locale);
 
   return (
     <>
       <MenuCategoryGrid
         activeCategory={activeCategory}
+        categoryLabels={categoryLabels}
         onCategoryChange={changeCategory}
       />
 

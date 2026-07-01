@@ -1,5 +1,6 @@
 import locationsManifest from "./locationsManifest.json";
 import locationIconManifest from "./locationIconManifest.json";
+import locationTranslationsEn from "./locationTranslations.en.json";
 import type { Locale } from "./content/types";
 
 export type Location = {
@@ -28,6 +29,15 @@ export const LOCATION_ICONS = locationIconManifest as {
 };
 
 const locations = locationsManifest as Location[];
+const locationNameMap = locationTranslationsEn as Record<string, string>;
+
+export function getLocationName(location: Location, locale: Locale): string {
+  if (locale !== "en") {
+    return location.name;
+  }
+
+  return locationNameMap[location.phone] ?? location.name;
+}
 
 export function getAllProvinceLabel(locale: Locale): string {
   return locale === "zh" ? "全部" : "All";

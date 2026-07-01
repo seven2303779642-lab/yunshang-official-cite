@@ -6,11 +6,13 @@ import { MENU_CATEGORY_FILTERS } from "@/data/menu";
 
 type MenuCategoryGridProps = {
   activeCategory: MenuCategoryFilter;
+  categoryLabels: string[];
   onCategoryChange: (category: MenuCategoryFilter) => void;
 };
 
 export default function MenuCategoryGrid({
   activeCategory,
+  categoryLabels,
   onCategoryChange,
 }: MenuCategoryGridProps) {
   return (
@@ -18,7 +20,7 @@ export default function MenuCategoryGrid({
       <div className="mx-auto max-w-[1400px] text-center">
         <div className="menu-category-scroll">
           <div className="menu-category-buttons">
-            {MENU_CATEGORY_FILTERS.map((category) => (
+            {MENU_CATEGORY_FILTERS.map((category, index) => (
               <motion.button
                 key={category}
                 type="button"
@@ -31,7 +33,7 @@ export default function MenuCategoryGrid({
                 onClick={() => onCategoryChange(category)}
                 whileTap={{ scale: 0.96 }}
               >
-                {category}
+                {categoryLabels[index] ?? category}
               </motion.button>
             ))}
           </div>

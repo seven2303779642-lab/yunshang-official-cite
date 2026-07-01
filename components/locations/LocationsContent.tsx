@@ -11,6 +11,7 @@ import {
   getRegionDisplayName,
   getRegionOptions,
   getLocationKey,
+  getLocationName,
   LOCATION_ICONS,
   type Location,
 } from "@/data/locations";
@@ -64,18 +65,22 @@ function openPhoneLink(
 
 function LocationCardContent({
   location,
+  locale,
   directionsLabel,
 }: {
   location: Location;
+  locale: Locale;
   directionsLabel: string;
 }) {
+  const displayName = getLocationName(location, locale);
+
   const body = (
     <>
       <div className="location-card-image-wrap">
         <div className="location-card-image-hover-layer">
           <img
             src={location.image}
-            alt={location.name}
+            alt={displayName}
             className="location-card__image"
             draggable={false}
           />
@@ -83,7 +88,7 @@ function LocationCardContent({
       </div>
 
       <div className="location-card__body">
-        <h3 className="location-card__title">{location.name}</h3>
+        <h3 className="location-card__title">{displayName}</h3>
         <p className="location-card__meta">
           {location.displayProvince} · {location.displayRegion}
         </p>
@@ -166,12 +171,14 @@ function LocationCardContent({
 
 function ExitingLocationCard({
   location,
+  locale,
   rect,
   directionsLabel,
   disabled,
   onComplete,
 }: {
   location: Location;
+  locale: Locale;
   rect: CardRect;
   directionsLabel: string;
   disabled: boolean;
@@ -199,6 +206,7 @@ function ExitingLocationCard({
       >
         <LocationCardContent
           location={location}
+          locale={locale}
           directionsLabel={directionsLabel}
         />
       </motion.div>
@@ -299,6 +307,7 @@ export default function LocationsContent({
                 >
                   <LocationCardContent
                     location={location}
+                    locale={locale}
                     directionsLabel={directionsLabel}
                   />
                 </motion.div>
@@ -311,6 +320,7 @@ export default function LocationsContent({
               <ExitingLocationCard
                 key={key}
                 location={location}
+                locale={locale}
                 rect={rect}
                 directionsLabel={directionsLabel}
                 disabled={disabled}

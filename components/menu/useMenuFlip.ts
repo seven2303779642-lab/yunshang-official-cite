@@ -13,6 +13,7 @@ import {
   type MenuCategoryFilter,
   type MenuItem,
 } from "@/data/menu";
+import type { Locale } from "@/data/siteContent";
 
 export type CardRect = {
   x: number;
@@ -72,7 +73,7 @@ type FlipSession = {
   nextKeys: string[];
 };
 
-export function useMenuFlip() {
+export function useMenuFlip(locale: Locale) {
   const disabled = false;
 
   const [activeCategory, setActiveCategory] =
@@ -89,7 +90,7 @@ export function useMenuFlip() {
   const resizePrevRectsRef = useRef<Map<string, CardRect> | null>(null);
   const isFirstCategoryRenderRef = useRef(true);
 
-  const filteredItems = filterMenuItems(activeCategory);
+  const filteredItems = filterMenuItems(activeCategory, locale);
 
   const registerCardRef = useCallback(
     (key: string) => (node: HTMLElement | null) => {
@@ -158,8 +159,8 @@ export function useMenuFlip() {
         return;
       }
 
-      const prevItems = filterMenuItems(activeCategory);
-      const nextItems = filterMenuItems(nextCategory);
+      const prevItems = filterMenuItems(activeCategory, locale);
+      const nextItems = filterMenuItems(nextCategory, locale);
       const prevRects = measureGridCards(grid, cardRefs.current);
 
       const nextKeys = new Set(nextItems.map(getMenuItemKey));
@@ -182,7 +183,7 @@ export function useMenuFlip() {
       setExitingCards(exiting);
       setActiveCategory(nextCategory);
     },
-    [activeCategory, disabled],
+    [activeCategory, disabled, locale],
   );
 
   const removeExitingCard = useCallback((key: string) => {
@@ -224,7 +225,7 @@ export function useMenuFlip() {
 
         runFlipToRest({
           prevRects,
-          nextKeys: filterMenuItems(activeCategory).map(getMenuItemKey),
+          nextKeys: filterMenuItems(activeCategory, locale).map(getMenuItemKey),
         });
       }, RESIZE_DEBOUNCE_MS);
     };
@@ -235,7 +236,7 @@ export function useMenuFlip() {
       clearTimeout(timeout);
       window.removeEventListener("resize", onResize);
     };
-  }, [activeCategory, disabled, runFlipToRest]);
+  }, [activeCategory, disabled, locale, runFlipToRest]);
 
   const getCardMotion = useCallback(
     (key: string): CardMotion => cardMotions.get(key) ?? REST_MOTION,

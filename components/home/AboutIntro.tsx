@@ -78,7 +78,7 @@ export default function AboutIntro({ content }: AboutIntroProps) {
         </p>
 
         <img
-          src="/images/home/about-intro/aboutintro-title.png"
+          src={content.titleImage}
           alt={content.titleImageAlt}
           className="mt-9 w-full max-w-[430px] origin-center -rotate-[5deg] select-none min-[1025px]:origin-left min-[1025px]:translate-x-1"
           draggable={false}

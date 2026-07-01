@@ -21,12 +21,33 @@ export const enContent: SiteContent = {
   },
   "home": {
     "heroSlider": {
+      "slides": [
+        {
+          "desktopImage": "/images/home/en/hero-sliders/slider-2.jpg",
+          "mobileImage": "/images/home/en/hero-sliders/slider-2.jpg",
+          "alt": "Yunshang rice noodle promotion"
+        },
+        {
+          "desktopImage": "/images/home/en/hero-sliders/slider-3.jpg",
+          "mobileImage": "/images/home/en/hero-sliders/slider-3.jpg",
+          "alt": "Yunshang rice noodle promotion"
+        },
+        {
+          "desktopImage": "/images/home/en/hero-sliders/slider-4.jpg",
+          "mobileImage": "/images/home/en/hero-sliders/slider-4.jpg",
+          "alt": "Yunshang rice noodle promotion"
+        },
+        {
+          "desktopImage": "/images/home/en/hero-sliders/slider-5.jpg",
+          "mobileImage": "/images/home/en/hero-sliders/slider-5.jpg",
+          "alt": "Yunshang rice noodle promotion"
+        }
+      ],
       "slideAlts": [
-        "Yunshang homepage slider image 1",
-        "Yunshang homepage slider image 2",
-        "Yunshang homepage slider image 3",
-        "Yunshang homepage slider image 4",
-        "Yunshang homepage slider image 5"
+        "Yunshang rice noodle promotion",
+        "Yunshang rice noodle promotion",
+        "Yunshang rice noodle promotion",
+        "Yunshang rice noodle promotion"
       ],
       "slideIndicatorAriaLabelTemplate": "Go to slide {n}"
     },
@@ -36,6 +57,7 @@ export const enContent: SiteContent = {
         "made from the heart."
       ],
       "body": "At Yunshang Rice Noodle, we honor the rich tradition of Yunnan-style rice noodles, where a steaming, flavourful broth brings every ingredient to life. Our signature broth is slow-simmered for over 12 hours, using only high-quality bones to create a naturally rich, delicate taste—no MSG, just pure goodness. We pair it with premium rice noodles made from 100% pure rice, free from additives, for the perfect balance of smoothness and bite. Fresh, locally sourced ingredients complete the bowl, ensuring every bite is nourishing, hearty, and deeply satisfying.",
+      "titleImage": "/images/home/en/about-intro/home-about-intro-title-en.png",
       "titleImageAlt": "No time to cook? Try Yunshang Rice Noodle!",
       "aboutButton": "About Us",
       "aboutButtonHref": "/en/about",
@@ -93,6 +115,27 @@ export const enContent: SiteContent = {
     "menuShowcase": {
       "leftLabelAlt": "A great bowl of rice noodles",
       "rightLabelAlt": "Half a bowl of toppings",
+      "assets": {
+        "leftLabel": "/images/home/en/menu-showcase/home-menu-showcase-true-flavours-en.png",
+        "rightLabel": "/images/home/en/menu-showcase/home-menu-showcase-top-ingredients-en.png",
+        "items": [
+          {
+            "tag": "/images/home/en/menu-showcase/home-menu-showcase-classic-en.png",
+            "image": "/images/home/menu-showcase/过桥米线.png",
+            "titleImage": "/images/home/en/menu-showcase/home-menu-showcase-crossing-the-bridge-rice-noodles-en.png"
+          },
+          {
+            "tag": "/images/home/en/menu-showcase/home-menu-showcase-popular-en.png",
+            "image": "/images/home/menu-showcase/特色米线.png",
+            "titleImage": "/images/home/en/menu-showcase/home-menu-showcase-specialty-rice-noodles-en.png"
+          },
+          {
+            "tag": "/images/home/en/menu-showcase/home-menu-showcase-must-try-en.png",
+            "image": "/images/home/menu-showcase/凉菜小吃.png",
+            "titleImage": "/images/home/en/menu-showcase/home-menu-showcase-cold-dishes-appetizers-en.png"
+          }
+        ]
+      },
       "items": [
         {
           "title": "Crossing-the-Bridge Series",
@@ -125,8 +168,8 @@ export const enContent: SiteContent = {
   },
   "about": {
     "hero": {
-      "desktopImage": "/images/about/hero/top-banner-desktop.jpg",
-      "mobileImage": "/images/about/hero/top-banner-mobile.jpg",
+      "desktopImage": "/images/about/en/hero/about-hero-desktop-en.jpg",
+      "mobileImage": "/images/about/en/hero/about-hero-mobile-en.jpg",
       "alt": "Yunshang About page banner"
     },
     "intro": {
@@ -178,28 +221,28 @@ export const enContent: SiteContent = {
           "tagline": "",
           "image": "/images/about/popular/original.jpg",
           "imageAlt": "Original Crossing-the-Bridge Rice Noodle Soup",
-          "tagImage": "/images/about/decorative/icon-white-01.png"
+          "tagImage": "/images/about/en/popular/about-popular-original-tag-en.png"
         },
         {
           "title": "Tomato Crossing-the-Bridge Rice Noodle Soup",
           "tagline": "",
           "image": "/images/about/popular/tomato.jpg",
           "imageAlt": "Tomato Crossing-the-Bridge Rice Noodle Soup",
-          "tagImage": "/images/about/decorative/icon-white-02.png"
+          "tagImage": "/images/about/en/popular/about-popular-tomato-tag-en.png"
         },
         {
           "title": "Chinese Sauerkraut Fish Rice Noodle Soup",
           "tagline": "",
           "image": "/images/about/popular/sour-fish.jpg",
           "imageAlt": "Chinese Sauerkraut Fish Rice Noodle Soup",
-          "tagImage": "/images/about/decorative/icon-white-03.png"
+          "tagImage": "/images/about/en/popular/about-popular-sour-fish-tag-en.png"
         },
         {
           "title": "Tomato Rice Noodle Soup with Beef & Enoki Mushroom",
           "tagline": "",
           "image": "/images/about/popular/sour-beef.jpg",
           "imageAlt": "Tomato Rice Noodle Soup with Beef & Enoki Mushroom",
-          "tagImage": "/images/about/decorative/icon-white-04.png"
+          "tagImage": "/images/about/en/popular/about-popular-sour-beef-tag-en.png"
         }
       ]
     },

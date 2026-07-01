@@ -21,6 +21,33 @@ export const zhContent: SiteContent = {
   },
   home: {
     heroSlider: {
+      slides: [
+        {
+          desktopImage: "/images/home/hero-sliders/desktop/slider-1.jpg",
+          mobileImage: "/images/home/hero-sliders/mobile/slider-1.jpg",
+          alt: "云尚首页轮播图 1",
+        },
+        {
+          desktopImage: "/images/home/hero-sliders/desktop/slider-2.jpg",
+          mobileImage: "/images/home/hero-sliders/mobile/slider-2.jpg",
+          alt: "云尚首页轮播图 2",
+        },
+        {
+          desktopImage: "/images/home/hero-sliders/desktop/slider-3.jpg",
+          mobileImage: "/images/home/hero-sliders/mobile/slider-3.jpg",
+          alt: "云尚首页轮播图 3",
+        },
+        {
+          desktopImage: "/images/home/hero-sliders/desktop/slider-4.jpg",
+          mobileImage: "/images/home/hero-sliders/mobile/slider-4.jpg",
+          alt: "云尚首页轮播图 4",
+        },
+        {
+          desktopImage: "/images/home/hero-sliders/desktop/slider-5.jpg",
+          mobileImage: "/images/home/hero-sliders/mobile/slider-5.jpg",
+          alt: "云尚首页轮播图 5",
+        },
+      ],
       slideAlts: [
         "云尚首页轮播图 1",
         "云尚首页轮播图 2",
@@ -34,6 +61,7 @@ export const zhContent: SiteContent = {
       headingLines: ["一碗有温度的米线，", "从匠心开始"],
       body:
         "云尚米线，传承云南百年米线文化，以滚烫鲜骨浓汤激发食材本味，醇厚鲜香，一口暖心！严选央企华润五丰米线，100%纯大米研磨，0胶添加，爽滑Q弹，吸汁入味。高汤精选优质鲜骨，慢熬12小时以上，浓郁纯正，无添加更安心。搭配本地新鲜食材，锁住天然美味。每一碗都是实打实的真材实料，肉足菜丰，汤鲜味美，满足感拉满！",
+      titleImage: "/images/home/about-intro/aboutintro-title.png",
       titleImageAlt: "不想做饭？来碗云尚米线！",
       aboutButton: "关于云尚",
       aboutButtonHref: "/about",
@@ -82,6 +110,24 @@ export const zhContent: SiteContent = {
     menuShowcase: {
       leftLabelAlt: "一碗好米线",
       rightLabelAlt: "半碗都是料",
+      assets: {
+        leftLabel: "/images/home/menu-showcase/一碗好米线.png",
+        rightLabel: "/images/home/menu-showcase/半碗都是料.png",
+        items: [
+          {
+            tag: "/images/home/menu-showcase/经典.png",
+            image: "/images/home/menu-showcase/过桥米线.png",
+          },
+          {
+            tag: "/images/home/menu-showcase/人气.png",
+            image: "/images/home/menu-showcase/特色米线.png",
+          },
+          {
+            tag: "/images/home/menu-showcase/必点.png",
+            image: "/images/home/menu-showcase/凉菜小吃.png",
+          },
+        ],
+      },
       items: [
         {
           title: "过桥米线",

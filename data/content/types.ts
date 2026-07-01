@@ -188,12 +188,18 @@ export type SiteContent = {
   nav: NavContent;
   home: {
     heroSlider: {
+      slides: {
+        desktopImage: string;
+        mobileImage?: string;
+        alt: string;
+      }[];
       slideAlts: string[];
       slideIndicatorAriaLabelTemplate: string;
     };
     aboutIntro: {
       headingLines: [string, string];
       body: string;
+      titleImage: string;
       titleImageAlt: string;
       aboutButton: string;
       aboutButtonHref: string;
@@ -216,6 +222,15 @@ export type SiteContent = {
     menuShowcase: {
       leftLabelAlt: string;
       rightLabelAlt: string;
+      assets: {
+        leftLabel: string;
+        rightLabel: string;
+        items: {
+          tag: string;
+          image: string;
+          titleImage?: string;
+        }[];
+      };
       items: MenuShowcaseItemContent[];
       viewMenuButton: string;
       viewMenuHref: string;

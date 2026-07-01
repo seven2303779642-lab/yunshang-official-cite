@@ -9,13 +9,13 @@ type MenuPageProps = {
   locale: Locale;
 };
 
-export function MenuPage({ content }: MenuPageProps) {
+export function MenuPage({ content, locale }: MenuPageProps) {
   return (
     <>
       <Navbar />
       <main>
         <MenuHero content={content.hero} />
-        <MenuContent />
+        <MenuContent content={content} locale={locale} />
       </main>
       <Footer />
     </>
