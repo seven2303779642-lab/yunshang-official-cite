@@ -6,8 +6,8 @@ type AboutHeroProps = {
 
 export default function AboutHero({ content }: AboutHeroProps) {
   return (
-    <section className="relative h-[280px] overflow-hidden bg-black min-[768px]:h-[420px] min-[1025px]:h-[520px]">
-      <picture className="absolute inset-0">
+    <section className="about-hero relative min-h-[calc(100vh-76px)] overflow-hidden min-[1025px]:min-h-[calc(100vh-100px)]">
+      <picture className="absolute inset-0 block h-full w-full">
         <source media="(max-width: 1024px)" srcSet={content.mobileImage} />
         <img
           src={content.desktopImage}
@@ -16,7 +16,6 @@ export default function AboutHero({ content }: AboutHeroProps) {
           draggable={false}
         />
       </picture>
-      <div className="absolute inset-0 bg-black/15" aria-hidden="true" />
     </section>
   );
 }

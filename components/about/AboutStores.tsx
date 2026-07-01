@@ -1,5 +1,7 @@
-import StoresButton from "@/components/ui/StoresButton";
+import BrandButton from "@/components/ui/BrandButton";
 import type { AboutContent } from "@/data/siteContent";
+
+const TITLE_ICON = "/images/about/decorative/group-1021.svg";
 
 type AboutStoresProps = {
   content: AboutContent["stores"];
@@ -7,26 +9,46 @@ type AboutStoresProps = {
 
 export default function AboutStores({ content }: AboutStoresProps) {
   return (
-    <section className="bg-[var(--color-cream)] px-6 py-16 min-[768px]:px-12 min-[1025px]:py-24">
-      <div className="mx-auto max-w-[1000px] text-center">
-        <h2 className="type-display-title text-[var(--color-red)]">
-          {content.title}
+    <section className="about-stores">
+      <div className="about-stores-inner">
+        <h2 className="about-stores-title">
+          <img
+            src={TITLE_ICON}
+            alt=""
+            aria-hidden="true"
+            className="about-stores-title-icon"
+            draggable={false}
+          />
+          <span>{content.title}</span>
+          <img
+            src={TITLE_ICON}
+            alt=""
+            aria-hidden="true"
+            className="about-stores-title-icon"
+            draggable={false}
+          />
         </h2>
-        <p className="type-body-copy-emphasis mt-4 text-[#202020]">
-          {content.subtitle}
-        </p>
 
-        <div className="mt-10 overflow-hidden bg-white shadow-sm">
+        <div className="about-stores-visual">
+          <img
+            src="/images/about/decorative/white-clound-pattern-yunshang.svg"
+            alt=""
+            aria-hidden="true"
+            className="about-stores-map-cloud"
+            draggable={false}
+          />
           <img
             src={content.mapImage}
             alt={content.mapAlt}
-            className="h-auto w-full"
+            className="about-stores-map"
             draggable={false}
           />
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <StoresButton href={content.ctaHref} label={content.ctaLabel} />
+        <div className="about-stores-cta">
+          <BrandButton href={content.ctaHref} variant="wide">
+            {content.ctaLabel}
+          </BrandButton>
         </div>
       </div>
     </section>

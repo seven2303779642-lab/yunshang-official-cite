@@ -1,3 +1,4 @@
+import AboutGallery from "@/components/about/AboutGallery";
 import AboutHero from "@/components/about/AboutHero";
 import AboutIntro from "@/components/about/AboutIntro";
 import AboutPopularDishes from "@/components/about/AboutPopularDishes";
@@ -20,6 +21,7 @@ export function AboutPage({ content }: AboutPageProps) {
         <AboutHero content={content.hero} />
         <AboutIntro content={content.intro} />
         <AboutValueGrid content={content.values} />
+        <AboutGallery />
         <AboutPopularDishes content={content.popularDishes} />
         <AboutStores content={content.stores} />
       </main>

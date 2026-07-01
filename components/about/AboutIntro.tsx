@@ -6,34 +6,37 @@ type AboutIntroProps = {
 
 export default function AboutIntro({ content }: AboutIntroProps) {
   return (
-    <section className="bg-[var(--color-cream)] px-6 py-16 min-[768px]:px-12 min-[1025px]:py-24">
-      <div className="mx-auto grid max-w-[1200px] items-center gap-10 min-[1025px]:grid-cols-2 min-[1025px]:gap-16">
-        <div className="text-center min-[1025px]:text-left">
-          <img
-            src={content.icon}
-            alt=""
-            aria-hidden="true"
-            className="mx-auto mb-6 h-10 w-10 min-[1025px]:mx-0"
-            draggable={false}
-          />
+    <section className="about-intro relative min-h-[500px] overflow-x-hidden bg-[var(--color-red)] px-10">
+      <div className="about-intro-content relative z-[2] mx-auto flex min-h-[500px] max-w-[900px] flex-col items-center justify-center pb-[140px] pt-12 text-center">
+        <img
+          src={content.icon}
+          alt=""
+          aria-hidden="true"
+          width={40}
+          height={40}
+          className="mb-6 h-10 w-10 shrink-0"
+          draggable={false}
+        />
 
-          <div className="space-y-5">
-            {content.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="type-body-copy text-[#202020]">
-                {paragraph}
-              </p>
-            ))}
-          </div>
+        <div className="space-y-5">
+          {content.paragraphs.map((paragraph) => (
+            <p
+              key={paragraph}
+              className="type-body-copy text-white min-[768px]:text-[17px] min-[768px]:leading-[1.9]"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
+      </div>
 
-        <div className="overflow-hidden rounded-sm bg-white shadow-sm">
-          <img
-            src={content.image}
-            alt={content.imageAlt}
-            className="h-full w-full object-cover"
-            draggable={false}
-          />
-        </div>
+      <div className="about-intro-wave" aria-hidden="true">
+        <img
+          src="/images/about/decorative/bolang-long.svg"
+          alt=""
+          className="about-intro-wave-img"
+          draggable={false}
+        />
       </div>
     </section>
   );

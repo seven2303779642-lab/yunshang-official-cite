@@ -1,46 +1,83 @@
 import BrandButton from "@/components/ui/BrandButton";
 import type { AboutContent } from "@/data/siteContent";
 
+const TITLE_ICON = "/images/about/decorative/white-icon.png";
+
+const TAG_POSITIONS = [
+  "about-popular-dishes-tag--1",
+  "about-popular-dishes-tag--2",
+  "about-popular-dishes-tag--3",
+  "about-popular-dishes-tag--4",
+];
+
 type AboutPopularDishesProps = {
   content: AboutContent["popularDishes"];
 };
 
-export default function AboutPopularDishes({ content }: AboutPopularDishesProps) {
+export default function AboutPopularDishes({
+  content,
+}: AboutPopularDishesProps) {
   return (
-    <section className="bg-[#fff4ec] px-6 py-16 min-[768px]:px-12 min-[1025px]:py-24">
-      <div className="mx-auto max-w-[1200px] text-center">
-        <h2 className="type-display-title text-[var(--color-red)]">
-          {content.title}
+    <section className="about-popular-dishes">
+      <div className="about-popular-dishes-inner">
+        <h2 className="about-popular-dishes-title">
+          <img
+            src={TITLE_ICON}
+            alt=""
+            aria-hidden="true"
+            className="about-section-title-icon"
+            draggable={false}
+          />
+          <span>{content.title}</span>
+          <img
+            src={TITLE_ICON}
+            alt=""
+            aria-hidden="true"
+            className="about-section-title-icon"
+            draggable={false}
+          />
         </h2>
-        <p className="type-body-copy-emphasis mt-4 text-[#202020]">
-          {content.subtitle}
-        </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 min-[768px]:grid-cols-2 min-[1025px]:grid-cols-4">
-          {content.items.map((item) => (
-            <article key={item.title} className="overflow-hidden bg-white">
-              <div className="aspect-[3/4] overflow-hidden">
+        <div className="about-popular-dishes-grid">
+          {content.items.map((item, index) => (
+            <article key={item.title} className="about-popular-dishes-card">
+              <div className="about-popular-dishes-photo-wrap">
+                <div className="about-popular-dishes-photo">
+                  <img
+                    src={item.image}
+                    alt={item.imageAlt}
+                    className="about-popular-dishes-image"
+                    draggable={false}
+                  />
+                </div>
+
                 <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  className="h-full w-full object-cover"
+                  src={item.tagImage}
+                  alt=""
+                  aria-hidden="true"
+                  className={`about-popular-dishes-tag ${TAG_POSITIONS[index] ?? ""}`}
                   draggable={false}
                 />
               </div>
 
-              <div className="px-4 py-6">
-                <h3 className="type-menu-category-title !text-[var(--color-red)]">
-                  {item.title}
-                </h3>
-                <p className="type-body-copy mt-3 text-[#202020]">{item.tagline}</p>
-              </div>
+              <h3 className="about-popular-dishes-name">{item.title}</h3>
+              <p className="about-popular-dishes-tagline">{item.tagline}</p>
             </article>
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="about-popular-dishes-cta">
           <BrandButton href={content.ctaHref}>{content.ctaLabel}</BrandButton>
         </div>
+      </div>
+
+      <div className="about-intro-wave" aria-hidden="true">
+        <img
+          src="/images/about/decorative/bolang-long.svg"
+          alt=""
+          className="about-intro-wave-img"
+          draggable={false}
+        />
       </div>
     </section>
   );

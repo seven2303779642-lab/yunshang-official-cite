@@ -1,4 +1,4 @@
-import StoresButton from "@/components/ui/StoresButton";
+import BrandButton from "@/components/ui/BrandButton";
 import type { SiteContent } from "@/data/siteContent";
 
 type StoreBannerProps = {
@@ -27,10 +27,9 @@ export default function StoreBanner({ content }: StoreBannerProps) {
         </p>
 
         <div className="relative mt-7 inline-flex items-center justify-center">
-          <StoresButton
-            href={content.storesButtonHref}
-            label={content.storesButton}
-          />
+          <BrandButton href={content.storesButtonHref} variant="wide">
+            {content.storesButton}
+          </BrandButton>
         </div>
       </div>
     </section>

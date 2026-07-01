@@ -1,12 +1,11 @@
-import MenuCategoryGrid from "@/components/menu/MenuCategoryGrid";
+import MenuContent from "@/components/menu/MenuContent";
 import MenuHero from "@/components/menu/MenuHero";
-import MenuItemPreview from "@/components/menu/MenuItemPreview";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import type { Locale, MenuContent } from "@/data/siteContent";
+import type { Locale, MenuContent as MenuContentType } from "@/data/siteContent";
 
 type MenuPageProps = {
-  content: MenuContent;
+  content: MenuContentType;
   locale: Locale;
 };
 
@@ -16,8 +15,7 @@ export function MenuPage({ content }: MenuPageProps) {
       <Navbar />
       <main>
         <MenuHero content={content.hero} />
-        <MenuCategoryGrid content={content.categories} />
-        <MenuItemPreview content={content.featuredItems} />
+        <MenuContent />
       </main>
       <Footer />
     </>

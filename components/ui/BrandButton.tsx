@@ -10,7 +10,7 @@ type BrandButtonProps = {
   children: ReactNode;
   className?: string;
   onClick?: () => void;
-  variant?: "section" | "navbar";
+  variant?: "section" | "navbar" | "wide";
 };
 
 export default function BrandButton({
@@ -20,6 +20,11 @@ export default function BrandButton({
   onClick,
   variant = "section",
 }: BrandButtonProps) {
+  const sizeClass =
+    variant === "wide"
+      ? "h-[46px] min-w-[220px]"
+      : "h-[46px] min-w-[168px]";
+
   const labelClass =
     variant === "navbar"
       ? "text-[20px] font-normal leading-none min-[768px]:text-lg min-[768px]:font-bold"
@@ -30,7 +35,8 @@ export default function BrandButton({
       href={href}
       onClick={onClick}
       className={cn(
-        "group relative block h-[46px] min-w-[168px] bg-[var(--color-red)]",
+        "group relative block bg-[var(--color-red)]",
+        sizeClass,
         className,
       )}
       style={{ fontFamily: "var(--font-display)" }}
@@ -46,6 +52,7 @@ export default function BrandButton({
         className={cn(
           "absolute inset-[9px] z-20 flex items-center justify-center bg-transparent text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[var(--color-red)]",
           labelClass,
+          variant === "wide" && "whitespace-nowrap px-3",
         )}
       >
         {children}

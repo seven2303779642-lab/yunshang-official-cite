@@ -166,6 +166,7 @@ export type AboutContent = {
       tagline: string;
       image: string;
       imageAlt: string;
+      tagImage: string;
     }[];
   };
   stores: {
@@ -353,11 +354,11 @@ export const zhContent: SiteContent = {
     },
     intro: {
       icon: "/images/about/decorative/white-icon.png",
-      image: "/images/about/story/rice-noodle-yunshang.jpg",
+      image: "/images/about/values/rice-noodle-yunshang.jpg",
       imageAlt: "云尚米线",
       paragraphs: [
-        "自2016年以来，云尚米线始终坚持以一碗好米线连接人与味道。我们精选优质食材，坚持慢火熬汤，把时间与匠心熬进每一碗汤里。",
-        "传承云南过桥米线的经典吃法，同时不断推出创新口味，让传统与新意在一碗中相遇，带来熟悉而温暖的家的味道。",
+        "自2016年以来，我们始终坚持做一碗真正用心的米线。精选好食材，慢火熬高汤，只为呈现最纯正的米线本味。在传承云南过桥米线精髓的同时，我们不断创新口味与体验，让每一位顾客都能感受到新鲜与惊喜。",
+        "我们相信，一碗米线不仅是味觉的满足，更是一份家的味道和心灵的慰藉。无论是钟爱传统风味的长辈、喜欢尝试新事物的年轻人，还是挑食的小朋友，都能在这里找到属于自己的那一碗热腾腾的美味。",
       ],
     },
     values: {
@@ -365,59 +366,67 @@ export const zhContent: SiteContent = {
       items: [
         {
           title: "精选米线",
-          description: "严选优质大米米线，爽滑Q弹，吸汁入味，是每一碗云尚米线的扎实根基。",
-          image: "/images/about/story/rice-noodle-yunshang.jpg",
+          description:
+            "选用华润五丰100%纯大米米线，经过传统工艺精心制作，0添加、无胶质，口感Q弹爽滑，为您呈现最地道的米线体验。",
+          image: "/images/about/values/rice-noodle-yunshang.jpg",
           imageAlt: "精选米线",
         },
         {
           title: "秘制高汤",
-          description: "精选鲜骨慢火熬制，汤底醇厚鲜香，无添加更安心，天天熬汤看得见。",
+          description:
+            "每一锅高汤都凝聚了我们的匠心，精选猪筒骨、老母鸡、火腿等优质食材，经过12小时慢火熬制，汤底醇厚鲜香，回味悠长，温暖您的每一餐。",
           image: "/images/about/values/real-bone-yunshang.jpg",
           imageAlt: "秘制高汤",
         },
         {
           title: "优质食材",
-          description: "本地优选新鲜食材，肉足菜丰，真材实料，锁住天然美味。",
+          description:
+            "我们每天精心挑选新鲜蔬菜、肉类等原材料，严格把控品质，确保每一份菜品都新鲜健康、高品质，让您吃得放心。",
           image: "/images/about/values/fresh-yunshang.jpg",
           imageAlt: "优质食材",
         },
         {
           title: "菜品多样",
-          description: "从经典过桥米线到特色风味米线，凉菜小吃丰富选择，满足不同口味。",
+          description:
+            "从经典过桥米线到创意特色口味，我们的菜品丰富多样，满足不同人群的需求，让每一位客人都能找到属于自己的美味。",
           image: "/images/about/values/variety-yunshang.jpg",
           imageAlt: "菜品多样",
         },
       ],
     },
     popularDishes: {
-      title: "人气推荐",
-      subtitle: "每一碗都是云尚的味道名片",
+      title: "云尚米线口碑之选",
+      subtitle: "",
       ctaLabel: "查看菜单",
       ctaHref: "/menu",
       items: [
         {
           title: "经典原味过桥米线",
-          tagline: "传承经典，一汤锁鲜",
+          tagline: "每天热销 3000 碗!",
           image: "/images/about/popular/original.jpg",
           imageAlt: "经典原味过桥米线",
+          tagImage: "/images/about/decorative/icon-white-01.png",
         },
         {
           title: "鲜香番茄过桥米线",
-          tagline: "甘香爽口，番茄鲜香",
+          tagline: "每一口都是鲜甜!",
           image: "/images/about/popular/tomato.jpg",
           imageAlt: "鲜香番茄过桥米线",
+          tagImage: "/images/about/decorative/icon-white-02.png",
         },
         {
           title: "老坛酸菜鱼米线",
-          tagline: "酸辣开胃，回味无穷",
+          tagline: "米线界里最好吃的酸菜鱼!",
           image: "/images/about/popular/sour-fish.jpg",
           imageAlt: "老坛酸菜鱼米线",
+          tagImage: "/images/about/decorative/icon-white-03.png",
         },
         {
           title: "酸汤金针菇肥牛米线",
-          tagline: "酸香浓郁，肥牛鲜嫩",
+          tagline: "肉多料足汤更鲜!",
           image: "/images/about/popular/sour-beef.jpg",
           imageAlt: "酸汤金针菇肥牛米线",
+          tagImage: "/images/about/decorative/icon-white-04.png",
         },
       ],
     },
@@ -855,11 +864,11 @@ export const enContent: SiteContent = {
     },
     intro: {
       icon: "/images/about/decorative/white-icon.png",
-      image: "/images/about/story/rice-noodle-yunshang.jpg",
+      image: "/images/about/values/rice-noodle-yunshang.jpg",
       imageAlt: "Yunshang Rice Noodle",
       paragraphs: [
-        "Since 2016, Yunshang Rice Noodle has been dedicated to connecting people through a great bowl of noodles. We select quality ingredients and slow-simmer our broth, putting time and craft into every bowl.",
-        "Honoring the heritage of Yunnan crossing-the-bridge rice noodles while introducing innovative flavors, we bring together tradition and creativity in every bowl—a taste that feels like home.",
+        "Since 2016, we have been committed to making every bowl of rice noodles with true care. We select quality ingredients and slow-simmer our broth to deliver the most authentic flavor. While honoring the heritage of Yunnan crossing-the-bridge rice noodles, we keep innovating in taste and experience so every guest can enjoy freshness and delight.",
+        "We believe a bowl of rice noodles is more than a meal—it is the taste of home and comfort for the soul. Whether you prefer classic flavors, love trying something new, or are a picky eater, you can find your own steaming bowl of happiness here.",
       ],
     },
     values: {
@@ -867,59 +876,67 @@ export const enContent: SiteContent = {
       items: [
         {
           title: "Selected Rice Noodles",
-          description: "Premium rice noodles that are smooth, springy, and full of flavor—the foundation of every Yunshang bowl.",
-          image: "/images/about/story/rice-noodle-yunshang.jpg",
+          description:
+            "We use China Resources Wufeng 100% rice noodles, crafted through traditional methods with no additives or gums—smooth, springy, and authentically satisfying.",
+          image: "/images/about/values/rice-noodle-yunshang.jpg",
           imageAlt: "Selected rice noodles",
         },
         {
           title: "Signature Broth",
-          description: "Slow-simmered from quality fresh bones—rich, aromatic, additive-free, made fresh every day.",
+          description:
+            "Every pot reflects our craft: premium pork bones, old hens, ham, and more, slow-simmered for 12 hours into a rich, aromatic broth that warms every meal.",
           image: "/images/about/values/real-bone-yunshang.jpg",
           imageAlt: "Signature bone broth",
         },
         {
           title: "Quality Ingredients",
-          description: "Locally sourced fresh ingredients, generous portions, and real ingredients you can trust.",
+          description:
+            "We handpick fresh vegetables, meats, and other ingredients every day, maintaining strict quality so every dish is fresh, healthy, and trustworthy.",
           image: "/images/about/values/fresh-yunshang.jpg",
           imageAlt: "Quality ingredients",
         },
         {
           title: "Menu Variety",
-          description: "From classic crossing-the-bridge noodles to signature flavors, plus cold dishes and snacks for every taste.",
+          description:
+            "From classic crossing-the-bridge noodles to creative signature flavors, our diverse menu helps every guest find a bowl they love.",
           image: "/images/about/values/variety-yunshang.jpg",
           imageAlt: "Menu variety",
         },
       ],
     },
     popularDishes: {
-      title: "Popular Picks",
-      subtitle: "Signature bowls that define the Yunshang experience",
+      title: "Beloved Yunshang Bowls",
+      subtitle: "",
       ctaLabel: "View Menu",
       ctaHref: "/en/menu",
       items: [
         {
           title: "Classic Original Crossing-the-Bridge Noodles",
-          tagline: "Heritage flavor, broth that locks in freshness",
+          tagline: "3,000 bowls sold every day!",
           image: "/images/about/popular/original.jpg",
           imageAlt: "Classic original crossing-the-bridge noodles",
+          tagImage: "/images/about/decorative/icon-white-01.png",
         },
         {
           title: "Tomato Crossing-the-Bridge Noodles",
-          tagline: "Bright, savory tomato aroma",
+          tagline: "Every bite is bright and sweet!",
           image: "/images/about/popular/tomato.jpg",
           imageAlt: "Tomato crossing-the-bridge noodles",
+          tagImage: "/images/about/decorative/icon-white-02.png",
         },
         {
           title: "Pickled Fish Rice Noodles",
-          tagline: "Sour, spicy, and irresistibly appetizing",
+          tagline: "The best pickled fish noodles in town!",
           image: "/images/about/popular/sour-fish.jpg",
           imageAlt: "Pickled fish rice noodles",
+          tagImage: "/images/about/decorative/icon-white-03.png",
         },
         {
           title: "Sour Soup Enoki Beef Rice Noodles",
-          tagline: "Tangy broth with tender beef",
+          tagline: "Generous beef, rich broth, more freshness!",
           image: "/images/about/popular/sour-beef.jpg",
           imageAlt: "Sour soup enoki beef rice noodles",
+          tagImage: "/images/about/decorative/icon-white-04.png",
         },
       ],
     },
