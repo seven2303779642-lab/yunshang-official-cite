@@ -1,14 +1,15 @@
 "use client";
 
 import StoreNearbyButton from "@/components/home/StoreNearbyButton";
-import type { SiteContent } from "@/data/siteContent";
+import type { Locale, SiteContent } from "@/data/siteContent";
 import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
 
 type StoreBannerProps = {
   content: SiteContent["home"]["storeBanner"];
+  locale: Locale;
 };
 
-export default function StoreBanner({ content }: StoreBannerProps) {
+export default function StoreBanner({ content, locale }: StoreBannerProps) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (
@@ -25,7 +26,7 @@ export default function StoreBanner({ content }: StoreBannerProps) {
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
         <div ref={ref}>
           <h2
-            className={`type-display-title !text-white ${scrollRevealClass(isVisible)}`}
+            className={`type-display-title !text-white${locale === "en" ? " uppercase" : ""} ${scrollRevealClass(isVisible)}`}
           >
             {content.title}
           </h2>

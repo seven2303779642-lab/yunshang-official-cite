@@ -13,7 +13,7 @@ type HomePageProps = {
   locale: Locale;
 };
 
-export default function HomePage({ content }: HomePageProps) {
+export default function HomePage({ content, locale }: HomePageProps) {
   return (
     <>
       <Navbar />
@@ -27,7 +27,7 @@ export default function HomePage({ content }: HomePageProps) {
         <div id="features">
           <FeatureCards content={content.home.featureCards} />
         </div>
-        <StoreBanner content={content.home.storeBanner} />
+        <StoreBanner content={content.home.storeBanner} locale={locale} />
         <div id="menu-showcase">
           <MenuShowcase content={content.home.menuShowcase} />
         </div>

@@ -151,8 +151,7 @@ export const enContent: SiteContent = {
     },
     "orderBanner": {
       "imageAlt": "Yunshang hot broth and rice noodles",
-      "titleImage": "/images/home/order-banner/order-title-en.svg",
-      "titleImageAlt": "your perfect noodle bowl awaits!",
+      "titleText": "your perfect noodle bowl awaits!",
       "headingLines": [
         "AFTER A LONG DAY, SKIP THE COOKING",
         "AND ENJOY A WARM, HEARTY NOODLE BOWL!"

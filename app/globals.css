@@ -22,6 +22,14 @@
   src: url("https://yunshang.ca/wp-content/uploads/Universal-Serif.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Heaters";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/order-title-en-heaters.ttf") format("truetype");
+}
+
 :root {
   /* Brand colors from Yunshang Elementor kit */
   --color-red: #c1413d;
@@ -231,14 +239,17 @@ button {
   letter-spacing: normal;
 }
 
-.order-banner-title-image {
-  display: block;
+.order-banner-title-text {
   position: relative;
   z-index: 1;
-  width: min(1000px, 92vw);
-  max-width: 92vw;
-  height: auto;
   margin: 0 auto 32px;
+  max-width: 92vw;
+  font-family: "Heaters", var(--font-display);
+  font-size: 98px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #fff5f0;
+  text-align: center;
 }
 
 .order-banner__title {
@@ -258,7 +269,7 @@ button {
   color: var(--color-white);
 }
 
-.order-banner--with-title-image .order-banner__title-line {
+.order-banner--with-title-text .order-banner__title-line {
   background: var(--color-red);
   padding: 6px 16px;
   box-decoration-break: clone;
@@ -266,7 +277,7 @@ button {
 }
 
 @media (min-width: 768px) {
-  .order-banner-title-image {
+  .order-banner-title-text {
     margin-bottom: 36px;
   }
 
@@ -276,17 +287,15 @@ button {
 }
 
 @media (min-width: 1025px) {
-  .order-banner-title-image {
-    width: min(1000px, 88vw);
-    max-width: 1000px;
+  .order-banner-title-text {
     margin-bottom: 40px;
   }
 
-  .order-banner:not(.order-banner--with-title-image) .order-banner__title {
+  .order-banner:not(.order-banner--with-title-text) .order-banner__title {
     gap: 20px;
   }
 
-  .order-banner:not(.order-banner--with-title-image) .order-banner__title-line {
+  .order-banner:not(.order-banner--with-title-text) .order-banner__title-line {
     font-size: 64px;
     font-weight: 400;
     line-height: 1.1;
@@ -294,16 +303,26 @@ button {
 }
 
 @media (max-width: 767px) {
-  .order-banner-title-image {
-    width: min(92vw, 400px);
-    margin-bottom: 28px;
+  .order-banner-title-text {
+    font-size: 57px;
+    margin-bottom: 20px;
   }
 
   .order-banner__title-line {
     font-size: 30px;
   }
 
-  .order-banner--with-title-image .order-banner__content {
+  .order-banner--with-title-text .order-banner__title-line {
+    align-self: center;
+    width: fit-content;
+    max-width: 92vw;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .order-banner--with-title-text .order-banner__content {
     padding-top: 3.25rem;
   }
 }

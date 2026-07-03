@@ -14,7 +14,7 @@ export default function OrderBanner({ content }: OrderBannerProps) {
   return (
     <section
       className={`order-banner relative min-h-[460px] overflow-hidden bg-black text-white min-[1025px]:min-h-[500px]${
-        content.titleImage ? " order-banner--with-title-image" : ""
+        content.titleText ? " order-banner--with-title-text" : ""
       }`}
     >
       <img
@@ -27,13 +27,8 @@ export default function OrderBanner({ content }: OrderBannerProps) {
       <div className="absolute inset-0 bg-black/30" />
 
       <div className="order-banner__content relative z-20 flex min-h-[460px] flex-col items-center justify-center px-6 pb-[118px] pt-16 text-center min-[1025px]:min-h-[500px] min-[1025px]:pb-[135px] min-[1025px]:pt-20">
-        {content.titleImage ? (
-          <img
-            src={content.titleImage}
-            alt={content.titleImageAlt ?? ""}
-            className="order-banner-title-image"
-            draggable={false}
-          />
+        {content.titleText ? (
+          <p className="order-banner-title-text">{content.titleText}</p>
         ) : null}
 
         <h2

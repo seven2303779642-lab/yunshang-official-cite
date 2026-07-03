@@ -246,8 +246,7 @@ export type SiteContent = {
     };
     orderBanner: {
       imageAlt: string;
-      titleImage?: string;
-      titleImageAlt?: string;
+      titleText?: string;
       headingLines: [string, string];
       pickupButton: string;
       deliveryButton: string;

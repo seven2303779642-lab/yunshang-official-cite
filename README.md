@@ -413,7 +413,7 @@ npm run build
   - `public/images/home/en/`（about-intro 标题、menu-showcase 标签/标题、hero-sliders）
   - `public/images/about/en/`（hero、popular dish 标签）
   - `public/images/events/en/cards/`（8 张活动英文海报 + 1 张 8 周年 source-only）
-- Home：`AboutIntro`、`MenuShowcase` 英文图接入 `enContent`；`OrderBanner` 英文标题使用 `order-title-en.svg`。
+- Home：`AboutIntro`、`MenuShowcase` 英文图接入 `enContent`；`OrderBanner` 英文标题使用 Heaters 字体文字（`public/fonts/order-title-en-heaters.ttf`，原 `order-title-en.svg` 已移除）。
 - About：英文 hero 与 popular dish 标签图接入。
 - Events：`eventsManifest.json` 为 8 条活动补充 `imageEn`，列表按 locale 切换海报。
 - `HeroSlider` 轮播改为从 content 读取 `slides`；英文页使用 `slider-2`–`slider-5`，mobile 无独立图时回退为 desktop 图。
