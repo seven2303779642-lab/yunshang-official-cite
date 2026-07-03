@@ -214,27 +214,31 @@ export const enContent: SiteContent = {
       "items": [
         {
           "title": "Authentic Rice Noodles",
+          "titleLines": ["Authentic", "Rice Noodles"],
           "description": "Made from 100% pure rice, gluten-free, and crafted with traditional techniques for a perfectly chewy, silky bite.",
           "image": "/images/about/values/rice-noodle-yunshang.jpg",
           "imageAlt": "Authentic rice noodles"
         },
         {
           "title": "12-Hour Slow-Simmered Broth",
+          "titleLines": ["12-Hour", "Slow-Simmered Broth"],
           "description": "Rich and aromatic, made with real pork bones, free-range chicken, and Yunnan ham—no shortcuts, just pure flavour.",
           "image": "/images/about/values/real-bone-yunshang.jpg",
           "imageAlt": "12-hour slow-simmered broth"
         },
         {
-          "title": "Fresh, Quality Ingredients",
-          "description": "Only the freshest meats and vegetables, carefully selected every day for a meal you can taste and trust.",
-          "image": "/images/about/values/fresh-yunshang.jpg",
-          "imageAlt": "Fresh, quality ingredients"
-        },
-        {
           "title": "A Bowl for Every Craving",
+          "titleLines": ["A Bowl", "for Every Craving"],
           "description": "From comforting classics to bold new flavours, there’s something for everyone.",
           "image": "/images/about/values/variety-yunshang.jpg",
           "imageAlt": "A bowl for every craving"
+        },
+        {
+          "title": "Fresh, Quality Ingredients",
+          "titleLines": ["Fresh,", "Quality Ingredients"],
+          "description": "Only the freshest meats and vegetables, carefully selected every day for a meal you can taste and trust.",
+          "image": "/images/about/values/fresh-yunshang.jpg",
+          "imageAlt": "Fresh, quality ingredients"
         }
       ]
     },
@@ -246,6 +250,11 @@ export const enContent: SiteContent = {
       "items": [
         {
           "title": "Original Crossing-the-Bridge Rice Noodle Soup",
+          "titleLines": [
+            "Original",
+            "Crossing-the-Bridge",
+            "Rice Noodle Soup"
+          ],
           "tagline": "",
           "image": "/images/about/popular/original.jpg",
           "imageAlt": "Original Crossing-the-Bridge Rice Noodle Soup",
@@ -253,6 +262,11 @@ export const enContent: SiteContent = {
         },
         {
           "title": "Tomato Crossing-the-Bridge Rice Noodle Soup",
+          "titleLines": [
+            "Tomato",
+            "Crossing-the-Bridge",
+            "Rice Noodle Soup"
+          ],
           "tagline": "",
           "image": "/images/about/popular/tomato.jpg",
           "imageAlt": "Tomato Crossing-the-Bridge Rice Noodle Soup",
@@ -260,6 +274,11 @@ export const enContent: SiteContent = {
         },
         {
           "title": "Chinese Sauerkraut Fish Rice Noodle Soup",
+          "titleLines": [
+            "Chinese",
+            "Sauerkraut Fish",
+            "Rice Noodle Soup"
+          ],
           "tagline": "",
           "image": "/images/about/popular/sour-fish.jpg",
           "imageAlt": "Chinese Sauerkraut Fish Rice Noodle Soup",
@@ -267,6 +286,11 @@ export const enContent: SiteContent = {
         },
         {
           "title": "Tomato Rice Noodle Soup with Beef & Enoki Mushroom",
+          "titleLines": [
+            "Tomato Rice",
+            "Noodle Soup with",
+            "Beef & Enoki Mushroom"
+          ],
           "tagline": "",
           "image": "/images/about/popular/sour-beef.jpg",
           "imageAlt": "Tomato Rice Noodle Soup with Beef & Enoki Mushroom",
@@ -298,71 +322,6 @@ export const enContent: SiteContent = {
         "Appetizers",
         "Desserts"
       ]
-    },
-    "featuredItems": {
-      "title": "Popular Picks",
-      "subtitle": "Find your next bowl from Yunshang’s signature rice noodle soups.",
-      "ctaLabel": "Online Order",
-      "ctaHref": "/en/order",
-      "items": [
-        {
-          "title": "Original Crossing-the-Bridge Rice Noodle Soup",
-          "description": "A rich bone broth simmered for 12 hours, paired with 12 flavourful toppings and rice noodles. The broth is delicious and nutrient-rich.",
-          "image": "/images/menu/items/original-bone-broth.jpg",
-          "imageAlt": "Original Crossing-the-Bridge Rice Noodle Soup",
-          "badges": [
-            "Classic"
-          ]
-        },
-        {
-          "title": "Tomato Crossing-the-Bridge Rice Noodle Soup",
-          "description": "Made with a tangy-sweet broth from fresh tomatoes, paired with 12 fresh ingredients and rice noodles. The broth is tangy and delicious.",
-          "image": "/images/menu/items/tomato-rice-noodle.jpg",
-          "imageAlt": "Tomato Crossing-the-Bridge Rice Noodle Soup",
-          "badges": [
-            "Signature",
-            "Vegetarian Option Available"
-          ]
-        },
-        {
-          "title": "Chinese Sauerkraut Fish Rice Noodle Soup",
-          "description": "Made with sauerkraut and fresh fish slices as the main ingredients, paired with a unique sauerkraut broth.",
-          "image": "/images/menu/items/pickled-fish.jpg",
-          "imageAlt": "Chinese Sauerkraut Fish Rice Noodle Soup",
-          "badges": [
-            "Medium Spicy",
-            "Must Try"
-          ]
-        },
-        {
-          "title": "Spicy & Sour Rice Noodle Soup With Beef & Enoki Mushroom",
-          "description": "Featuring a bold, tangy, and spicy broth, complemented by tender beef slices and delicate enoki mushrooms.",
-          "image": "/images/menu/items/sour-beef.jpg",
-          "imageAlt": "Spicy & Sour Rice Noodle Soup With Beef & Enoki Mushroom",
-          "badges": [
-            "Hot",
-            "Signature"
-          ]
-        },
-        {
-          "title": "Spicy Crossing-the-Bridge Rice Noodle Soup",
-          "description": "Made with a signature Sichuan spicy base, featuring a rich and bold broth paired with 12 fresh ingredients and rice noodles. Full of spice and aroma, it offers a unique Sichuan flavour experience.",
-          "image": "/images/menu/items/spicy-rice-noodle.jpg",
-          "imageAlt": "Spicy Crossing-the-Bridge Rice Noodle Soup",
-          "badges": [
-            "Medium Spicy"
-          ]
-        },
-        {
-          "title": "Green Peppercorn Rice Noodle Soup",
-          "description": "Made with a broth of Sichuan peppercorns and spicy flavours, paired with 12 fresh ingredients and rice noodles, it offers a fragrant, spicy taste with a numbing aroma and refreshing flavour.",
-          "image": "/images/menu/items/peppercorn-rice-noodle.jpg",
-          "imageAlt": "Green Peppercorn Rice Noodle Soup",
-          "badges": [
-            "Medium Spicy"
-          ]
-        }
-      ]
     }
   },
   "locations": {
@@ -374,144 +333,7 @@ export const enContent: SiteContent = {
       "province": "Province filter",
       "region": "Region filter"
     },
-    "filters": {
-      "title": "Select Province",
-      "items": [
-        "All",
-        "Alberta",
-        "British Columbia",
-        "Ontario",
-        "Manitoba"
-      ]
-    },
-    "locations": {
-      "title": "Yunshang Locations",
-      "subtitle": "Find a YUNSHANG Store nearest you to visit or order online for pickup or delivery.",
-      "directionsLabel": "Get Directions",
-      "items": [
-        {
-          "name": "Warden",
-          "province": "Ontario",
-          "region": "Scarborough",
-          "address": "Unit C1-1a, 7060 Warden Ave., Markham, ON L3R 5V1",
-          "phone": "(905) 604-1258",
-          "hours": "Mon-Sun 11:00AM – 11:00PM",
-          "image": "/images/stores/locations/warden.png",
-          "imageAlt": "Warden",
-          "directionsHref": "#"
-        },
-        {
-          "name": "First Markham Place Branch",
-          "province": "Ontario",
-          "region": "Markham",
-          "address": "Unit 16, 3235 Highway 7 East, Markham, ON L3R 3P3",
-          "phone": "(905) 604-5789",
-          "hours": "Mon-Sun 11:00AM – 02:00AM",
-          "image": "/images/stores/locations/fmp.png",
-          "imageAlt": "First Markham Place Branch",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Bayview Hill",
-          "province": "Ontario",
-          "region": "Richmond Hill",
-          "address": "Unit 16, 9665 Bayview Ave, Richmond Hill, ON L4C 9V4",
-          "phone": "(905) 237-9758",
-          "hours": "Mon-Sun 11:30AM – 10:00PM",
-          "image": "/images/stores/locations/bayview.png",
-          "imageAlt": "Bayview Hill",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Unionville",
-          "province": "Ontario",
-          "region": "Markham",
-          "address": "Unit C4, 8380 Kennedy Rd, Markham, ON L3R 0W4",
-          "phone": "(905) 305-6661",
-          "hours": "Mon-Sun 11:00AM – 10:00PM",
-          "image": "/images/stores/locations/unionville.png",
-          "imageAlt": "Unionville",
-          "directionsHref": "#"
-        },
-        {
-          "name": "North York",
-          "province": "Ontario",
-          "region": "North York",
-          "address": "Unit 5, 5285 Yonge St, North York, ON M2N 5R3",
-          "phone": "(416) 223-6662",
-          "hours": "Mon-Sun 11:30AM – 5:00AM",
-          "image": "/images/stores/locations/north-york.png",
-          "imageAlt": "North York",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Scarborough",
-          "province": "Ontario",
-          "region": "Scarborough",
-          "address": "Unit 32, 4186 Finch Ave E, Scarborough, ON M1S 3V1",
-          "phone": "(416) 298-4567",
-          "hours": "Mon-Sun 11:00AM – 02:00AM",
-          "image": "/images/stores/locations/scarborough.png",
-          "imageAlt": "Scarborough",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Downtown Toronto",
-          "province": "Ontario",
-          "region": "Toronto",
-          "address": "414 Dundas St W, Toronto, ON M5T 1G7",
-          "phone": "(647) 523-5555",
-          "hours": "Mon-Thur & Sun 11:00AM – 10:30PM\nFri-Sat 11:00AM – 11:00PM",
-          "image": "/images/stores/locations/downtown-toronto.png",
-          "imageAlt": "Downtown Toronto",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Burnaby",
-          "province": "British Columbia",
-          "region": "Burnaby",
-          "address": "Unit 1605, 4500 Kingsway, Burnaby, BC V5H 2A9",
-          "phone": "(604) 568-1616",
-          "hours": "Mon-Sun 10:00AM – 12:00AM",
-          "image": "/images/stores/locations/burnaby.png",
-          "imageAlt": "Burnaby",
-          "directionsHref": "#"
-        },
-        {
-          "name": "UBC Branch",
-          "province": "British Columbia",
-          "region": "Vancouver",
-          "address": "Unit 201, 5728 University Blvd, Vancouver, BC V6T 1K6",
-          "phone": "(604) 558-3816",
-          "hours": "Mon-Sun 10:00AM – 10:00PM",
-          "image": "/images/stores/locations/vancouver.png",
-          "imageAlt": "UBC Branch",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Calgary",
-          "province": "Alberta",
-          "region": "Calgary",
-          "address": "111 2 Ave SE , Calgary, AB T2G 0B2",
-          "phone": "(587) 353-5488",
-          "hours": "Mon-Sun 11:00AM – 10:00PM",
-          "image": "/images/stores/locations/calgary.png",
-          "imageAlt": "Calgary",
-          "directionsHref": "#"
-        },
-        {
-          "name": "Edmonton",
-          "province": "Alberta",
-          "region": "Edmonton",
-          "address": "10167 109 St. NW, Edmonton, AB T5J 3M5",
-          "phone": "(587) 402-8979",
-          "hours": "Mon-Sun 11:00AM – 11:00PM",
-          "image": "/images/stores/locations/edmonton.png",
-          "imageAlt": "Edmonton",
-          "directionsHref": "#"
-        }
-      ]
-    }
+    "directionsLabel": "Get Directions"
   },
   "events": {
     "hero": {
@@ -520,49 +342,6 @@ export const enContent: SiteContent = {
       "desktopImage": "/images/events/hero/rice-noodle-festival-web.webp",
       "mobileImage": "/images/events/hero/rice-noodle-festival-mobile.webp",
       "imageAlt": "Yunshang event banner"
-    },
-    "list": {
-      "title": "Events",
-      "subtitle": "Stay updated on Yunshang promotions, seasonal campaigns, and new dishes.",
-      "ctaLabel": "View Details",
-      "items": [
-        {
-          "title": "2026 Rice Noodle Festival | 2nd Bowl 50% Off",
-          "date": "May 25 – May 31, 2026",
-          "excerpt": "The annual Yunshang Rice Noodle Festival is back! VIP members who dine in and order any two rice noodle bowls in the same transaction will receive 50% off the lower-priced bowl.",
-          "image": "/images/events/hero/rice-noodle-festival-web.webp",
-          "imageAlt": "2026 Rice Noodle Festival | 2nd Bowl 50% Off",
-          "href": "#",
-          "tag": "Festival"
-        },
-        {
-          "title": "Yunshang 9th Anniversary",
-          "date": "Aug 30 – Sept 1, 2025",
-          "excerpt": "Nine amazing years, same delicious promise — and we’re celebrating big! For 3 days only, enjoy 9 of our most-loved noodle bowls for just $9.99 each.",
-          "image": "/images/events/cards/ninth-anniversary.png",
-          "imageAlt": "Yunshang 9th Anniversary",
-          "href": "#",
-          "tag": "Anniversary"
-        },
-        {
-          "title": "Free Coconut Lava Ball for Kids",
-          "date": "February 17–19, 2024",
-          "excerpt": "Happy Family Day long weekend! From February 17th, 2024 to February 19th, 2024, children under 12 years old will receive a complimentary dessert.",
-          "image": "/images/events/cards/family-day.jpg",
-          "imageAlt": "Free Coconut Lava Ball for Kids",
-          "href": "#",
-          "tag": "Holiday"
-        },
-        {
-          "title": "New Dish Tasting Event",
-          "date": "November 15th, 2024 ~ December 15th, 2024",
-          "excerpt": "The New fall-winter limited edition—Chicken & Pork Tripe Rice Noodle Soup with Peppercorn is now available! Redeem your New Dish Coupon and complete a survey to enjoy a free taste.",
-          "image": "/images/events/cards/pork-tripe-web.jpg",
-          "imageAlt": "New Dish Tasting Event",
-          "href": "#",
-          "tag": "New Dish"
-        }
-      ]
     }
   },
   "footer": {

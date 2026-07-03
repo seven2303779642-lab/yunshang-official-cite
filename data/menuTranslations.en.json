@@ -1,150 +1,206 @@
 {
-  "过桥米线-原味骨汤过桥米线.jpg": {
+  "crossing-original-bone-broth": {
     "name": "Original Crossing-the-Bridge Rice Noodle Soup",
     "description": "A rich bone broth simmered for 12 hours, paired with 12 flavourful toppings and rice noodles. The broth is delicious and nutrient-rich.",
-    "tags": ["Classic"]
+    "tags": [
+      "Classic"
+    ]
   },
-  "过桥米线-川味香辣过桥米线.jpg": {
+  "crossing-spicy-sichuan": {
     "name": "Spicy Crossing-the-Bridge Rice Noodle Soup",
     "description": "Made with a signature Sichuan spicy base, featuring a rich and bold broth paired with 12 fresh ingredients and rice noodles.",
-    "tags": ["Medium Spicy"]
+    "tags": [
+      "Medium Spicy"
+    ]
   },
-  "过桥米线-鲜香番茄过桥米线.jpg": {
+  "crossing-tomato": {
     "name": "Tomato Crossing-the-Bridge Rice Noodle Soup",
     "description": "Made with a tangy-sweet broth from fresh tomatoes, paired with 12 fresh ingredients and rice noodles.",
-    "tags": ["Signature", "Vegetarian Option Available"]
+    "tags": [
+      "Signature",
+      "Vegetarian Option Available"
+    ]
   },
-  "过桥米线-鲜麻藤椒过桥米线.jpg": {
+  "crossing-green-peppercorn": {
     "name": "Green Peppercorn Rice Noodle Soup",
     "description": "Made with a broth of Sichuan peppercorns and spicy flavours, paired with 12 fresh ingredients and rice noodles.",
-    "tags": ["Medium Spicy"]
+    "tags": [
+      "Medium Spicy"
+    ]
   },
-  "过桥米线-椰香咖喱过桥米线.jpg": {
+  "crossing-coconut-curry": {
     "name": "Coconut Curry Crossing-the-Bridge Rice Noodle Soup",
     "description": "A fragrant coconut milk and curry broth paired with 12 fresh ingredients and rice noodles.",
-    "tags": ["Mild Spicy"]
+    "tags": [
+      "Mild Spicy"
+    ]
   },
-  "特色米线-果木烟熏肠旺米线.jpg": {
+  "specialty-smoked-intestine": {
     "name": "Fruitwood Smoked Pork Intestine Rice Noodle Soup",
     "description": "Fruitwood-smoked pork intestine in a rich, spicy broth with tofu and konjac.",
-    "tags": ["Must Try", "Medium Spicy"]
+    "tags": [
+      "Must Try",
+      "Medium Spicy"
+    ]
   },
-  "特色米线-老坛酸菜鱼米线.jpg": {
+  "specialty-sauerkraut-fish": {
     "name": "Chinese Sauerkraut Fish Rice Noodle Soup",
     "description": "Made with sauerkraut and fresh fish slices, paired with a unique sauerkraut broth.",
-    "tags": ["Must Try", "Medium Spicy"]
+    "tags": [
+      "Must Try",
+      "Medium Spicy"
+    ]
   },
-  "特色米线-酸汤金针菇肥牛米线.jpg": {
+  "specialty-sour-beef-enoki": {
     "name": "Spicy & Sour Rice Noodle Soup With Beef & Enoki Mushroom",
     "description": "Featuring a bold, tangy, and spicy broth with tender beef slices and enoki mushrooms.",
-    "tags": ["Signature", "Hot"]
+    "tags": [
+      "Signature",
+      "Hot"
+    ]
   },
-  "特色米线-巴蜀香麻藤椒鱼米线.jpg": {
+  "specialty-sichuan-fish-peppercorn": {
     "name": "Sichuan Green Peppercorn Fish Rice Noodle Soup",
     "description": "Fresh fish slices in a numbing peppercorn broth with silky rice noodles.",
-    "tags": ["Medium Spicy"]
+    "tags": [
+      "Medium Spicy"
+    ]
   },
-  "特色米线-番茄金针菇肥牛米线.jpg": {
+  "specialty-tomato-beef-enoki": {
     "name": "Tomato Rice Noodle Soup with Beef & Enoki Mushroom",
     "description": "A sweet and savory tomato broth with tender beef and enoki mushrooms.",
-    "tags": ["Must Try"]
+    "tags": [
+      "Must Try"
+    ]
   },
-  "凉菜-夫妻肺片.jpg": {
+  "cold-couple-lung-slices": {
     "name": "Beef with Chili Sauce and Cilantro",
     "description": "Premium beef and offal in a signature spicy chili oil sauce.",
-    "tags": ["Must Try", "Medium Spicy"]
+    "tags": [
+      "Must Try",
+      "Medium Spicy"
+    ]
   },
-  "凉菜-口水鸡.jpg": {
+  "cold-mouthwatering-chicken": {
     "name": "Cold Cut Chicken with Chili Sauce",
     "description": "Tender chicken topped with a bold, fragrant chili sauce.",
-    "tags": ["Signature", "Mild Spicy"]
+    "tags": [
+      "Signature",
+      "Mild Spicy"
+    ]
   },
-  "凉菜-盐边牛肉.jpg": {
+  "cold-yanbian-beef": {
     "name": "Yanbian Beef",
     "description": "Carefully selected beef with a distinctive cured flavour.",
-    "tags": ["Medium Spicy"]
+    "tags": [
+      "Medium Spicy"
+    ]
   },
-  "凉菜-果木熏肥肠.jpg": {
+  "cold-smoked-intestine": {
     "name": "Fruitwood Smoked Pork Intestine",
     "description": "Fruitwood-smoked pork intestine with a savoury, aromatic finish.",
-    "tags": ["House Specialty"]
+    "tags": [
+      "House Specialty"
+    ]
   },
-  "凉菜-捞汁脆鲷鱼.jpg": {
+  "cold-crispy-fish": {
     "name": "Crispy Sea Bream in Special Sauce",
     "description": "Crispy sea bream with a bright, tangy dipping sauce.",
-    "tags": ["New", "Mild Spicy"]
+    "tags": [
+      "New",
+      "Mild Spicy"
+    ]
   },
-  "凉菜-西芹猪耳.jpg": {
+  "cold-celery-pig-ear": {
     "name": "Celery with Pig Ear",
     "description": "Crisp celery and pig ear with a light vinegar dressing.",
     "tags": []
   },
-  "凉菜-炝拌土豆丝.jpg": {
+  "cold-potato-shreds": {
     "name": "Potato Slices with Chili Sauce",
     "description": "Shredded potato with peppercorn chili oil for a tangy bite.",
-    "tags": ["Signature", "Mild Spicy"]
+    "tags": [
+      "Signature",
+      "Mild Spicy"
+    ]
   },
-  "凉菜-红油豆腐丝.png": {
+  "cold-tofu-sheets": {
     "name": "Shredded Tofu with Chili Oil",
     "description": "Fine shredded tofu in a rich chili oil dressing.",
-    "tags": ["Mild Spicy"]
+    "tags": [
+      "Mild Spicy"
+    ]
   },
-  "凉菜-拍黄瓜.jpg": {
+  "cold-cucumber": {
     "name": "Smashed Cucumber",
     "description": "Fresh cucumber smashed and tossed with garlic and vinegar.",
     "tags": []
   },
-  "凉菜-凉拌海带丝.jpg": {
+  "cold-seaweed": {
     "name": "Seaweed Salad",
     "description": "Seaweed tossed with garlic, vinegar, and chili.",
     "tags": []
   },
-  "小吃-盐酥鸡.png": {
+  "snack-salted-crispy-chicken": {
     "name": "Salty Popcorn Chicken",
     "description": "Crispy popcorn chicken with a savoury seasoned crust.",
-    "tags": ["Must Try"]
+    "tags": [
+      "Must Try"
+    ]
   },
-  "小吃-蒜香鸡脆骨.jpg": {
+  "snack-garlic-cartilage": {
     "name": "Garlic Chicken Cartilage",
     "description": "Crispy chicken cartilage with a fragrant garlic finish.",
-    "tags": ["Mild Spicy"]
+    "tags": [
+      "Mild Spicy"
+    ]
   },
-  "小吃-蒜泥炸豆腐.jpg": {
+  "snack-fried-tofu": {
     "name": "Deep Fried Tofu with Garlic Sauce",
     "description": "Golden fried tofu topped with garlic sauce.",
-    "tags": ["Mild Spicy"]
+    "tags": [
+      "Mild Spicy"
+    ]
   },
-  "小吃-香炸鱿鱼须.png": {
+  "snack-fried-squid": {
     "name": "Crispy Fried Squid Tentacles",
     "description": "Lightly battered squid tentacles fried until crisp.",
-    "tags": ["Signature"]
+    "tags": [
+      "Signature"
+    ]
   },
-  "小吃-新奥尔良鸡翅.jpg": {
+  "snack-orleans-wings": {
     "name": "New Orleans Fried Chicken Wings",
     "description": "Chicken wings marinated in New Orleans spices and fried to perfection.",
     "tags": []
   },
-  "小吃-秘制肉夹馍(猪肉).png": {
+  "snack-roujiamo": {
     "name": "Secret Recipe Chinese Burger (Pork)",
     "description": "Slow-braised pork in a soft, freshly baked bun.",
-    "tags": ["Signature"]
+    "tags": [
+      "Signature"
+    ]
   },
-  "小吃-麻辣酥小排.jpg": {
+  "snack-crispy-ribs": {
     "name": "Spicy Crispy Pork Ribs",
     "description": "Crispy pork ribs tossed in a spicy, aromatic seasoning.",
-    "tags": ["Medium Spicy"]
+    "tags": [
+      "Medium Spicy"
+    ]
   },
-  "甜品-椰汁流心球.jpg": {
+  "dessert-coconut-ball": {
     "name": "Coconut Lava Ball",
     "description": "Crispy shell with a warm coconut filling inside.",
-    "tags": ["Must Try"]
+    "tags": [
+      "Must Try"
+    ]
   },
-  "甜品-红糖糍粑.jpg": {
+  "dessert-brown-sugar-cake": {
     "name": "Brown Sugar Rice Cake",
     "description": "Crispy glutinous rice cake with brown sugar syrup and soybean powder.",
     "tags": []
   },
-  "甜品-红豆南瓜饼.jpg": {
+  "dessert-red-bean-pumpkin": {
     "name": "Red Bean Pumpkin Pancake",
     "description": "Soft pumpkin pancake filled with sweet red bean paste.",
     "tags": []

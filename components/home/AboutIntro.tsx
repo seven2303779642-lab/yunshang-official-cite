@@ -1,8 +1,9 @@
 "use client";
 
 import BrandButton from "@/components/ui/BrandButton";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import type { SiteContent } from "@/data/siteContent";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const VIDEO_EMBED_URL =
   "https://www.youtube.com/embed/H_a0OlznLLs?autoplay=1&rel=0&modestbranding=1";
@@ -13,36 +14,6 @@ type AboutIntroProps = {
 
 export default function AboutIntro({ content }: AboutIntroProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [isDesktopCloudVisible, setIsDesktopCloudVisible] = useState(false);
-  const [isMobileCloudVisible, setIsMobileCloudVisible] = useState(false);
-  const desktopCloudRef = useRef<HTMLImageElement>(null);
-  const mobileCloudRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const cloudImages = [
-      { ref: desktopCloudRef, onVisible: () => setIsDesktopCloudVisible(true) },
-      { ref: mobileCloudRef, onVisible: () => setIsMobileCloudVisible(true) },
-    ] as const;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          const match = cloudImages.find(({ ref }) => ref.current === entry.target);
-          match?.onVisible();
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    cloudImages.forEach(({ ref }) => {
-      if (ref.current) observer.observe(ref.current);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     if (!isVideoOpen) return;
@@ -89,16 +60,15 @@ export default function AboutIntro({ content }: AboutIntroProps) {
         </BrandButton>
       </div>
 
-      <img
-        ref={desktopCloudRef}
-        src="/images/home/decorative/cloud.svg"
-        alt=""
-        aria-hidden="true"
-        className={`pointer-events-none absolute left-[calc(50%+115px)] top-[105px] z-30 hidden h-[286px] w-[434px] -translate-x-1/2 select-none object-contain transition-opacity duration-700 ease-in-out min-[1025px]:block ${
-          isDesktopCloudVisible ? "opacity-100" : "opacity-0"
-        }`}
-        draggable={false}
-      />
+      <ScrollReveal className="pointer-events-none absolute left-[calc(50%+115px)] top-[105px] z-30 hidden h-[286px] w-[434px] -translate-x-1/2 select-none min-[1025px]:block">
+        <img
+          src="/images/home/decorative/cloud.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-contain"
+          draggable={false}
+        />
+      </ScrollReveal>
 
       <div className="relative h-[300px] overflow-hidden bg-black min-[768px]:h-[488px] min-[1025px]:h-auto min-[1025px]:min-h-[500px]">
         <img
@@ -109,16 +79,15 @@ export default function AboutIntro({ content }: AboutIntroProps) {
         />
         <div className="absolute inset-0 bg-black/10" />
 
-        <img
-          ref={mobileCloudRef}
-          src="/images/home/decorative/cloud.svg"
-          alt=""
-          aria-hidden="true"
-          className={`pointer-events-none absolute left-[-64px] top-[130px] z-20 hidden w-[235px] select-none transition-opacity duration-700 ease-in-out min-[768px]:block min-[1025px]:hidden ${
-            isMobileCloudVisible ? "opacity-100" : "opacity-0"
-          }`}
-          draggable={false}
-        />
+        <ScrollReveal className="pointer-events-none absolute left-[-64px] top-[130px] z-20 hidden w-[235px] select-none min-[768px]:block min-[1025px]:hidden">
+          <img
+            src="/images/home/decorative/cloud.svg"
+            alt=""
+            aria-hidden="true"
+            className="w-full object-contain"
+            draggable={false}
+          />
+        </ScrollReveal>
 
         <button
           type="button"

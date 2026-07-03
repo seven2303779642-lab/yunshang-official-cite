@@ -12,7 +12,6 @@ export default function LocationsHero({ content }: LocationsHeroProps) {
       subtitle={content.subtitle}
       imageSrc="/images/locations/banner/locations-banner.jpg"
       imageAlt={content.title}
-      showMobileText={false}
     />
   );
 }

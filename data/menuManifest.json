@@ -3,210 +3,296 @@
     "category": "过桥米线",
     "name": "原味骨汤过桥米线",
     "description": "精心熬煮12小时的浓郁骨汤，搭配12款丰富配菜和米线。汤底鲜美，营养丰富。",
-    "tags": ["经典"],
-    "filename": "过桥米线-原味骨汤过桥米线.jpg"
+    "tags": [
+      "经典"
+    ],
+    "filename": "过桥米线-原味骨汤过桥米线.jpg",
+    "id": "crossing-original-bone-broth"
   },
   {
     "category": "过桥米线",
     "name": "川味香辣过桥米线",
     "description": "采用四川特有的香辣底料，汤底浓郁辛辣，搭配12款丰富配菜和米线，辣味十足，带来独特的川味风味体验。",
-    "tags": ["中辣"],
-    "filename": "过桥米线-川味香辣过桥米线.jpg"
+    "tags": [
+      "中辣"
+    ],
+    "filename": "过桥米线-川味香辣过桥米线.jpg",
+    "id": "crossing-spicy-sichuan"
   },
   {
     "category": "过桥米线",
     "name": "鲜香番茄过桥米线",
     "description": "选用新鲜番茄熬制的酸甜汤底，搭配12款丰富配菜和米线，汤底酸甜可口。",
-    "tags": ["招牌推荐", "可做素食"],
-    "filename": "过桥米线-鲜香番茄过桥米线.jpg"
+    "tags": [
+      "招牌推荐",
+      "可做素食"
+    ],
+    "filename": "过桥米线-鲜香番茄过桥米线.jpg",
+    "id": "crossing-tomato"
   },
   {
     "category": "过桥米线",
     "name": "鲜麻藤椒过桥米线",
     "description": "采用新鲜的藤椒与麻辣结合的汤底，搭配12款丰富配菜和米线，汤底味道鲜香麻辣，有独特的麻香与清爽的口感。",
-    "tags": ["中辣"],
-    "filename": "过桥米线-鲜麻藤椒过桥米线.jpg"
+    "tags": [
+      "中辣"
+    ],
+    "filename": "过桥米线-鲜麻藤椒过桥米线.jpg",
+    "id": "crossing-green-peppercorn"
   },
   {
     "category": "过桥米线",
     "name": "椰香咖喱过桥米线",
     "description": "采用香浓椰奶与咖喱相结合的汤底，搭配12款丰富配菜和米线。汤味浓郁，香气四溢，咖喱的香辣与椰香相得益彰，创造出别具一格的风味。",
-    "tags": ["微辣"],
-    "filename": "过桥米线-椰香咖喱过桥米线.jpg"
+    "tags": [
+      "微辣"
+    ],
+    "filename": "过桥米线-椰香咖喱过桥米线.jpg",
+    "id": "crossing-coconut-curry"
   },
   {
     "category": "特色米线",
     "name": "果木烟熏肠旺米线",
     "description": "选用经过果木烟熏的肥肠，搭配丰富配菜如豆腐、血旺等，汤底浓郁辛辣。",
-    "tags": ["人气必点", "中辣"],
-    "filename": "特色米线-果木烟熏肠旺米线.jpg"
+    "tags": [
+      "人气必点",
+      "中辣"
+    ],
+    "filename": "特色米线-果木烟熏肠旺米线.jpg",
+    "id": "specialty-smoked-intestine"
   },
   {
     "category": "特色米线",
     "name": "老坛酸菜鱼米线",
     "description": "选用酸菜与鲜美的鱼片为主料，搭配独特的酸菜汤底。",
-    "tags": ["人气必点", "中辣"],
-    "filename": "特色米线-老坛酸菜鱼米线.jpg"
+    "tags": [
+      "人气必点",
+      "中辣"
+    ],
+    "filename": "特色米线-老坛酸菜鱼米线.jpg",
+    "id": "specialty-sauerkraut-fish"
   },
   {
     "category": "特色米线",
     "name": "酸汤金针菇肥牛米线",
     "description": "采用浓郁、酸爽且辛辣的汤底，搭配嫩滑肥牛片、脆嫩金针菇和米线。",
-    "tags": ["招牌推荐", "大辣"],
-    "filename": "特色米线-酸汤金针菇肥牛米线.jpg"
+    "tags": [
+      "招牌推荐",
+      "大辣"
+    ],
+    "filename": "特色米线-酸汤金针菇肥牛米线.jpg",
+    "id": "specialty-sour-beef-enoki"
   },
   {
     "category": "特色米线",
     "name": "巴蜀香麻藤椒鱼米线",
     "description": "选用新鲜的藤椒和麻辣汤底，搭配嫩滑的鱼片与米线，汤底麻香十足，辣味适中。",
-    "tags": ["中辣"],
-    "filename": "特色米线-巴蜀香麻藤椒鱼米线.jpg"
+    "tags": [
+      "中辣"
+    ],
+    "filename": "特色米线-巴蜀香麻藤椒鱼米线.jpg",
+    "id": "specialty-sichuan-fish-peppercorn"
   },
   {
     "category": "特色米线",
     "name": "番茄金针菇肥牛米线",
     "description": "采用酸甜可口的番茄汤底，搭配嫩滑的肥牛片和脆嫩的金针菇，汤底清新爽口。",
-    "tags": ["人气必点"],
-    "filename": "特色米线-番茄金针菇肥牛米线.jpg"
+    "tags": [
+      "人气必点"
+    ],
+    "filename": "特色米线-番茄金针菇肥牛米线.jpg",
+    "id": "specialty-tomato-beef-enoki"
   },
   {
     "category": "凉菜",
     "name": "夫妻肺片",
     "description": "选用优质牛肉、牛杂，搭配特制麻辣红油，口感鲜香麻辣。",
-    "tags": ["人气必点", "中辣"],
-    "filename": "凉菜-夫妻肺片.jpg"
+    "tags": [
+      "人气必点",
+      "中辣"
+    ],
+    "filename": "凉菜-夫妻肺片.jpg",
+    "id": "cold-couple-lung-slices"
   },
   {
     "category": "凉菜",
     "name": "口水鸡",
     "description": "嫩滑鸡肉淋上特调红油酱汁，麻辣鲜香。",
-    "tags": ["招牌推荐", "微辣"],
-    "filename": "凉菜-口水鸡.jpg"
+    "tags": [
+      "招牌推荐",
+      "微辣"
+    ],
+    "filename": "凉菜-口水鸡.jpg",
+    "id": "cold-mouthwatering-chicken"
   },
   {
     "category": "凉菜",
     "name": "盐边牛肉",
     "description": "精挑细选的牛肉，采用盐边独特的腌制工艺，鲜嫩多汁，风味独特。",
-    "tags": ["中辣"],
-    "filename": "凉菜-盐边牛肉.jpg"
+    "tags": [
+      "中辣"
+    ],
+    "filename": "凉菜-盐边牛肉.jpg",
+    "id": "cold-yanbian-beef"
   },
   {
     "category": "凉菜",
     "name": "果木熏肥肠",
     "description": "肥肠经过果木熏制，香气四溢，搭配秘制调料，外香里嫩。",
-    "tags": ["本店特色"],
-    "filename": "凉菜-果木熏肥肠.jpg"
+    "tags": [
+      "本店特色"
+    ],
+    "filename": "凉菜-果木熏肥肠.jpg",
+    "id": "cold-smoked-intestine"
   },
   {
     "category": "凉菜",
     "name": "捞汁脆鲷鱼",
     "description": "脆嫩鲷鱼搭配酸甜开胃的捞汁，鲜美爽口，酸辣适中。",
-    "tags": ["新品上架", "微辣"],
-    "filename": "凉菜-捞汁脆鲷鱼.jpg"
+    "tags": [
+      "新品上架",
+      "微辣"
+    ],
+    "filename": "凉菜-捞汁脆鲷鱼.jpg",
+    "id": "cold-crispy-fish"
   },
   {
     "category": "凉菜",
     "name": "西芹猪耳",
     "description": "西芹清脆爽口，猪耳弹牙入味，搭配香醋调味，酸香可口。",
     "tags": [],
-    "filename": "凉菜-西芹猪耳.jpg"
+    "filename": "凉菜-西芹猪耳.jpg",
+    "id": "cold-celery-pig-ear"
   },
   {
     "category": "凉菜",
     "name": "炝拌土豆丝",
     "description": "土豆丝清爽脆口，搭配花椒红油，酸辣开胃。",
-    "tags": ["招牌推荐", "微辣"],
-    "filename": "凉菜-炝拌土豆丝.jpg"
+    "tags": [
+      "招牌推荐",
+      "微辣"
+    ],
+    "filename": "凉菜-炝拌土豆丝.jpg",
+    "id": "cold-potato-shreds"
   },
   {
     "category": "凉菜",
     "name": "红油豆腐丝",
     "description": "细切的豆腐丝搭配浓郁的红油酱汁。",
-    "tags": ["微辣"],
-    "filename": "凉菜-红油豆腐丝.png"
+    "tags": [
+      "微辣"
+    ],
+    "filename": "凉菜-红油豆腐丝.png",
+    "id": "cold-tofu-sheets"
   },
   {
     "category": "凉菜",
     "name": "拍黄瓜",
     "description": "清脆黄瓜拍制，拌以蒜香醋汁，清新爽口。",
     "tags": [],
-    "filename": "凉菜-拍黄瓜.jpg"
+    "filename": "凉菜-拍黄瓜.jpg",
+    "id": "cold-cucumber"
   },
   {
     "category": "凉菜",
     "name": "凉拌海带丝",
     "description": "精选海带丝，搭配蒜香醋辣调料，酸辣清爽。",
     "tags": [],
-    "filename": "凉菜-凉拌海带丝.jpg"
+    "filename": "凉菜-凉拌海带丝.jpg",
+    "id": "cold-seaweed"
   },
   {
     "category": "小吃",
     "name": "盐酥鸡",
     "description": "外脆内嫩的盐酥鸡，炸至金黄酥脆。",
-    "tags": ["人气必点"],
-    "filename": "小吃-盐酥鸡.png"
+    "tags": [
+      "人气必点"
+    ],
+    "filename": "小吃-盐酥鸡.png",
+    "id": "snack-salted-crispy-chicken"
   },
   {
     "category": "小吃",
     "name": "蒜香鸡脆骨",
     "description": "鸡脆骨炸至酥脆，外焦内嫩，蒜香浓郁。",
-    "tags": ["微辣"],
-    "filename": "小吃-蒜香鸡脆骨.jpg"
+    "tags": [
+      "微辣"
+    ],
+    "filename": "小吃-蒜香鸡脆骨.jpg",
+    "id": "snack-garlic-cartilage"
   },
   {
     "category": "小吃",
     "name": "蒜泥炸豆腐",
     "description": "炸至金黄的豆腐外脆内嫩，淋上蒜泥酱汁。",
-    "tags": ["微辣"],
-    "filename": "小吃-蒜泥炸豆腐.jpg"
+    "tags": [
+      "微辣"
+    ],
+    "filename": "小吃-蒜泥炸豆腐.jpg",
+    "id": "snack-fried-tofu"
   },
   {
     "category": "小吃",
     "name": "香炸鱿鱼须",
     "description": "炸至金黄酥脆的鱿鱼须，口感鲜嫩弹牙。",
-    "tags": ["招牌推荐"],
-    "filename": "小吃-香炸鱿鱼须.png"
+    "tags": [
+      "招牌推荐"
+    ],
+    "filename": "小吃-香炸鱿鱼须.png",
+    "id": "snack-fried-squid"
   },
   {
     "category": "小吃",
     "name": "新奥尔良鸡翅",
     "description": "鸡翅经过新奥尔良风味的腌制，外焦里嫩。",
     "tags": [],
-    "filename": "小吃-新奥尔良鸡翅.jpg"
+    "filename": "小吃-新奥尔良鸡翅.jpg",
+    "id": "snack-orleans-wings"
   },
   {
     "category": "小吃",
     "name": "秘制肉夹馍(猪肉)",
     "description": "精选猪肉，秘制调料腌制，搭配软糯的馍饼。",
-    "tags": ["招牌推荐"],
-    "filename": "小吃-秘制肉夹馍(猪肉).png"
+    "tags": [
+      "招牌推荐"
+    ],
+    "filename": "小吃-秘制肉夹馍(猪肉).png",
+    "id": "snack-roujiamo"
   },
   {
     "category": "小吃",
     "name": "麻辣酥小排",
     "description": "外脆内嫩的小排骨，经过麻辣调味，味道辣香四溢。",
-    "tags": ["中辣"],
-    "filename": "小吃-麻辣酥小排.jpg"
+    "tags": [
+      "中辣"
+    ],
+    "filename": "小吃-麻辣酥小排.jpg",
+    "id": "snack-crispy-ribs"
   },
   {
     "category": "甜品",
     "name": "椰汁流心球",
     "description": "椰汁流心球，外层酥脆，内含香浓椰汁。",
-    "tags": ["人气必点"],
-    "filename": "甜品-椰汁流心球.jpg"
+    "tags": [
+      "人气必点"
+    ],
+    "filename": "甜品-椰汁流心球.jpg",
+    "id": "dessert-coconut-ball"
   },
   {
     "category": "甜品",
     "name": "红糖糍粑",
     "description": "外脆内软，糯米糍粑裹上香浓的红糖酱汁，再撒上一层细腻的黄豆粉，软糯香甜。",
     "tags": [],
-    "filename": "甜品-红糖糍粑.jpg"
+    "filename": "甜品-红糖糍粑.jpg",
+    "id": "dessert-brown-sugar-cake"
   },
   {
     "category": "甜品",
     "name": "红豆南瓜饼",
     "description": "金黄香软的南瓜饼，内含红豆馅。",
     "tags": [],
-    "filename": "甜品-红豆南瓜饼.jpg"
+    "filename": "甜品-红豆南瓜饼.jpg",
+    "id": "dessert-red-bean-pumpkin"
   }
 ]

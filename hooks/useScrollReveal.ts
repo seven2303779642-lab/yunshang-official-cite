@@ -8,6 +8,16 @@ type UseScrollRevealOptions = {
   once?: boolean;
 };
 
+export function scrollRevealClass(isVisible: boolean, extraClasses = "") {
+  return [
+    "transition-opacity duration-700 ease-in-out",
+    extraClasses,
+    isVisible ? "opacity-100" : "opacity-0",
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
 export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
   options: UseScrollRevealOptions = {},
 ) {

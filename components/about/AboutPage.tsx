@@ -34,11 +34,16 @@ export function AboutPage({ content }: AboutPageProps) {
           </>
         ) : null}
         <div id="features">
-          <AboutValueGrid content={content.values} />
+          <AboutValueGrid
+            content={content.values}
+            variant={content.enSections ? "en" : "default"}
+          />
         </div>
         {content.enSections ? (
           <AboutEnVideo content={content.enSections.video} />
-        ) : null}
+        ) : (
+          <AboutGallery />
+        )}
         <AboutPopularDishes content={content.popularDishes} />
         <AboutStores content={content.stores} />
       </main>

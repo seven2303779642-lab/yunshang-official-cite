@@ -27,7 +27,8 @@
       "link": "/events/",
       "image": "/images/events/cards/events-云尚6月儿童月！娃娃吃饭领可爱玩具！.jpg",
       "imageEn": "/images/events/en/cards/events-kids-month-en.jpg",
-      "imageFilename": "events-云尚6月儿童月！娃娃吃饭领可爱玩具！.jpg"
+      "imageFilename": "events-云尚6月儿童月！娃娃吃饭领可爱玩具！.jpg",
+      "id": "kids-month"
     },
     {
       "title": "2026 云尚米线节｜第二碗半价",
@@ -51,7 +52,8 @@
       "link": "/events/ricenoodlefestival/",
       "image": "/images/events/cards/events-2026 云尚米线节｜第二碗半价.png",
       "imageEn": "/images/events/en/cards/events-rice-noodle-festival-2026-en.png",
-      "imageFilename": "events-2026 云尚米线节｜第二碗半价.png"
+      "imageFilename": "events-2026 云尚米线节｜第二碗半价.png",
+      "id": "rice-noodle-festival-2026"
     },
     {
       "title": "云尚米线9周年庆｜人气米线 $9.99！",
@@ -78,7 +80,8 @@
       "link": "/events/9thanniversary/",
       "image": "/images/events/cards/events-云尚米线9周年庆｜人气米线 $9.99！.png",
       "imageEn": "/images/events/en/cards/events-9th-anniversary-en.png",
-      "imageFilename": "events-云尚米线9周年庆｜人气米线 $9.99！.png"
+      "imageFilename": "events-云尚米线9周年庆｜人气米线 $9.99！.png",
+      "id": "ninth-anniversary"
     },
     {
       "title": "会员狂欢周|云尚首届【米线节】来啦！",
@@ -99,7 +102,8 @@
       "link": "/events/ricenoodlefestival2025/",
       "image": "/images/events/cards/events-会员狂欢周云尚首届【米线节】来啦！.png",
       "imageEn": "/images/events/en/cards/events-rice-noodle-festival-member-week-en.png",
-      "imageFilename": "events-会员狂欢周云尚首届【米线节】来啦！.png"
+      "imageFilename": "events-会员狂欢周云尚首届【米线节】来啦！.png",
+      "id": "member-week-noodle-festival"
     },
     {
       "title": "$0试新品｜秋冬限定新品猪肚鸡米线来啦！",
@@ -127,7 +131,8 @@
       "link": "/events/tastingsurvey/",
       "image": "/images/events/cards/events-$0试新品｜秋冬限定新品猪肚鸡米线来啦！.jpg",
       "imageEn": "/images/events/en/cards/events-pork-tripe-chicken-new-dish-en.jpg",
-      "imageFilename": "events-$0试新品｜秋冬限定新品猪肚鸡米线来啦！.jpg"
+      "imageFilename": "events-$0试新品｜秋冬限定新品猪肚鸡米线来啦！.jpg",
+      "id": "pork-tripe-trial"
     },
     {
       "title": "幸福家庭日，宝宝有免费甜品吃哦～",
@@ -148,7 +153,8 @@
       "link": "/events/2024-happy-family-day/",
       "image": "/images/events/cards/events-幸福家庭日，宝宝有免费甜品吃哦～.jpg",
       "imageEn": "/images/events/en/cards/events-family-day-en.jpg",
-      "imageFilename": "events-幸福家庭日，宝宝有免费甜品吃哦～.jpg"
+      "imageFilename": "events-幸福家庭日，宝宝有免费甜品吃哦～.jpg",
+      "id": "family-day"
     },
     {
       "title": "2023圣诞活动：超值满赠，好礼不停",
@@ -171,7 +177,8 @@
       "link": "/events/2023-holiday-celebration/",
       "image": "/images/events/cards/events-2023圣诞活动：超值满赠，好礼不停.png",
       "imageEn": "/images/events/en/cards/events-2023-holiday-en.png",
-      "imageFilename": "events-2023圣诞活动：超值满赠，好礼不停.png"
+      "imageFilename": "events-2023圣诞活动：超值满赠，好礼不停.png",
+      "id": "christmas-2023"
     },
     {
       "title": "云尚米线7周年庆:“米线任你吃，金额随你付”",
@@ -191,7 +198,8 @@
       "link": "/events/sickkids/",
       "image": "/images/events/cards/events-云尚米线7周年庆“米线任你吃，金额随你付”.jpg",
       "imageEn": "/images/events/en/cards/events-7th-anniversary-en.jpg",
-      "imageFilename": "events-云尚米线7周年庆“米线任你吃，金额随你付”.jpg"
+      "imageFilename": "events-云尚米线7周年庆“米线任你吃，金额随你付”.jpg",
+      "id": "seventh-anniversary"
     }
   ]
 }

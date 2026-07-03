@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import AboutEnBridgeCopy from "@/components/about/AboutEnBridgeCopy";
 import type { AboutEnBridgeContent } from "@/data/siteContent";
 
@@ -9,9 +10,11 @@ export default function AboutEnBridge({ content }: AboutEnBridgeProps) {
   return (
     <section
       className="about-en-bridge"
-      style={{
-        backgroundImage: `url("${content.cloudBackgroundImage}")`,
-      }}
+      style={
+        {
+          "--about-en-bridge-cloud": `url("${content.cloudBackgroundImage}")`,
+        } as CSSProperties
+      }
     >
       <div className="about-en-bridge__inner">
         <div className="about-en-bridge__content">

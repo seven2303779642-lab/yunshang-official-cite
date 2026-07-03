@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
 import type { AboutEnBridgeContent } from "@/data/siteContent";
 
 type AboutEnBridgeCopyProps = {
@@ -17,17 +17,9 @@ export default function AboutEnBridgeCopy({
 }: AboutEnBridgeCopyProps) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
-  const headingRevealClass = `transition-opacity duration-700 ease-in-out ${
-    isVisible ? "opacity-100" : "opacity-0"
-  }`;
-
-  const bodyRevealClass = `transition-opacity delay-200 duration-700 ease-in-out ${
-    isVisible ? "opacity-100" : "opacity-0"
-  }`;
-
   return (
     <div ref={ref} className="about-en-bridge__copy">
-      <div className={`about-en-bridge__heading ${headingRevealClass}`}>
+      <div className={`about-en-bridge__heading ${scrollRevealClass(isVisible)}`}>
         <img
           src={signOverlayImage}
           alt=""
@@ -44,7 +36,7 @@ export default function AboutEnBridgeCopy({
           ))}
         </h2>
       </div>
-      <div className={`about-en-bridge__body ${bodyRevealClass}`}>
+      <div className={`about-en-bridge__body ${scrollRevealClass(isVisible, "delay-200")}`}>
         {paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

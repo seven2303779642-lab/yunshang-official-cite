@@ -15,7 +15,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Markham-Warden总店.png",
-    "imageFilename": "Ontario-Markham-Warden总店.png"
+    "imageFilename": "Ontario-Markham-Warden总店.png",
+    "id": "ontario-markham-warden"
   },
   {
     "province": "Ontario",
@@ -33,7 +34,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Markham-万锦广场分店.png",
-    "imageFilename": "Ontario-Markham-万锦广场分店.png"
+    "imageFilename": "Ontario-Markham-万锦广场分店.png",
+    "id": "ontario-markham-fmp"
   },
   {
     "province": "Ontario",
@@ -51,7 +53,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Richmond-Hill-富豪山庄分店.png",
-    "imageFilename": "Ontario-Richmond-Hill-富豪山庄分店.png"
+    "imageFilename": "Ontario-Richmond-Hill-富豪山庄分店.png",
+    "id": "ontario-richmond-hill-bayview"
   },
   {
     "province": "Ontario",
@@ -69,7 +72,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Markham-新旺角广场分店.png",
-    "imageFilename": "Ontario-Markham-新旺角广场分店.png"
+    "imageFilename": "Ontario-Markham-新旺角广场分店.png",
+    "id": "ontario-markham-unionville"
   },
   {
     "province": "Ontario",
@@ -87,7 +91,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-North-York-北约克分店.png",
-    "imageFilename": "Ontario-North-York-北约克分店.png"
+    "imageFilename": "Ontario-North-York-北约克分店.png",
+    "id": "ontario-north-york-north-york"
   },
   {
     "province": "Ontario",
@@ -105,7 +110,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Scarborough-士嘉堡分店.png",
-    "imageFilename": "Ontario-Scarborough-士嘉堡分店.png"
+    "imageFilename": "Ontario-Scarborough-士嘉堡分店.png",
+    "id": "ontario-scarborough-scarborough"
   },
   {
     "province": "Ontario",
@@ -123,7 +129,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Downtown-Toronto-唐人街分店.png",
-    "imageFilename": "Ontario-Downtown-Toronto-唐人街分店.png"
+    "imageFilename": "Ontario-Downtown-Toronto-唐人街分店.png",
+    "id": "ontario-downtown-toronto-downtown"
   },
   {
     "province": "Ontario",
@@ -141,7 +148,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Mississauga-密西沙加分店.png",
-    "imageFilename": "Ontario-Mississauga-密西沙加分店.png"
+    "imageFilename": "Ontario-Mississauga-密西沙加分店.png",
+    "id": "ontario-mississauga-mississauga"
   },
   {
     "province": "Ontario",
@@ -159,7 +167,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Aurora-奥罗拉分店.png",
-    "imageFilename": "Ontario-Aurora-奥罗拉分店.png"
+    "imageFilename": "Ontario-Aurora-奥罗拉分店.png",
+    "id": "ontario-aurora-aurora"
   },
   {
     "province": "Ontario",
@@ -177,7 +186,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Waterloo-滑铁卢分店.png",
-    "imageFilename": "Ontario-Waterloo-滑铁卢分店.png"
+    "imageFilename": "Ontario-Waterloo-滑铁卢分店.png",
+    "id": "ontario-waterloo-waterloo"
   },
   {
     "province": "Ontario",
@@ -195,7 +205,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Oakville-奥克维尔分店.png",
-    "imageFilename": "Ontario-Oakville-奥克维尔分店.png"
+    "imageFilename": "Ontario-Oakville-奥克维尔分店.png",
+    "id": "ontario-oakville-oakville"
   },
   {
     "province": "Ontario",
@@ -213,7 +224,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Ontario-Ottawa-渥太华分店.png",
-    "imageFilename": "Ontario-Ottawa-渥太华分店.png"
+    "imageFilename": "Ontario-Ottawa-渥太华分店.png",
+    "id": "ontario-ottawa-ottawa"
   },
   {
     "province": "British Columbia",
@@ -231,7 +243,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/British-Columbia-Richmond-大温列治文分店.png",
-    "imageFilename": "British-Columbia-Richmond-大温列治文分店.png"
+    "imageFilename": "British-Columbia-Richmond-大温列治文分店.png",
+    "id": "bc-richmond-richmond"
   },
   {
     "province": "British Columbia",
@@ -249,7 +262,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/British-Columbia-Vancouver-UBC大学分店.png",
-    "imageFilename": "British-Columbia-Vancouver-UBC大学分店.png"
+    "imageFilename": "British-Columbia-Vancouver-UBC大学分店.png",
+    "id": "bc-vancouver-ubc"
   },
   {
     "province": "British Columbia",
@@ -267,7 +281,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/British-Columbia-Burnaby-本拿比分店.png",
-    "imageFilename": "British-Columbia-Burnaby-本拿比分店.png"
+    "imageFilename": "British-Columbia-Burnaby-本拿比分店.png",
+    "id": "bc-burnaby-burnaby"
   },
   {
     "province": "Alberta",
@@ -285,7 +300,8 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Alberta-Calgary-卡尔加里分店.png",
-    "imageFilename": "Alberta-Calgary-卡尔加里分店.png"
+    "imageFilename": "Alberta-Calgary-卡尔加里分店.png",
+    "id": "alberta-calgary-calgary"
   },
   {
     "province": "Alberta",
@@ -303,6 +319,7 @@
     "deliveryLink": "",
     "status": "",
     "image": "/images/locations/cards/Alberta-Edmonton-埃德蒙顿分店.png",
-    "imageFilename": "Alberta-Edmonton-埃德蒙顿分店.png"
+    "imageFilename": "Alberta-Edmonton-埃德蒙顿分店.png",
+    "id": "alberta-edmonton-edmonton"
   }
 ]

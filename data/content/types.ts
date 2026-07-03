@@ -92,19 +92,6 @@ export type MenuContent = {
     title: string;
     items: string[];
   };
-  featuredItems: {
-    title: string;
-    subtitle: string;
-    ctaLabel: string;
-    ctaHref: string;
-    items: {
-      title: string;
-      description: string;
-      image: string;
-      imageAlt: string;
-      badges: string[];
-    }[];
-  };
 };
 
 export type LocationsContent = {
@@ -116,26 +103,7 @@ export type LocationsContent = {
     province: string;
     region: string;
   };
-  filters: {
-    title: string;
-    items: string[];
-  };
-  locations: {
-    title: string;
-    subtitle: string;
-    directionsLabel: string;
-    items: {
-      name: string;
-      province: string;
-      region: string;
-      address: string;
-      phone: string;
-      hours: string;
-      image: string;
-      imageAlt: string;
-      directionsHref: string;
-    }[];
-  };
+  directionsLabel: string;
 };
 
 export type EventsContent = {
@@ -145,20 +113,6 @@ export type EventsContent = {
     desktopImage?: string;
     mobileImage?: string;
     imageAlt?: string;
-  };
-  list: {
-    title: string;
-    subtitle: string;
-    ctaLabel: string;
-    items: {
-      title: string;
-      date: string;
-      excerpt: string;
-      image: string;
-      imageAlt: string;
-      href: string;
-      tag?: string;
-    }[];
   };
 };
 
@@ -208,6 +162,7 @@ export type AboutContent = {
     title: string;
     items: {
       title: string;
+      titleLines?: string[];
       description: string;
       image: string;
       imageAlt: string;
@@ -220,6 +175,7 @@ export type AboutContent = {
     ctaHref: string;
     items: {
       title: string;
+      titleLines?: string[];
       tagline: string;
       image: string;
       imageAlt: string;

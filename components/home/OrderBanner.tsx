@@ -2,36 +2,14 @@
 
 import BrandButton from "@/components/ui/BrandButton";
 import type { SiteContent } from "@/data/siteContent";
-import { useEffect, useRef, useState } from "react";
+import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
 
 type OrderBannerProps = {
   content: SiteContent["home"]["orderBanner"];
 };
 
 export default function OrderBanner({ content }: OrderBannerProps) {
-  const [isHeadingVisible, setIsHeadingVisible] = useState(false);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    const heading = headingRef.current;
-    if (!heading) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          setIsHeadingVisible(true);
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    observer.observe(heading);
-
-    return () => observer.disconnect();
-  }, []);
+  const { ref, isVisible } = useScrollReveal<HTMLHeadingElement>();
 
   return (
     <section
@@ -59,10 +37,8 @@ export default function OrderBanner({ content }: OrderBannerProps) {
         ) : null}
 
         <h2
-          ref={headingRef}
-          className={`order-banner__title transition-opacity duration-700 ease-in-out ${
-            isHeadingVisible ? "opacity-100" : "opacity-0"
-          }`}
+          ref={ref}
+          className={`order-banner__title ${scrollRevealClass(isVisible)}`}
         >
           <span className="order-banner__title-line">{content.headingLines[0]}</span>
           <span className="order-banner__title-line">{content.headingLines[1]}</span>

@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties, ReactNode } from "react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
 
 type ScrollRevealProps = {
   children: ReactNode;
@@ -18,17 +18,13 @@ export default function ScrollReveal({
 }: ScrollRevealProps) {
   const { ref, isVisible } = useScrollReveal({ threshold });
 
-  const revealClass = `transition-opacity duration-700 ease-in-out ${
-    isVisible ? "opacity-100" : "opacity-0"
-  }`;
-
   const style: CSSProperties | undefined =
     delay > 0 ? { transitionDelay: `${delay}ms` } : undefined;
 
   return (
     <div
       ref={ref}
-      className={`${revealClass}${className ? ` ${className}` : ""}`}
+      className={`${scrollRevealClass(isVisible)}${className ? ` ${className}` : ""}`}
       style={style}
     >
       {children}

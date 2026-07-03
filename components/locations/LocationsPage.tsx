@@ -20,7 +20,7 @@ export function LocationsPage({ content, locale }: LocationsPageProps) {
         <div id="locations">
           <LocationsContent
             locale={locale}
-            directionsLabel={content.locations.directionsLabel}
+            directionsLabel={content.directionsLabel}
             filterAria={content.filterAria}
           />
         </div>

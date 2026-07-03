@@ -2,40 +2,14 @@
 
 import StoreNearbyButton from "@/components/home/StoreNearbyButton";
 import type { SiteContent } from "@/data/siteContent";
-import { useEffect, useRef, useState } from "react";
+import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
 
 type StoreBannerProps = {
   content: SiteContent["home"]["storeBanner"];
 };
 
 export default function StoreBanner({ content }: StoreBannerProps) {
-  const [isTextVisible, setIsTextVisible] = useState(false);
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const textBlock = textRef.current;
-    if (!textBlock) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          setIsTextVisible(true);
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    observer.observe(textBlock);
-
-    return () => observer.disconnect();
-  }, []);
-
-  const revealClass = `transition-opacity duration-700 ease-in-out ${
-    isTextVisible ? "opacity-100" : "opacity-0"
-  }`;
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (
     <section className="relative h-[430px] overflow-hidden bg-black min-[768px]:h-[530px] min-[1025px]:h-[520px]">
@@ -49,15 +23,15 @@ export default function StoreBanner({ content }: StoreBannerProps) {
       <div className="absolute inset-0 bg-black/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-        <div ref={textRef}>
-          <h2 className={`type-display-title !text-white ${revealClass}`}>
+        <div ref={ref}>
+          <h2
+            className={`type-display-title !text-white ${scrollRevealClass(isVisible)}`}
+          >
             {content.title}
           </h2>
 
           <p
-            className={`type-body-copy-emphasis mt-[20px] text-white transition-opacity delay-200 duration-700 ease-in-out ${
-              isTextVisible ? "opacity-100" : "opacity-0"
-            }`}
+            className={`type-body-copy-emphasis mt-[20px] text-white ${scrollRevealClass(isVisible, "delay-200")}`}
           >
             {content.subtitle}
           </p>

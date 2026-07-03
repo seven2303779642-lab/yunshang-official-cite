@@ -60,7 +60,17 @@ export default function AboutPopularDishes({
                 />
               </div>
 
-              <h3 className="about-popular-dishes-name">{item.title}</h3>
+              <h3 className="about-popular-dishes-name">
+                {item.titleLines ? (
+                  item.titleLines.map((line) => (
+                    <span key={line} className="about-popular-dishes-name-line">
+                      {line}
+                    </span>
+                  ))
+                ) : (
+                  item.title
+                )}
+              </h3>
               <p className="about-popular-dishes-tagline">{item.tagline}</p>
             </article>
           ))}

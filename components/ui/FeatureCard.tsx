@@ -12,6 +12,7 @@ type AboutFeatureCardProps = {
   imageSrc: string;
   imageAlt: string;
   title: string;
+  titleLines?: string[];
   description: string;
   titleIconSrc: string;
 };
@@ -97,7 +98,7 @@ export default function FeatureCard(props: FeatureCardProps) {
     );
   }
 
-  const { imageSrc, imageAlt, title, description, titleIconSrc } = props;
+  const { imageSrc, imageAlt, title, titleLines, description, titleIconSrc } = props;
 
   return (
     <article className="feature-card">
@@ -119,7 +120,17 @@ export default function FeatureCard(props: FeatureCardProps) {
             className="feature-card__title-icon"
             draggable={false}
           />
-          <span className="feature-card__title-text">{title}</span>
+          <span className="feature-card__title-text">
+            {titleLines ? (
+              titleLines.map((line) => (
+                <span key={line} className="feature-card__title-line">
+                  {line}
+                </span>
+              ))
+            ) : (
+              title
+            )}
+          </span>
           <img
             src={titleIconSrc}
             alt=""

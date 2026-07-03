@@ -234,7 +234,7 @@ export default function LocationsContent({
   const regionOptions = getRegionOptions(activeProvince, allProvinceLabel);
 
   return (
-    <section className="locations-content bg-[#fff4ec] px-[18px] pb-[120px] pt-6 min-[768px]:px-10 min-[768px]:pb-[160px] min-[768px]:pt-8">
+    <section className="locations-content bg-[#fff4ec] px-[18px] pb-[120px] pt-2 min-[768px]:px-10 min-[768px]:pb-[160px] min-[768px]:pt-8">
       <div className="mx-auto max-w-[1320px]">
         <div className="locations-filters-panel">
           <select

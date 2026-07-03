@@ -4,6 +4,7 @@ import locationTranslationsEn from "./locationTranslations.en.json";
 import type { Locale } from "./content/types";
 
 export type Location = {
+  id: string;
   province: string;
   displayProvince: string;
   region: string;
@@ -36,7 +37,7 @@ export function getLocationName(location: Location, locale: Locale): string {
     return location.name;
   }
 
-  return locationNameMap[location.phone] ?? location.name;
+  return locationNameMap[location.id] ?? location.name;
 }
 
 export function getAllProvinceLabel(locale: Locale): string {
@@ -52,7 +53,7 @@ export function getAllLocations(): Location[] {
 }
 
 export function getLocationKey(location: Location): string {
-  return `${location.province}-${location.region}-${location.name}`;
+  return location.id;
 }
 
 export function getProvinceOptions(locale: Locale): Location["province"][] {

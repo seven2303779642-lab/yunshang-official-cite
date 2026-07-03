@@ -3,6 +3,7 @@ import eventsTranslationsEn from "./eventsTranslations.en.json";
 import type { Locale } from "./content/types";
 
 export type EventItem = {
+  id: string;
   title: string;
   date?: string;
   subtitle?: string;
@@ -49,11 +50,7 @@ const eventTranslationMap = eventsTranslationsEn as Record<
 >;
 
 function getEventTranslation(event: EventItem): EventTranslationEn | undefined {
-  if (!event.imageFilename) {
-    return undefined;
-  }
-
-  return eventTranslationMap[event.imageFilename];
+  return eventTranslationMap[event.id];
 }
 
 export function getEventTitle(event: EventItem, locale: Locale): string {
@@ -169,7 +166,7 @@ export function getEventImage(event: EventItem, locale: Locale): string {
 }
 
 export function getEventKey(event: EventItem): string {
-  return `${event.title}-${event.imageFilename ?? event.image}`;
+  return event.id;
 }
 
 export function isEventLinkClickable(link?: string): boolean {

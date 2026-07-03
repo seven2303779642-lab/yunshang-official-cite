@@ -14,6 +14,7 @@ export type MenuTag =
   | "本店特色";
 
 export type MenuItem = {
+  id: string;
   category: string;
   name: string;
   description: string;
@@ -77,7 +78,7 @@ export function localizeMenuItem(item: MenuItem, locale: Locale): MenuItem {
     return item;
   }
 
-  const translation = menuTranslationMap[item.filename];
+  const translation = menuTranslationMap[item.id];
   if (!translation) {
     return item;
   }
@@ -112,7 +113,7 @@ export function filterMenuItems(
 }
 
 export function getMenuItemKey(item: MenuItem): string {
-  return `${item.category}-${item.name}`;
+  return item.id;
 }
 
 export function getTagIcon(tag: string): string | undefined {
