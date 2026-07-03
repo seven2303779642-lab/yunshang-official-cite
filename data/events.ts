@@ -170,6 +170,7 @@ export function getEventKey(event: EventItem): string {
 }
 
 export function isEventLinkClickable(link?: string): boolean {
+  // Reserved for future event detail pages; list UI is display-only (no card links/buttons).
   const trimmed = link?.trim();
   return Boolean(trimmed && trimmed !== "#");
 }

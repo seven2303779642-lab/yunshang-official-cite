@@ -9,7 +9,6 @@ import {
   getEventParticipatingStores,
   getEventParticipatingStoresTitle,
   getEventTitle,
-  isEventLinkClickable,
   type EventItem,
 } from "@/data/events";
 import type { Locale } from "@/data/siteContent";
@@ -21,62 +20,31 @@ type EventsListProps = {
 function EventCardImage({
   event,
   locale,
-  clickable,
   title,
 }: {
   event: EventItem;
   locale: Locale;
-  clickable: boolean;
   title: string;
 }) {
-  const image = (
-    <div className="event-card-image-hover-layer">
-      <img
-        src={getEventImage(event, locale)}
-        alt={title}
-        className="event-card__image"
-        draggable={false}
-      />
-    </div>
-  );
-
   return (
     <div className="event-card-image-wrap">
-      {clickable ? (
-        <a href={event.link} className="event-card-image-link">
-          {image}
-        </a>
-      ) : (
-        image
-      )}
+      <div className="event-card-image-hover-layer">
+        <img
+          src={getEventImage(event, locale)}
+          alt={title}
+          className="event-card__image"
+          draggable={false}
+        />
+      </div>
     </div>
   );
 }
 
-function EventCardTitle({
-  title,
-  link,
-  clickable,
-}: {
-  title: string;
-  link?: string;
-  clickable: boolean;
-}) {
-  if (clickable) {
-    return (
-      <h2 className="event-card__title">
-        <a href={link} className="event-card__title-link">
-          {title}
-        </a>
-      </h2>
-    );
-  }
-
+function EventCardTitle({ title }: { title: string }) {
   return <h2 className="event-card__title">{title}</h2>;
 }
 
 function EventCard({ event, locale }: { event: EventItem; locale: Locale }) {
-  const clickable = isEventLinkClickable(event.link);
   const title = getEventTitle(event, locale);
   const paragraphs = getEventParagraphs(event, locale);
   const participatingStoresTitle = getEventParticipatingStoresTitle(
@@ -95,19 +63,10 @@ function EventCard({ event, locale }: { event: EventItem; locale: Locale }) {
   return (
     <article className="event-card">
       <div className="event-card__layout">
-        <EventCardImage
-          event={event}
-          locale={locale}
-          clickable={clickable}
-          title={title}
-        />
+        <EventCardImage event={event} locale={locale} title={title} />
 
         <div className="event-card__content">
-          <EventCardTitle
-            title={title}
-            link={event.link}
-            clickable={clickable}
-          />
+          <EventCardTitle title={title} />
 
           {event.date ? (
             <p className="event-card__date">{event.date}</p>

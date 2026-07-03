@@ -127,7 +127,8 @@ data/*.ts                     → 读取、筛选、本地化（menu.ts、locati
 
 ## 默认不在范围内（除非用户明确要求）
 
-- **活动详情页**——目前仅列表；链接可能指向站外或 `#`。
+- **活动页**——目前仅列表展示，**卡片不可点击、无跳转按钮**。`eventsManifest.json` 中的 `link` / `buttonText` 与 `events.ts` 的 `isEventLinkClickable()` 仅为日后详情页预留，**不要在列表 UI 中重新加链接或 CTA 按钮**，除非用户明确要求。
+- **活动详情页**——站内详情路由尚未实现。
 - **Order 页面**——`PlaceholderPage`，未接入真实下单。
 - 英文 hero `slider-1` 素材（源站无）；8 周年英文海报仅为 source-only，未写入 manifest。
 - 大规模数据层重构（如合并分类来源、数据库迁移）未经用户同意不做。
