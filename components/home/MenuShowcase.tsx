@@ -90,7 +90,7 @@ export default function MenuShowcase({ content }: MenuShowcaseProps) {
                           <img
                             src={asset.titleImage}
                             alt={item.title}
-                            className="menu-showcase__title-image mx-auto h-auto max-w-[280px] select-none max-[1024px]:max-w-[280px]"
+                            className="menu-showcase__title-image select-none"
                             draggable={false}
                           />
                         ) : (

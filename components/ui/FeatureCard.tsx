@@ -36,7 +36,15 @@ export default function FeatureCard(props: FeatureCardProps) {
         <div className="feature-card__content feature-card__content--home">
           <div className="feature-card__content-inner">
             <h3 className="feature-card__title type-feature-title">
-              {feature.mobileTitleLines ? (
+              {feature.titleLines ? (
+                <span className="feature-card__title-stack">
+                  {feature.titleLines.map((line) => (
+                    <span key={line} className="feature-card__title-line">
+                      {line}
+                    </span>
+                  ))}
+                </span>
+              ) : feature.mobileTitleLines ? (
                 <>
                   <span className="feature-card__title-mobile">
                     {feature.mobileTitleLines.map((line) => (
@@ -72,7 +80,12 @@ export default function FeatureCard(props: FeatureCardProps) {
 
               <p className="feature-card__text type-body-copy-emphasis">
                 {feature.lines.map((line) => (
-                  <span key={line} className="feature-card__text-line">
+                  <span key={`desktop-${line}`} className="feature-card__text-line feature-card__text-line--desktop">
+                    {line}
+                  </span>
+                ))}
+                {(feature.mobileLines ?? feature.lines).map((line) => (
+                  <span key={`mobile-${line}`} className="feature-card__text-line feature-card__text-line--mobile">
                     {line}
                   </span>
                 ))}

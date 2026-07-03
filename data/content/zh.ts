@@ -81,6 +81,13 @@ export const zhContent: SiteContent = {
             "拒绝科技与狠活，",
             "只用猪骨、老母鸡、火腿等新鲜好料。100%无添加，天天熬汤看得见！",
           ],
+          mobileLines: [
+            "拒绝科技与狠活，",
+            "只用猪骨、老母鸡、",
+            "火腿等新鲜好料。",
+            "100% 无添加，",
+            "天天熬汤看得见！",
+          ],
           nowrap: true,
         },
         {
@@ -88,6 +95,7 @@ export const zhContent: SiteContent = {
           imageAlt: "米线",
           iconAlt: "米线无限续图标",
           lines: ["纯大米米线，", "堂食无限量供应，", "想续就续，吃饱吃好不加价！"],
+          mobileLines: ["纯大米米线，", "堂食无限量供应，", "想续就续，吃饱吃好不加价！"],
           nowrap: true,
         },
         {
@@ -95,6 +103,7 @@ export const zhContent: SiteContent = {
           imageAlt: "新鲜番茄食材",
           iconAlt: "新鲜食材图标",
           lines: ["实打实的真材实料，品质无忧，每一口都放心！"],
+          mobileLines: ["实打实的真材实料，", "品质无忧，每一口都放心！"],
           nowrap: true,
           mobileTitleLines: ["新鲜食材,", "本地优选"],
         },

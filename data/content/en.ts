@@ -71,36 +71,32 @@ export const enContent: SiteContent = {
       "features": [
         {
           "title": "12-Hour Slow-Simmered Broth",
+          "titleLines": ["12-Hour", "Slow-Simmered Broth"],
           "imageAlt": "12-hour slow-simmered broth",
           "iconAlt": "12-hour slow-simmered broth icon",
           "lines": [
             "Made with premium pork bones, ham, and chicken, simmered to perfection for deep, rich flavour.",
             "No MSG, no additives — just pure, slow-cooked broth with natural, aromatic richness."
-          ],
-          "nowrap": true
+          ]
         },
         {
           "title": "Unlimited Rice Noodle Refills",
+          "titleLines": ["Unlimited", "Rice Noodle Refills"],
           "imageAlt": "Rice noodles",
           "iconAlt": "Unlimited rice noodle refills icon",
           "lines": [
             "100% pure rice noodles,",
             "no additives.",
             "Dine-in guests enjoy free refills!"
-          ],
-          "nowrap": true
+          ]
         },
         {
           "title": "Fresh & Locally Sourced",
+          "titleLines": ["Fresh &", "Locally Sourced"],
           "imageAlt": "Fresh locally sourced ingredients",
           "iconAlt": "Fresh locally sourced ingredients icon",
           "lines": [
             "We use fresh, locally sourced ingredients for the best quality in every bite."
-          ],
-          "nowrap": true,
-          "mobileTitleLines": [
-            "Fresh &",
-            "Locally Sourced"
           ]
         }
       ]
@@ -177,6 +173,7 @@ export const enContent: SiteContent = {
       "icon": "/images/about/decorative/white-icon.png",
       "image": "/images/about/values/rice-noodle-yunshang.jpg",
       "imageAlt": "Yunshang Rice Noodle",
+      "title": "Savor the Legacy of China’s Most Beloved Rice Noodles",
       "paragraphs": [
         "With a history spanning over a century, Rice Noodles is one of China’s most treasured culinary traditions. Originating from Yunnan, China, this dish carries a remarkable cultural heritage, passed down through generations.",
         "Unlike ramen or pho, Chinese Crossing-the-Bridge Rice Noodles are served with a steaming hot broth and fresh toppings on the side, allowing you to mix and customize every bite. Simply add the silky rice noodles, let the flavours come together, and enjoy a fresh, flavourful, and soul-warming experience like no other!"

@@ -60,12 +60,12 @@ export default function OrderBanner({ content }: OrderBannerProps) {
 
         <h2
           ref={headingRef}
-          className={`order-banner__title type-display-title !text-white transition-opacity duration-700 ease-in-out ${
+          className={`order-banner__title transition-opacity duration-700 ease-in-out ${
             isHeadingVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span className="block">{content.headingLines[0]}</span>
-          <span className="mt-3 block min-[1025px]:mt-[20px]">{content.headingLines[1]}</span>
+          <span className="order-banner__title-line">{content.headingLines[0]}</span>
+          <span className="order-banner__title-line">{content.headingLines[1]}</span>
         </h2>
 
         <div className="mt-10 flex flex-col items-center gap-5 min-[768px]:flex-row min-[768px]:gap-[120px]">

@@ -5,7 +5,10 @@ export type FeatureCardContent = {
   imageAlt: string;
   iconAlt: string;
   lines: string[];
+  mobileLines?: string[];
   nowrap?: boolean;
+  /** Multi-line title at all breakpoints (e.g. English home cards). */
+  titleLines?: string[];
   mobileTitleLines?: string[];
 };
 
@@ -170,6 +173,7 @@ export type AboutContent = {
     image: string;
     imageAlt: string;
     paragraphs: string[];
+    title?: string;
   };
   values: {
     title: string;

@@ -1,5 +1,15 @@
 /* Loaded after globals.css so desktop rules win over Tailwind utilities. */
 
+.menu-showcase .menu-showcase__title-image {
+  display: block;
+  width: min(280px, 100%);
+  height: auto;
+  aspect-ratio: 1102 / 232;
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
 @media (min-width: 1025px) {
   .menu-showcase {
     --showcase-card-width: 300px;
@@ -76,9 +86,10 @@
   }
 
   .menu-showcase .menu-showcase__title-image {
-    width: 280px;
-    max-width: 100%;
+    width: min(280px, 100%);
     height: auto;
+    aspect-ratio: 1102 / 232;
+    object-fit: contain;
   }
 
   .menu-showcase .menu-showcase__title-icon {
