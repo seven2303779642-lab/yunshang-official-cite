@@ -1,3 +1,6 @@
+import AboutEnBridge from "@/components/about/AboutEnBridge";
+import AboutEnToppings from "@/components/about/AboutEnToppings";
+import AboutEnVideo from "@/components/about/AboutEnVideo";
 import AboutGallery from "@/components/about/AboutGallery";
 import AboutHero from "@/components/about/AboutHero";
 import AboutIntro from "@/components/about/AboutIntro";
@@ -18,10 +21,24 @@ export function AboutPage({ content }: AboutPageProps) {
     <>
       <Navbar />
       <main>
-        <AboutHero content={content.hero} />
-        <AboutIntro content={content.intro} />
-        <AboutValueGrid content={content.values} />
-        <AboutGallery />
+        <div id="hero">
+          <AboutHero content={content.hero} />
+        </div>
+        <div id="intro">
+          <AboutIntro content={content.intro} />
+        </div>
+        {content.enSections ? (
+          <>
+            <AboutEnToppings content={content.enSections.toppings} />
+            <AboutEnBridge content={content.enSections.bridge} />
+          </>
+        ) : null}
+        <div id="features">
+          <AboutValueGrid content={content.values} />
+        </div>
+        {content.enSections ? (
+          <AboutEnVideo content={content.enSections.video} />
+        ) : null}
         <AboutPopularDishes content={content.popularDishes} />
         <AboutStores content={content.stores} />
       </main>

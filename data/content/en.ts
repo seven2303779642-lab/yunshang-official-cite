@@ -179,6 +179,36 @@ export const enContent: SiteContent = {
         "Unlike ramen or pho, Chinese Crossing-the-Bridge Rice Noodles are served with a steaming hot broth and fresh toppings on the side, allowing you to mix and customize every bite. Simply add the silky rice noodles, let the flavours come together, and enjoy a fresh, flavourful, and soul-warming experience like no other!"
       ]
     },
+    "enSections": {
+      "toppings": {
+        "title": "OUR RICE NOODLE TOPPINGS",
+        "titleIcon": "/images/about/decorative/white-icon.png",
+        "desktopImage": "/images/about/en/toppings/sidedish-scaled.jpg",
+        "mobileImage": "/images/about/en/toppings/sidedish-mobile-990x1024.jpg",
+        "imageAlt": "Yunshang rice noodle toppings"
+      },
+      "bridge": {
+        "titleLines": [
+          "Why Is It Called",
+          "\"Crossing-the-Bridge\" Rice Noodles?",
+          "Why Are the Toppings",
+          "Served Separately?"
+        ],
+        "paragraphs": [
+          "Legend has it that hundreds of years ago, a devoted wife would bring lunch to her scholar husband, who spent long hours studying on a secluded island. Each day, she crossed a bridge to deliver his meal, but the challenge was keeping the soup hot. She discovered that a layer of oil on top acted as insulation, preserving the broth’s heat. To keep the rice noodles, thinly sliced meats, and tofu skin fresh, she carried them separately, preventing them from getting soggy.",
+          "By the time she arrived, the soup was still steaming hot. With a quick mix, the delicate meats cooked instantly, the noodles softened, and a hearty, comforting meal was ready to enjoy. Over the years, this simple act of love became a treasured tradition, and Crossing-the-Bridge Rice Noodles evolved into a symbol of warmth, devotion, and care.",
+          "Today, this serving style isn’t just about tradition—it’s an immersive dining experience, allowing you to mix and customize every bite just the way you like it."
+        ],
+        "decorationImage": "/images/about/en/bridge/resource-2.svg",
+        "signOverlayImage": "/images/about/en/bridge/yunshang-and-sign.svg",
+        "cloudBackgroundImage": "/images/about/decorative/white-clound-pattern-yunshang.svg",
+        "illustrationImage": "/images/about/en/bridge/yunshang-en-rice-noodle-girl-647x1024.png",
+        "illustrationAlt": "Yunshang Crossing-the-Bridge Rice Noodles illustration"
+      },
+      "video": {
+        "src": "/images/about/en/video/about-intro.mp4"
+      }
+    },
     "values": {
       "title": "Savor the Legacy of China’s Most Beloved Rice Noodles",
       "items": [

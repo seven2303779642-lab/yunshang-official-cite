@@ -1,6 +1,7 @@
 "use client";
 
 import BrandButton from "@/components/ui/BrandButton";
+import NavLanguageSwitchLink from "@/components/layout/NavLanguageSwitchLink";
 import { useOrderPopup } from "@/components/order/OrderPopupContext";
 import {
   enContent,
@@ -140,13 +141,12 @@ export default function Navbar() {
               );
             })}
 
-            <Link
-              href={nav.languageHref}
+            <NavLanguageSwitchLink
               className={getNavItemClass(false)}
-              aria-label={nav.languageSwitchAriaLabel}
+              ariaLabel={nav.languageSwitchAriaLabel}
             >
               {nav.languageSwitch}
-            </Link>
+            </NavLanguageSwitchLink>
           </div>
 
           <div className="flex items-center">
@@ -217,14 +217,13 @@ export default function Navbar() {
             );
           })}
 
-          <Link
-            href={nav.languageHref}
-            onClick={handleMobileLinkClick}
+          <NavLanguageSwitchLink
             className={getMobileNavItemClass(false)}
-            aria-label={nav.languageSwitchAriaLabel}
+            ariaLabel={nav.languageSwitchAriaLabel}
+            onClick={handleMobileLinkClick}
           >
             {nav.languageSwitch}
-          </Link>
+          </NavLanguageSwitchLink>
 
           <BrandButton
             variant="navbar"

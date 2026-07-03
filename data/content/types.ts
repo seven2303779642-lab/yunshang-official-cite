@@ -162,6 +162,34 @@ export type EventsContent = {
   };
 };
 
+export type AboutEnToppingsContent = {
+  title: string;
+  titleIcon: string;
+  desktopImage: string;
+  mobileImage: string;
+  imageAlt: string;
+};
+
+export type AboutEnBridgeContent = {
+  titleLines: string[];
+  paragraphs: string[];
+  decorationImage: string;
+  signOverlayImage: string;
+  cloudBackgroundImage: string;
+  illustrationImage: string;
+  illustrationAlt: string;
+};
+
+export type AboutEnVideoContent = {
+  src: string;
+};
+
+export type AboutEnSectionsContent = {
+  toppings: AboutEnToppingsContent;
+  bridge: AboutEnBridgeContent;
+  video: AboutEnVideoContent;
+};
+
 export type AboutContent = {
   hero: {
     desktopImage: string;
@@ -175,6 +203,7 @@ export type AboutContent = {
     paragraphs: string[];
     title?: string;
   };
+  enSections?: AboutEnSectionsContent;
   values: {
     title: string;
     items: {

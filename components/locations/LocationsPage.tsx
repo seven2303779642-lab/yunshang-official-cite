@@ -14,12 +14,16 @@ export function LocationsPage({ content, locale }: LocationsPageProps) {
     <>
       <Navbar />
       <main>
-        <LocationsHero content={content.hero} />
-        <LocationsContent
-          locale={locale}
-          directionsLabel={content.locations.directionsLabel}
-          filterAria={content.filterAria}
-        />
+        <div id="hero">
+          <LocationsHero content={content.hero} />
+        </div>
+        <div id="locations">
+          <LocationsContent
+            locale={locale}
+            directionsLabel={content.locations.directionsLabel}
+            filterAria={content.filterAria}
+          />
+        </div>
       </main>
       <Footer />
     </>

@@ -1,6 +1,10 @@
 export * from "./types";
 export { zhContent } from "./zh";
 export { enContent } from "./en";
+export {
+  getLanguageSwitchHref,
+  getLanguageSwitchPathname,
+} from "./languageSwitch";
 
 import type { Locale, SiteContent } from "./types";
 import { enContent } from "./en";

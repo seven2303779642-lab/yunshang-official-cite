@@ -95,7 +95,7 @@ export default function Footer() {
   const footer = language === "en" ? enContent.footer : zhContent.footer;
 
   return (
-    <footer className="relative overflow-visible bg-[var(--color-red)]">
+    <footer id="footer" className="relative overflow-visible bg-[var(--color-red)]">
       {/* Floating top decoration: sits above footer and covers the previous section */}
       <div
         className="pointer-events-none absolute left-0 top-[-80px] z-20 h-[80px] w-full bg-repeat-x"

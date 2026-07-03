@@ -18,11 +18,19 @@ export default function HomePage({ content }: HomePageProps) {
     <>
       <Navbar />
       <main>
-        <HeroSlider content={content.home.heroSlider} />
-        <AboutIntro content={content.home.aboutIntro} />
-        <FeatureCards content={content.home.featureCards} />
+        <div id="hero">
+          <HeroSlider content={content.home.heroSlider} />
+        </div>
+        <div id="intro">
+          <AboutIntro content={content.home.aboutIntro} />
+        </div>
+        <div id="features">
+          <FeatureCards content={content.home.featureCards} />
+        </div>
         <StoreBanner content={content.home.storeBanner} />
-        <MenuShowcase content={content.home.menuShowcase} />
+        <div id="menu-showcase">
+          <MenuShowcase content={content.home.menuShowcase} />
+        </div>
         <OrderBanner content={content.home.orderBanner} />
       </main>
       <Footer />
