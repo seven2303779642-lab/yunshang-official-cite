@@ -40,11 +40,11 @@ export function getLocationName(location: Location, locale: Locale): string {
 }
 
 export function getAllProvinceLabel(locale: Locale): string {
-  return locale === "zh" ? "全部" : "All";
+  return locale === "zh" ? "选择 省份" : "Select Province";
 }
 
 export function getAllRegionLabel(locale: Locale): string {
-  return locale === "zh" ? "全部" : "All";
+  return locale === "zh" ? "选择 区域" : "Select Region";
 }
 
 export function getAllLocations(): Location[] {

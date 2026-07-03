@@ -36,7 +36,7 @@ function FooterLink({
 }) {
   const { openOrderPopup } = useOrderPopup();
   const sharedClassName =
-    "type-footer-link relative isolate px-4 py-1 text-white transition-colors duration-300 before:pointer-events-none before:absolute before:inset-x-[-8px] before:inset-y-[-4px] before:-z-10 before:scale-x-50 before:scale-y-75 before:bg-white before:opacity-0 before:transition-all before:duration-300 before:ease-out hover:text-[var(--color-red)] hover:before:scale-x-100 hover:before:scale-y-100 hover:before:opacity-100";
+    "type-footer-link relative isolate px-4 py-0.5 text-white transition-colors duration-300 before:pointer-events-none before:absolute before:inset-x-[-8px] before:inset-y-[-4px] before:-z-10 before:scale-x-50 before:scale-y-75 before:bg-white before:opacity-0 before:transition-all before:duration-300 before:ease-out hover:text-[var(--color-red)] hover:before:scale-x-100 hover:before:scale-y-100 hover:before:opacity-100";
 
   if (opensOrderPopup) {
     return (
@@ -67,7 +67,7 @@ function FooterLinkColumn({
   }>;
 }) {
   return (
-    <div className="flex flex-col items-center gap-7">
+    <div className="flex flex-col items-center gap-4">
       <Image
         src="/images/home/decorative/cloud-white-text.svg"
         alt=""
@@ -128,7 +128,7 @@ export default function Footer() {
         />
 
         <div className="relative z-10 mx-auto flex max-w-[1200px] items-start justify-between gap-16 max-[767px]:flex-col max-[767px]:items-center max-[767px]:justify-start max-[767px]:gap-9">
-          <div className="flex w-[170px] flex-col items-center max-[767px]:w-[170px] max-[767px]:flex-col-reverse max-[767px]:gap-7">
+          <div className="flex w-[170px] flex-col items-center min-[768px]:ml-14 max-[767px]:w-[170px] max-[767px]:flex-col-reverse max-[767px]:gap-7 max-[767px]:ml-0">
             <Link href={footer.homeHref} aria-label={footer.homeAriaLabel}>
               <Image
                 src="/images/common/logos/云尚-2.png"
@@ -173,7 +173,7 @@ export default function Footer() {
               alt={footer.wechatQrAlt}
               width={140}
               height={140}
-              className="h-[120px] w-[120px]"
+              className="h-[120px] w-[120px] rounded-[10px]"
             />
           </div>
         </div>

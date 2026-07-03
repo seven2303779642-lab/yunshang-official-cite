@@ -146,25 +146,19 @@ function LocationCardContent({
 
         {location.mapLink ? (
           <div className="location-card__cta">
-            <span className="location-card-nav-button">{directionsLabel}</span>
+            <a
+              href={location.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="location-card-nav-button"
+            >
+              {directionsLabel}
+            </a>
           </div>
         ) : null}
       </div>
     </>
   );
-
-  if (location.mapLink) {
-    return (
-      <a
-        href={location.mapLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="location-card-link"
-      >
-        {body}
-      </a>
-    );
-  }
 
   return <div className="location-card-link">{body}</div>;
 }

@@ -65,15 +65,15 @@ export default function AboutIntro({ content }: AboutIntroProps) {
   }, [isVideoOpen]);
 
   return (
-    <section className="relative grid overflow-hidden bg-[var(--color-red)] text-white min-[1025px]:min-h-[560px] min-[1025px]:grid-cols-2">
-      <div className="relative z-20 flex flex-col items-center justify-center px-[15px] py-[60px] text-center min-[768px]:px-[50px] min-[768px]:py-[68px] min-[1025px]:items-start min-[1025px]:justify-start min-[1025px]:p-[100px] min-[1025px]:text-left">
+    <section className="relative grid overflow-hidden bg-[var(--color-red)] text-white min-[1025px]:min-h-[500px] min-[1025px]:grid-cols-2">
+      <div className="relative z-20 flex flex-col items-center justify-center px-[15px] py-[60px] text-center min-[768px]:px-[50px] min-[768px]:py-[68px] min-[1025px]:items-start min-[1025px]:justify-start min-[1025px]:py-[60px] min-[1025px]:pl-[100px] min-[1025px]:pr-[60px] min-[1025px]:text-left">
         <h2 className="type-display-title !text-white">
           {content.headingLines[0]}
           <br />
           {content.headingLines[1]}
         </h2>
 
-        <p className="type-body-copy mt-[20px] max-w-[920px] text-white min-[1025px]:max-w-[476px]">
+        <p className="type-body-copy mt-[20px] max-w-[920px] text-white min-[1025px]:max-w-[580px]">
           {content.body}
         </p>
 
@@ -100,7 +100,7 @@ export default function AboutIntro({ content }: AboutIntroProps) {
         draggable={false}
       />
 
-      <div className="relative h-[300px] overflow-hidden bg-black min-[768px]:h-[488px] min-[1025px]:h-auto min-[1025px]:min-h-[560px]">
+      <div className="relative h-[300px] overflow-hidden bg-black min-[768px]:h-[488px] min-[1025px]:h-auto min-[1025px]:min-h-[500px]">
         <img
           src="/images/home/about-intro/bone-soup.webp"
           alt={content.boneSoupImageAlt}

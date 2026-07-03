@@ -62,7 +62,7 @@ export default function Navbar() {
 
   const navBaseClass = useMemo(
     () =>
-      "type-nav-link relative isolate px-3 py-1 " +
+      "type-nav-link relative isolate p-0 " +
       "before:pointer-events-none before:absolute before:inset-x-[-6px] before:inset-y-[-2px] before:-z-10 before:bg-white",
     [],
   );
@@ -109,15 +109,15 @@ export default function Navbar() {
           <Image
             src="/images/common/logos/云尚-1.png"
             alt={nav.logoAlt}
-            width={260}
-            height={80}
+            width={256}
+            height={70}
             priority
-            className="h-12 w-auto min-[1025px]:h-16"
+            className="h-[60px] w-auto min-[1025px]:h-[70px]"
           />
         </Link>
 
-        <div className="hidden items-center gap-[54px] text-white min-[1025px]:flex">
-          <div className="grid grid-flow-col auto-cols-max items-center gap-7">
+        <div className="hidden items-center gap-8 text-white min-[1025px]:flex">
+          <div className="grid grid-flow-col auto-cols-max items-center gap-5">
             {NAV_ITEM_CONFIG.map((item) => {
               const href = language === "en" ? item.enHref : item.zhHref;
               const active = isNavItemActive(

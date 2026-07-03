@@ -30,7 +30,7 @@ export default function MenuShowcase({ content }: MenuShowcaseProps) {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#fff4ec] px-6 pt-20 pb-28 min-[1025px]:px-12 min-[1025px]:pt-28 min-[1025px]:pb-36"
+      className="menu-showcase relative overflow-hidden bg-[#fff4ec] px-6 pt-20 pb-28 min-[1025px]:px-12 min-[1025px]:pt-28 min-[1025px]:pb-36"
     >
       <div className="pointer-events-none absolute left-1/2 top-full z-0 -translate-x-1/2 translate-y-[-30%] overflow-visible min-[768px]:max-[1024px]:translate-y-[-40%] max-[767px]:translate-y-[-55%]">
         <motion.img
@@ -43,106 +43,94 @@ export default function MenuShowcase({ content }: MenuShowcaseProps) {
         />
       </div>
 
-      <motion.img
-        src={content.assets.leftLabel}
-        alt={content.leftLabelAlt}
-        className="pointer-events-none absolute left-7 top-28 z-10 hidden w-[116px] select-none min-[1025px]:block"
-        style={{ y: leftY }}
-        draggable={false}
-      />
-
-      <motion.img
-        src={content.assets.rightLabel}
-        alt={content.rightLabelAlt}
-        className="pointer-events-none absolute right-7 top-28 z-10 hidden w-[116px] select-none min-[1025px]:block"
-        style={{ y: rightY }}
-        draggable={false}
-      />
-
-      <div className="relative z-20 mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-1 gap-14 min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:flex-col min-[768px]:max-[1024px]:gap-16 min-[1025px]:grid min-[1025px]:grid-cols-3 min-[1025px]:gap-16">
+      <div className="menu-showcase__inner relative z-10 mx-auto max-[1024px]:max-w-[1180px]">
+        <div className="menu-showcase__cards max-[767px]:grid max-[767px]:grid-cols-1 max-[767px]:gap-14 min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:flex-col min-[768px]:max-[1024px]:gap-16">
           {content.items.map((item, index) => {
             const asset = content.assets.items[index];
 
             return (
-            <article
-              key={item.title}
-              className={`text-center min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:items-stretch min-[768px]:max-[1024px]:gap-10 min-[768px]:max-[1024px]:text-center ${
-                index % 2 === 1
-                  ? "min-[768px]:max-[1024px]:flex-row-reverse"
-                  : "min-[768px]:max-[1024px]:flex-row"
-              }`}
-            >
-              <div className="relative mx-auto w-full max-w-[360px] shrink-0 overflow-visible min-[768px]:max-[1024px]:mx-0 min-[768px]:max-[1024px]:w-[46%] min-[768px]:max-[1024px]:max-w-[400px] min-[1025px]:mx-auto min-[1025px]:w-auto">
-                <div className="aspect-[304/390] w-full overflow-hidden">
+              <article
+                key={item.title}
+                className={`menu-showcase__item text-center min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:items-stretch min-[768px]:max-[1024px]:gap-10 min-[768px]:max-[1024px]:text-center ${
+                  index % 2 === 1
+                    ? "min-[768px]:max-[1024px]:flex-row-reverse"
+                    : "min-[768px]:max-[1024px]:flex-row"
+                }`}
+              >
+                <div className="menu-showcase__media relative mx-auto w-full max-w-[360px] shrink-0 overflow-visible min-[768px]:max-[1024px]:mx-0 min-[768px]:max-[1024px]:w-[46%] min-[768px]:max-[1024px]:max-w-[400px]">
+                  <div className="menu-showcase__image-frame w-full overflow-hidden max-[1024px]:aspect-[304/390]">
+                    <img
+                      src={asset.image}
+                      alt={item.title}
+                      className="menu-showcase__image object-cover max-[1024px]:h-full max-[1024px]:w-full"
+                      draggable={false}
+                    />
+                  </div>
+
                   <img
-                    src={asset.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover"
+                    src={asset.tag}
+                    alt=""
+                    aria-hidden="true"
+                    className="menu-showcase__tag pointer-events-none absolute -right-10 -top-12 w-[136px] rotate-[-8deg] select-none max-[1024px]:w-[136px]"
                     draggable={false}
                   />
                 </div>
 
-                <img
-                  src={asset.tag}
-                  alt=""
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -right-10 -top-12 w-[136px] rotate-[-8deg] select-none min-[1025px]:w-[146px]"
-                  draggable={false}
-                />
-              </div>
+                <div className="menu-showcase__copy relative min-[768px]:max-[1024px]:min-h-0 min-[768px]:max-[1024px]:flex-1 min-[768px]:max-[1024px]:self-stretch">
+                  <div
+                    className={`min-[768px]:max-[1024px]:absolute min-[768px]:max-[1024px]:inset-x-0 min-[768px]:max-[1024px]:top-0 min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:items-center ${
+                      index === content.items.length - 1
+                        ? "min-[768px]:max-[1024px]:bottom-[62px]"
+                        : "min-[768px]:max-[1024px]:bottom-0"
+                    }`}
+                  >
+                    <div className="menu-showcase__copy-inner w-full">
+                      <div className="menu-showcase__title-row mt-2 flex items-center justify-center gap-3 leading-none min-[768px]:max-[1024px]:mt-0 min-[768px]:max-[1024px]:justify-center min-[1025px]:justify-center">
+                        {asset.titleImage ? (
+                          <img
+                            src={asset.titleImage}
+                            alt={item.title}
+                            className="menu-showcase__title-image mx-auto h-auto max-w-[280px] select-none max-[1024px]:max-w-[280px]"
+                            draggable={false}
+                          />
+                        ) : (
+                          <>
+                            <img
+                              src="/images/home/decorative/cloud-red-text.svg"
+                              alt=""
+                              aria-hidden="true"
+                              className="menu-showcase__title-icon h-6 w-6 shrink-0 translate-y-[3px] select-none"
+                              draggable={false}
+                            />
+                            <h3 className="menu-showcase__title type-menu-category-title !text-[var(--color-red)] !leading-none">
+                              {item.title}
+                            </h3>
+                            <img
+                              src="/images/home/decorative/cloud-red-text.svg"
+                              alt=""
+                              aria-hidden="true"
+                              className="menu-showcase__title-icon h-6 w-6 shrink-0 translate-y-[3px] select-none"
+                              draggable={false}
+                            />
+                          </>
+                        )}
+                      </div>
 
-              <div className="relative min-[768px]:max-[1024px]:min-h-0 min-[768px]:max-[1024px]:flex-1 min-[768px]:max-[1024px]:self-stretch">
-                <div
-                  className={`min-[768px]:max-[1024px]:absolute min-[768px]:max-[1024px]:inset-x-0 min-[768px]:max-[1024px]:top-0 min-[768px]:max-[1024px]:flex min-[768px]:max-[1024px]:items-center ${
-                    index === content.items.length - 1
-                      ? "min-[768px]:max-[1024px]:bottom-[62px]"
-                      : "min-[768px]:max-[1024px]:bottom-0"
-                  }`}
-                >
-                  <div className="w-full">
-                    <div className="mt-2 flex items-center justify-center gap-3 leading-none min-[768px]:max-[1024px]:mt-0 min-[768px]:max-[1024px]:justify-center min-[1025px]:justify-center">
-                      {asset.titleImage ? (
-                        <img
-                          src={asset.titleImage}
-                          alt={item.title}
-                          className="mx-auto h-auto max-w-[280px] select-none min-[1025px]:max-w-[320px]"
-                          draggable={false}
-                        />
-                      ) : (
-                        <>
-                          <img
-                            src="/images/home/decorative/cloud-red-text.svg"
-                            alt=""
-                            aria-hidden="true"
-                            className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
-                            draggable={false}
-                          />
-                          <h3 className="type-menu-category-title !text-[var(--color-red)] !leading-none">{item.title}</h3>
-                          <img
-                            src="/images/home/decorative/cloud-red-text.svg"
-                            alt=""
-                            aria-hidden="true"
-                            className="h-6 w-6 shrink-0 translate-y-[3px] select-none"
-                            draggable={false}
-                          />
-                        </>
-                      )}
+                      <p className="menu-showcase__text type-body-copy mx-auto mt-4 text-[#202020] max-[1024px]:max-w-[360px] min-[768px]:max-[1024px]:mx-auto min-[768px]:max-[1024px]:max-w-none">
+                        {item.text}
+                      </p>
                     </div>
-
-                    <p className="type-body-copy mx-auto mt-4 max-w-[360px] text-[#202020] min-[768px]:max-[1024px]:mx-auto min-[768px]:max-[1024px]:max-w-none">
-                      {item.text}
-                    </p>
                   </div>
+
+                  {index === content.items.length - 1 && (
+                    <div className="mt-8 hidden min-[768px]:max-[1024px]:absolute min-[768px]:max-[1024px]:bottom-0 min-[768px]:max-[1024px]:left-0 min-[768px]:max-[1024px]:mt-0 min-[768px]:max-[1024px]:block">
+                      <BrandButton href={content.viewMenuHref}>
+                        {content.viewMenuButton}
+                      </BrandButton>
+                    </div>
+                  )}
                 </div>
-
-                {index === content.items.length - 1 && (
-                  <div className="mt-8 hidden min-[768px]:max-[1024px]:absolute min-[768px]:max-[1024px]:bottom-0 min-[768px]:max-[1024px]:left-0 min-[768px]:max-[1024px]:mt-0 min-[768px]:max-[1024px]:block">
-                    <BrandButton href={content.viewMenuHref}>{content.viewMenuButton}</BrandButton>
-                  </div>
-                )}
-              </div>
-            </article>
+              </article>
             );
           })}
         </div>
@@ -151,6 +139,22 @@ export default function MenuShowcase({ content }: MenuShowcaseProps) {
           <BrandButton href={content.viewMenuHref}>{content.viewMenuButton}</BrandButton>
         </div>
       </div>
+
+      <motion.img
+        src={content.assets.leftLabel}
+        alt={content.leftLabelAlt}
+        className="menu-showcase__side-label menu-showcase__side-label--left pointer-events-none absolute z-30 hidden select-none min-[1025px]:block"
+        style={{ y: leftY }}
+        draggable={false}
+      />
+
+      <motion.img
+        src={content.assets.rightLabel}
+        alt={content.rightLabelAlt}
+        className="menu-showcase__side-label menu-showcase__side-label--right pointer-events-none absolute z-30 hidden select-none min-[1025px]:block"
+        style={{ y: rightY }}
+        draggable={false}
+      />
     </section>
   );
 }

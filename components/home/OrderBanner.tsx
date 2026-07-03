@@ -35,7 +35,7 @@ export default function OrderBanner({ content }: OrderBannerProps) {
 
   return (
     <section
-      className={`relative min-h-[460px] overflow-hidden bg-black text-white min-[1025px]:min-h-[500px]${
+      className={`order-banner relative min-h-[460px] overflow-hidden bg-black text-white min-[1025px]:min-h-[500px]${
         content.titleImage ? " order-banner--with-title-image" : ""
       }`}
     >
@@ -60,7 +60,7 @@ export default function OrderBanner({ content }: OrderBannerProps) {
 
         <h2
           ref={headingRef}
-          className={`type-display-title !text-white transition-opacity duration-700 ease-in-out min-[1025px]:font-normal min-[1025px]:text-[64px] ${
+          className={`order-banner__title type-display-title !text-white transition-opacity duration-700 ease-in-out ${
             isHeadingVisible ? "opacity-100" : "opacity-0"
           }`}
         >

@@ -128,7 +128,7 @@ export default function BrandButton({
 
   const labelClass =
     variant === "navbar"
-      ? "text-[20px] font-normal leading-none min-[768px]:text-lg min-[768px]:font-bold"
+      ? "text-[18px] font-normal leading-none"
       : "text-[20px] font-normal leading-none min-[768px]:text-[26px]";
 
   const sharedClassName = cn(

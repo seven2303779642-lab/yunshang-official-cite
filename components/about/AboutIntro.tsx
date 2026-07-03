@@ -6,8 +6,8 @@ type AboutIntroProps = {
 
 export default function AboutIntro({ content }: AboutIntroProps) {
   return (
-    <section className="about-intro relative min-h-[500px] overflow-x-hidden bg-[var(--color-red)] px-10">
-      <div className="about-intro-content relative z-[2] mx-auto flex min-h-[500px] max-w-[900px] flex-col items-center justify-center pb-[140px] pt-12 text-center">
+    <section className="about-intro relative min-h-[460px] overflow-x-hidden bg-[var(--color-red)] px-10">
+      <div className="about-intro-content relative z-[2] mx-auto flex min-h-[460px] max-w-[900px] flex-col items-center justify-center pb-[110px] pt-8 text-center">
         <img
           src={content.icon}
           alt=""

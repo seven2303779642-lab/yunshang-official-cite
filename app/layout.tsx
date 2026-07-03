@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import OrderPopup from "@/components/order/OrderPopup";
 import { OrderPopupProvider } from "@/components/order/OrderPopupContext";
 import "./globals.css";
+import "./menu-showcase.css";
 import "@fontsource/noto-sans-sc/400.css";
 import "@fontsource/noto-sans-sc/500.css";
 import "@fontsource/noto-sans-sc/600.css";

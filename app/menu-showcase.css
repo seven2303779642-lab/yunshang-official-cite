@@ -1,0 +1,119 @@
+/* Loaded after globals.css so desktop rules win over Tailwind utilities. */
+
+@media (min-width: 1025px) {
+  .menu-showcase {
+    --showcase-card-width: 300px;
+    --showcase-main-height: 400px;
+    --showcase-side-scale: clamp(0.72, calc(100vw / 1440px), 1);
+    --showcase-side-inset: 28px;
+  }
+
+  .menu-showcase .menu-showcase__inner {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: none;
+  }
+
+  .menu-showcase .menu-showcase__cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: min(calc(100% - 100px), 1200px);
+    max-width: 1200px;
+    margin-inline: auto;
+    column-gap: 30px;
+  }
+
+  .menu-showcase .menu-showcase__item {
+    display: block;
+    flex: 0 0 auto;
+    width: var(--showcase-card-width);
+    min-width: 0;
+  }
+
+  .menu-showcase .menu-showcase__media {
+    width: var(--showcase-card-width);
+    max-width: var(--showcase-card-width);
+    margin-inline: auto;
+  }
+
+  .menu-showcase .menu-showcase__image-frame {
+    aspect-ratio: auto;
+    width: var(--showcase-card-width);
+    height: var(--showcase-main-height);
+    overflow: hidden;
+  }
+
+  .menu-showcase .menu-showcase__image {
+    display: block;
+    width: var(--showcase-card-width);
+    height: var(--showcase-main-height);
+    object-fit: cover;
+  }
+
+  .menu-showcase .menu-showcase__tag {
+    width: 146px;
+    right: -40px;
+    top: -48px;
+  }
+
+  .menu-showcase .menu-showcase__copy,
+  .menu-showcase .menu-showcase__copy-inner {
+    width: var(--showcase-card-width);
+    max-width: var(--showcase-card-width);
+  }
+
+  .menu-showcase .menu-showcase__title-row {
+    gap: 12px;
+  }
+
+  .menu-showcase .menu-showcase__title {
+    font-size: clamp(30px, 2.2vw + 14px, 48px);
+    font-weight: 500;
+    line-height: clamp(1.05, 0.01vw + 1.08, 1.1);
+    letter-spacing: clamp(-0.03em, 0.06vw, 0);
+  }
+
+  .menu-showcase .menu-showcase__title-image {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .menu-showcase .menu-showcase__title-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-showcase .menu-showcase__text {
+    width: 100%;
+    max-width: var(--showcase-card-width);
+    margin-top: 16px;
+    font-size: clamp(13px, 0.45vw + 11px, 16px);
+    line-height: clamp(22px, 0.75vw + 18px, 28.8px);
+    letter-spacing: clamp(-0.02em, 0.08vw, 0.02em);
+    overflow-wrap: break-word;
+  }
+
+  .menu-showcase .menu-showcase__side-label {
+    position: absolute;
+    z-index: 30;
+    top: calc(112px * var(--showcase-side-scale));
+    width: calc(110px * var(--showcase-side-scale));
+    height: calc(360px * var(--showcase-side-scale));
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+  }
+
+  .menu-showcase .menu-showcase__side-label--left {
+    left: var(--showcase-side-inset);
+    max-width: calc(50% - 1.5 * var(--showcase-card-width) - 8px);
+  }
+
+  .menu-showcase .menu-showcase__side-label--right {
+    right: var(--showcase-side-inset);
+    max-width: calc(50% - 1.5 * var(--showcase-card-width) - 8px);
+  }
+}

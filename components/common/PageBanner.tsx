@@ -40,10 +40,7 @@ export default function PageBanner({
         <div className="page-banner__overlay" aria-hidden="true" />
         <div className="page-banner__copy">
           <h1
-            className={cn(
-              "page-banner__title type-display-title text-white",
-              titleClassName,
-            )}
+            className={cn("page-banner__title text-white", titleClassName)}
           >
             {title}
           </h1>
@@ -62,7 +59,7 @@ export default function PageBanner({
 
       {showMobileText ? (
         <div className="page-banner__mobile-copy">
-          <h1 className="type-display-title text-[var(--color-red)]">
+          <h1 className="page-banner__title text-[var(--color-red)]">
             {title}
           </h1>
           {subtitle ? (
