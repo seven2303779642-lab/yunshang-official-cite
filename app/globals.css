@@ -779,8 +779,8 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 12px;
-  border: 1px solid var(--color-red);
+  padding: 3px 12px;
+  border: 2px solid var(--color-red);
   border-radius: 999px;
   background: transparent;
   font-family: var(--font-sans);
@@ -797,21 +797,23 @@ button {
   object-fit: contain;
 }
 
+.menu-items--en h3.menu-item-card__title {
+  line-height: 32px;
+}
+
+.menu-items--en p.menu-item-card__description {
+  line-height: 20px;
+}
+
 @media (max-width: 767px) {
   .menu-items--en h3.menu-item-card__title {
     font-size: 21px;
     font-weight: 500;
-    line-height: 1.05;
   }
 
   .menu-items--en p.menu-item-card__description {
     font-size: 13px;
     font-weight: 400;
-    line-height: 1.38;
-  }
-
-  .menu-items--en .menu-item-tag {
-    padding: 3px 12px;
   }
 
   .menu-items--en .menu-item-card__image-wrap {
