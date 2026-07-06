@@ -44,7 +44,7 @@ export default function AboutIntro({ content }: AboutIntroProps) {
           {content.headingLines[1]}
         </h2>
 
-        <p className="type-body-copy mt-[20px] max-w-[920px] text-white min-[1025px]:max-w-[580px]">
+        <p className="type-body-copy mt-[20px] max-w-[920px] text-white min-[1025px]:max-w-[580px] min-[1025px]:pr-[48px]">
           {content.body}
         </p>
 
