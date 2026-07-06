@@ -153,7 +153,9 @@ export default function MenuItemPreview({
         onCategoryChange={changeCategory}
       />
 
-      <section className="menu-items bg-[#fff4ec] px-6 pb-[160px] pt-2 min-[768px]:px-10 min-[768px]:pt-4">
+      <section
+        className={`menu-items bg-[#fff4ec] px-6 pb-[160px] pt-2 min-[768px]:px-10 min-[768px]:pt-4${locale === "en" ? " menu-items--en" : ""}`}
+      >
         <div className="mx-auto max-w-[1400px]">
           <div ref={gridRef} className="menu-item-grid">
             {filteredItems.map((item) => {

@@ -133,4 +133,22 @@
     width: 6.3vw;
     max-width: none;
   }
+
+  .menu-showcase.menu-showcase--en {
+    --showcase-content-width: 330px;
+  }
+
+  .menu-showcase.menu-showcase--en .menu-showcase__cards {
+    width: min(calc(100% - 20px), 1260px);
+    max-width: 1260px;
+  }
+
+  .menu-showcase.menu-showcase--en .menu-showcase__title-image {
+    width: min(320px, 100%);
+  }
+
+  .menu-showcase.menu-showcase--en .menu-showcase__text {
+    max-width: 330px;
+    text-wrap: pretty;
+  }
 }

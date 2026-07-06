@@ -54,6 +54,7 @@ export type FooterSocialContent = {
 };
 
 export type NavContent = {
+  logoImage: string;
   logoAlt: string;
   home: string;
   about: string;

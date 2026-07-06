@@ -4,6 +4,7 @@ import { ORDER_DELIVERY_URL, ORDER_PICKUP_URL } from "../orderLinks";
 export const zhContent: SiteContent = {
   locale: "zh",
   nav: {
+    logoImage: "/images/common/logos/云尚-1.png",
     logoAlt: "云尚米线",
     home: "首页",
     about: "关于",

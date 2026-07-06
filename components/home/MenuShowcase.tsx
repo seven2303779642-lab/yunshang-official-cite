@@ -1,7 +1,7 @@
 "use client";
 
 import BrandButton from "@/components/ui/BrandButton";
-import type { SiteContent } from "@/data/siteContent";
+import type { Locale, SiteContent } from "@/data/siteContent";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -9,9 +9,10 @@ const SCROLL_SPRING = { stiffness: 80, damping: 22, mass: 0.4 };
 
 type MenuShowcaseProps = {
   content: SiteContent["home"]["menuShowcase"];
+  locale?: Locale;
 };
 
-export default function MenuShowcase({ content }: MenuShowcaseProps) {
+export default function MenuShowcase({ content, locale }: MenuShowcaseProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -30,7 +31,7 @@ export default function MenuShowcase({ content }: MenuShowcaseProps) {
   return (
     <section
       ref={sectionRef}
-      className="menu-showcase relative overflow-hidden bg-[#fff4ec] px-6 pt-20 pb-28 min-[1025px]:px-12 min-[1025px]:pt-28 min-[1025px]:pb-36"
+      className={`menu-showcase relative overflow-hidden bg-[#fff4ec] px-6 pt-20 pb-28 min-[1025px]:px-12 min-[1025px]:pt-28 min-[1025px]:pb-36${locale === "en" ? " menu-showcase--en" : ""}`}
     >
       <div className="pointer-events-none absolute left-1/2 top-full z-0 -translate-x-1/2 translate-y-[-30%] overflow-visible min-[768px]:max-[1024px]:translate-y-[-40%] max-[767px]:translate-y-[-55%]">
         <motion.img

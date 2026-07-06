@@ -4,6 +4,7 @@ import { ORDER_DELIVERY_URL, ORDER_PICKUP_URL } from "../orderLinks";
 export const enContent: SiteContent = {
   "locale": "en",
   "nav": {
+    "logoImage": "/images/common/logos/en/navbar-logo.png",
     "logoAlt": "Yunshang Rice Noodle",
     "home": "Home",
     "about": "About Us",
@@ -135,15 +136,15 @@ export const enContent: SiteContent = {
       "items": [
         {
           "title": "Crossing-the-Bridge Series",
-          "text": "A timeless dish rooted in Yunnan’s culinary heritage, renowned for its signature steaming broth and delicate flavours. At Yunshang, we honor this tradition with a selection of rich soup bases and 12 carefully chosen ingredients. Served separately, the fresh meats and vegetables are gently cooked in the piping hot broth right at your table before silky rice noodles are added. The result is a perfectly balanced, aromatic, and soul-warming experience in every bite."
+          "text": "A timeless dish rooted in Yunnan's culinary heritage, renowned for its signature steaming broth and delicate flavours. At Yunshang, we honor this tradition with a selection of rich soup bases and 12 carefully chosen ingredients. Served separately, the fresh meats and vegetables are gently cooked in the piping hot broth right at your table before silky rice noodles are added. The result is a perfectly balanced, aromatic, and soul-warming experience in every bite."
         },
         {
           "title": "Signature Rice Noodle Soup",
-          "text": "Beyond our classic Crossing-the-Bridge Rice Noodle, we’ve taken traditional bone broth noodles and turned them into an unforgettable experience with bold, unique flavours! From the zesty and spicy Sauerkraut Fish Rice Noodle Soup to the sweet and savory Tomato Rice Noodle Soup With Beef & Enoki Mushroom, and the fiery and irresistible Sichuan-style Braised Pork Intestine & Red Konjac in Rice Noodle Soup—each bowl is packed with flavour that’ll keep you coming back for more! Plus, with endless options to customize your toppings, you can even create your own personalized rice noodle experience!"
+          "text": "Beyond our classic Crossing-the-Bridge Rice Noodle, we've taken traditional bone broth noodles and turned them into an unforgettable experience with bold, unique flavours! From the zesty and spicy Sauerkraut Fish Rice Noodle Soup to the sweet and savory Tomato Rice Noodle Soup With Beef & Enoki Mushroom, and the fiery and irresistible Sichuan-style Braised Pork Intestine & Red Konjac in Rice Noodle Soup—each bowl is packed with flavour that'll keep you coming back for more! Plus, with endless options to customize your toppings, you can even create your own personalized rice noodle experience!"
         },
         {
           "title": "Cold Dishes, Appetizers & Desserts",
-          "text": "At Yunshang Rice Noodle, we offer more than just noodles – our menu is filled with bold, irresistible cold dishes, appetizers, and desserts that will leave you coming back for more! Dive into the fiery, mouthwatering Cold Cut Chicken with Chili Sauce, the tangy, crunchy Potato Slices with Chili Sauce, or the unforgettable, Beef with Chili Sauce and Cilantro—each one bursting with flavour! Don’t miss the addictive Salty Popcorn Chicken, juicy New Orleans Fried Chicken Wings, and crispy, savory Deep Fried Tofu with Garlic Sauce—each bite a flavour explosion you won’t want to stop eating!"
+          "text": "At Yunshang Rice Noodle, we offer more than just noodles – our menu is filled with bold, irresistible cold dishes, appetizers, and desserts that will leave you coming back for more! Dive into the fiery, mouthwatering Cold Cut Chicken with Chili Sauce, the tangy, crunchy Potato Slices with Chili Sauce, or the unforgettable, Beef with Chili Sauce and Cilantro—each one bursting with flavour! Don't miss the addictive Salty Popcorn Chicken, juicy New Orleans Fried Chicken Wings, and crispy, savory Deep Fried Tofu with Garlic Sauce—each bite a flavour explosion you won't want to stop eating!"
         }
       ],
       "viewMenuButton": "See Menu",
@@ -172,9 +173,9 @@ export const enContent: SiteContent = {
       "icon": "/images/about/decorative/white-icon.png",
       "image": "/images/about/values/rice-noodle-yunshang.jpg",
       "imageAlt": "Yunshang Rice Noodle",
-      "title": "Savor the Legacy of China’s Most Beloved Rice Noodles",
+      "title": "Savor the Legacy of China's Most Beloved Rice Noodles",
       "paragraphs": [
-        "With a history spanning over a century, Rice Noodles is one of China’s most treasured culinary traditions. Originating from Yunnan, China, this dish carries a remarkable cultural heritage, passed down through generations.",
+        "With a history spanning over a century, Rice Noodles is one of China's most treasured culinary traditions. Originating from Yunnan, China, this dish carries a remarkable cultural heritage, passed down through generations.",
         "Unlike ramen or pho, Chinese Crossing-the-Bridge Rice Noodles are served with a steaming hot broth and fresh toppings on the side, allowing you to mix and customize every bite. Simply add the silky rice noodles, let the flavours come together, and enjoy a fresh, flavourful, and soul-warming experience like no other!"
       ]
     },
@@ -194,9 +195,9 @@ export const enContent: SiteContent = {
           "Served Separately?"
         ],
         "paragraphs": [
-          "Legend has it that hundreds of years ago, a devoted wife would bring lunch to her scholar husband, who spent long hours studying on a secluded island. Each day, she crossed a bridge to deliver his meal, but the challenge was keeping the soup hot. She discovered that a layer of oil on top acted as insulation, preserving the broth’s heat. To keep the rice noodles, thinly sliced meats, and tofu skin fresh, she carried them separately, preventing them from getting soggy.",
+          "Legend has it that hundreds of years ago, a devoted wife would bring lunch to her scholar husband, who spent long hours studying on a secluded island. Each day, she crossed a bridge to deliver his meal, but the challenge was keeping the soup hot. She discovered that a layer of oil on top acted as insulation, preserving the broth's heat. To keep the rice noodles, thinly sliced meats, and tofu skin fresh, she carried them separately, preventing them from getting soggy.",
           "By the time she arrived, the soup was still steaming hot. With a quick mix, the delicate meats cooked instantly, the noodles softened, and a hearty, comforting meal was ready to enjoy. Over the years, this simple act of love became a treasured tradition, and Crossing-the-Bridge Rice Noodles evolved into a symbol of warmth, devotion, and care.",
-          "Today, this serving style isn’t just about tradition—it’s an immersive dining experience, allowing you to mix and customize every bite just the way you like it."
+          "Today, this serving style isn't just about tradition—it's an immersive dining experience, allowing you to mix and customize every bite just the way you like it."
         ],
         "decorationImage": "/images/about/en/bridge/resource-2.svg",
         "signOverlayImage": "/images/about/en/bridge/yunshang-and-sign.svg",
@@ -209,7 +210,7 @@ export const enContent: SiteContent = {
       }
     },
     "values": {
-      "title": "Savor the Legacy of China’s Most Beloved Rice Noodles",
+      "title": "Savor the Legacy of China's Most Beloved Rice Noodles",
       "items": [
         {
           "title": "Authentic Rice Noodles",
@@ -228,7 +229,7 @@ export const enContent: SiteContent = {
         {
           "title": "A Bowl for Every Craving",
           "titleLines": ["A Bowl", "for Every Craving"],
-          "description": "From comforting classics to bold new flavours, there’s something for everyone.",
+          "description": "From comforting classics to bold new flavours, there's something for everyone.",
           "image": "/images/about/values/variety-yunshang.jpg",
           "imageAlt": "A bowl for every craving"
         },
@@ -242,7 +243,7 @@ export const enContent: SiteContent = {
       ]
     },
     "popularDishes": {
-      "title": "Our Signature Picks",
+      "title": "OUR SIGNATURE PICKS",
       "subtitle": "",
       "ctaLabel": "See Menu",
       "ctaHref": "/en/menu",
@@ -309,7 +310,7 @@ export const enContent: SiteContent = {
   "menu": {
     "hero": {
       "title": "Menu",
-      "subtitle": "Explore Yunshang’s signature rice noodle soups, cold dishes, appetizers, and desserts."
+      "subtitle": "Explore Yunshang's signature rice noodle soups, cold dishes, appetizers, and desserts."
     },
     "categories": {
       "title": "Categories",
@@ -337,7 +338,7 @@ export const enContent: SiteContent = {
   "events": {
     "hero": {
       "title": "Events",
-      "subtitle": "Discover Yunshang’s latest promotions and brand events.",
+      "subtitle": "Discover Yunshang's latest promotions and brand events.",
       "desktopImage": "/images/events/hero/rice-noodle-festival-web.webp",
       "mobileImage": "/images/events/hero/rice-noodle-festival-mobile.webp",
       "imageAlt": "Yunshang event banner"
@@ -401,11 +402,11 @@ export const enContent: SiteContent = {
     "comingSoon": "This page is under construction.",
     "about": {
       "title": "About Us",
-      "subtitle": "Savor the legacy of China’s most beloved rice noodles."
+      "subtitle": "Savor the legacy of China's most beloved rice noodles."
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Explore Yunshang’s rice noodle soups, cold dishes, appetizers, and desserts."
+      "subtitle": "Explore Yunshang's rice noodle soups, cold dishes, appetizers, and desserts."
     },
     "locations": {
       "title": "Locations",

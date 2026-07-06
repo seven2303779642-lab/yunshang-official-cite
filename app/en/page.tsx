@@ -2,5 +2,9 @@ import HomePage from "@/components/home/HomePage";
 import { enContent } from "@/data/siteContent";
 
 export default function EnglishHomePage() {
-  return <HomePage content={enContent} locale="en" />;
+  return (
+    <div className="home-page--en">
+      <HomePage content={enContent} locale="en" />
+    </div>
+  );
 }
