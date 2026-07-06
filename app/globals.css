@@ -813,6 +813,16 @@ button {
   .menu-items--en .menu-item-tag {
     padding: 3px 12px;
   }
+
+  .menu-items--en .menu-item-card__image-wrap {
+    max-height: 160px;
+  }
+
+  .menu-items--en .menu-item-card__image {
+    height: 100%;
+    min-height: 0;
+    max-height: 160px;
+  }
 }
 
 .locations-filter-select {
