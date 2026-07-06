@@ -89,9 +89,6 @@ function LocationCardContent({
 
       <div className="location-card__body">
         <h3 className="location-card__title">{displayName}</h3>
-        <p className="location-card__meta">
-          {location.displayProvince} · {location.displayRegion}
-        </p>
 
         <div className="location-card__details">
           {location.address ? (
