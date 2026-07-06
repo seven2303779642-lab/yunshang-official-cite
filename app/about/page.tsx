@@ -1,6 +1,5 @@
-import { AboutPage } from "@/components/about/AboutPage";
-import { zhContent } from "@/data/siteContent";
+import { redirect } from "next/navigation";
 
-export default function Page() {
-  return <AboutPage content={zhContent.about} locale="zh" />;
+export default function AboutRedirectPage() {
+  redirect("/about-us");
 }

@@ -23,7 +23,7 @@
 | --- | --- | --- |
 | 语言入口 | `/` | — |
 | 首页 | `/home` | `/en` |
-| 关于 | `/about` | `/en/about` |
+| 关于 | `/about-us` | `/en/about-us` |
 | 菜单 | `/menu` | `/en/menu` |
 | 门店 | `/locations` | `/en/locations` |
 | 活动 | `/events` | `/en/events` |

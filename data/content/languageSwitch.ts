@@ -2,7 +2,7 @@ import { getLanguageFromPathname } from "./index";
 
 const ZH_TO_EN_ROUTES: Record<string, string> = {
   "/home": "/en",
-  "/about": "/en/about",
+  "/about-us": "/en/about-us",
   "/menu": "/en/menu",
   "/stores": "/en/stores",
   "/locations": "/en/locations",
@@ -13,7 +13,7 @@ const ZH_TO_EN_ROUTES: Record<string, string> = {
 const EN_TO_ZH_ROUTES: Record<string, string> = {
   "/en": "/home",
   "/en/home": "/home",
-  "/en/about": "/about",
+  "/en/about-us": "/about-us",
   "/en/menu": "/menu",
   "/en/stores": "/stores",
   "/en/locations": "/locations",

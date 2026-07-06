@@ -65,7 +65,7 @@ export const zhContent: SiteContent = {
       titleImage: "/images/home/about-intro/aboutintro-title.png",
       titleImageAlt: "不想做饭？来碗云尚米线！",
       aboutButton: "关于云尚",
-      aboutButtonHref: "/about",
+      aboutButtonHref: "/about-us",
       boneSoupImageAlt: "云尚米线骨汤熬制画面",
       playVideoAriaLabel: "播放云尚米线介绍视频",
       videoDialogAriaLabel: "云尚米线介绍视频播放窗口",
@@ -293,7 +293,7 @@ export const zhContent: SiteContent = {
     homeAriaLabel: "返回首页",
     homeHref: "/home",
     linksLeft: [
-      { label: "关于云尚", href: "/about" },
+      { label: "关于云尚", href: "/about-us" },
       { label: "活动", href: "/events" },
     ],
     linksRight: [

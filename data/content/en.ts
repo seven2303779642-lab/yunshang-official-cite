@@ -67,7 +67,7 @@ export const enContent: SiteContent = {
       "titleImage": "/images/home/en/about-intro/home-about-intro-title-en.png",
       "titleImageAlt": "No time to cook? Try Yunshang Rice Noodle!",
       "aboutButton": "About Us",
-      "aboutButtonHref": "/en/about",
+      "aboutButtonHref": "/en/about-us",
       "boneSoupImageAlt": "Yunshang bone broth preparation",
       "playVideoAriaLabel": "Play Yunshang introduction video",
       "videoDialogAriaLabel": "Yunshang introduction video player",
@@ -357,7 +357,7 @@ export const enContent: SiteContent = {
     "linksLeft": [
       {
         "label": "About Us",
-        "href": "/en/about"
+        "href": "/en/about-us"
       },
       {
         "label": "Promo",

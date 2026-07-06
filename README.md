@@ -50,7 +50,7 @@
 | ---- | ------------ | --------------- | ----------------------------------------------------------------- |
 | 语言入口 | `/`          | —               | Landing Page（语言选择）；`/welcome` 重定向至 `/`                            |
 | 首页   | `/home`      | `/en`           | Hero、AboutIntro、FeatureCards、StoreBanner、MenuShowcase、OrderBanner |
-| 关于   | `/about`     | `/en/about`     | 中文：Gallery 轮播；英文：Toppings / Bridge / Video + 独立 ValueGrid 样式      |
+| 关于   | `/about-us`  | `/en/about-us`  | 中文：Gallery 轮播；英文：Toppings / Bridge / Video + 独立 ValueGrid 样式      |
 | 菜单   | `/menu`      | `/en/menu`      | manifest 驱动，分类 FLIP 筛选；手机端 Tab 换行全展示                              |
 | 门店   | `/locations` | `/en/locations` | 省/区筛选 + 门店卡片 FLIP；仅「查看导航 / Get Directions」跳转地图                    |
 | 活动   | `/events`    | `/en/events`    | Navbar 显示为 Promo；列表页接入 manifest                                   |

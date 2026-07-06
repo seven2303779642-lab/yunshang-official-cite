@@ -1,6 +1,5 @@
-import { AboutPage } from "@/components/about/AboutPage";
-import { enContent } from "@/data/siteContent";
+import { redirect } from "next/navigation";
 
-export default function Page() {
-  return <AboutPage content={enContent.about} locale="en" />;
+export default function EnAboutRedirectPage() {
+  redirect("/en/about-us");
 }
