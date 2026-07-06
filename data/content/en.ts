@@ -161,19 +161,13 @@ export const enContent: SiteContent = {
       "titleLines": [
         "your perfect noodle bowl awaits!"
       ],
-      "mobileTitleLines": [
-        "your perfect noodle",
-        "bowl awaits!"
-      ],
       "headingLines": [
         "AFTER A LONG DAY, SKIP THE COOKING",
         "AND ENJOY A WARM, HEARTY NOODLE BOWL!"
       ],
       "mobileHeadingLines": [
-        "AFTER A LONG DAY,",
-        "SKIP THE COOKING AND ENJOY",
-        "A WARM, HEARTY NOODLE",
-        "BOWL!"
+        "AFTER A LONG DAY,\n SKIP THE COOKING",
+        "AND ENJOY A WARM, HEARTY NOODLE BOWL!"
       ],
       "pickupButton": "Pick Up",
       "deliveryButton": "Delivery",

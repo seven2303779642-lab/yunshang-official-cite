@@ -379,6 +379,62 @@ button {
   .order-banner--with-title-text .order-banner__content {
     padding-top: 3.25rem;
   }
+
+  .home-page--en .order-banner--with-title-text .order-banner__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* English OrderBanner — inline span highlight (match yunshang.ca/en/home) */
+.home-page--en .order-banner--with-title-text .order-banner__title {
+  display: block;
+  text-align: center;
+}
+
+.home-page--en .order-banner__heading-set--mobile,
+.home-page--en .order-banner__heading-set--desktop {
+  max-width: 92vw;
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .home-page--en .order-banner__heading-set--mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-page--en .order-banner__heading-set--desktop {
+    display: block;
+  }
+}
+
+.home-page--en .order-banner--with-title-text .order-banner__title-line {
+  display: inline;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #fef7f3;
+  box-decoration-break: slice;
+  -webkit-box-decoration-break: slice;
+}
+
+@media (min-width: 768px) {
+  .home-page--en .order-banner--with-title-text .order-banner__title-line {
+    font-size: 37px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page--en .order-banner--with-title-text .order-banner__title-line {
+    font-size: 24px;
+    width: auto;
+    max-width: none;
+    align-self: auto;
+    text-align: center;
+  }
 }
 
 .home-page--en .order-banner__actions {

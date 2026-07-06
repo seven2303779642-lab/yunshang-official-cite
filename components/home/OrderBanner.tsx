@@ -3,10 +3,26 @@
 import BrandButton from "@/components/ui/BrandButton";
 import type { SiteContent } from "@/data/siteContent";
 import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
+import { Fragment } from "react";
 
 type OrderBannerProps = {
   content: SiteContent["home"]["orderBanner"];
 };
+
+function OrderBannerHighlightLine({ line }: { line: string }) {
+  const parts = line.split("\n");
+
+  return (
+    <span className="order-banner__title-line">
+      {parts.map((part, index) => (
+        <Fragment key={index}>
+          {index > 0 ? <br /> : null}
+          {part}
+        </Fragment>
+      ))}
+    </span>
+  );
+}
 
 export default function OrderBanner({ content }: OrderBannerProps) {
   const { ref, isVisible } = useScrollReveal<HTMLHeadingElement>();
@@ -73,24 +89,18 @@ export default function OrderBanner({ content }: OrderBannerProps) {
             <>
               <span className="order-banner__heading-set order-banner__heading-set--desktop">
                 {desktopHeadingLines.map((line) => (
-                  <span key={line} className="order-banner__title-line">
-                    {line}
-                  </span>
+                  <OrderBannerHighlightLine key={line} line={line} />
                 ))}
               </span>
               <span className="order-banner__heading-set order-banner__heading-set--mobile">
                 {mobileHeadingLines.map((line) => (
-                  <span key={line} className="order-banner__title-line">
-                    {line}
-                  </span>
+                  <OrderBannerHighlightLine key={line} line={line} />
                 ))}
               </span>
             </>
           ) : (
             content.headingLines.map((line) => (
-              <span key={line} className="order-banner__title-line">
-                {line}
-              </span>
+              <OrderBannerHighlightLine key={line} line={line} />
             ))
           )}
         </h2>
