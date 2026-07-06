@@ -24,27 +24,33 @@ export const enContent: SiteContent = {
     "heroSlider": {
       "slides": [
         {
-          "desktopImage": "/images/home/en/hero-sliders/slider-2.jpg",
-          "mobileImage": "/images/home/en/hero-sliders/slider-2.jpg",
+          "desktopImage": "/images/home/sliders/en/desktop/en-sliders-1.jpg",
+          "mobileImage": "/images/home/sliders/en/mobile/en-sliders-1.jpg",
           "alt": "Yunshang rice noodle promotion"
         },
         {
-          "desktopImage": "/images/home/en/hero-sliders/slider-3.jpg",
-          "mobileImage": "/images/home/en/hero-sliders/slider-3.jpg",
+          "desktopImage": "/images/home/sliders/en/desktop/en-sliders-2.jpg",
+          "mobileImage": "/images/home/sliders/en/mobile/en-sliders-2.jpg",
           "alt": "Yunshang rice noodle promotion"
         },
         {
-          "desktopImage": "/images/home/en/hero-sliders/slider-4.jpg",
-          "mobileImage": "/images/home/en/hero-sliders/slider-4.jpg",
+          "desktopImage": "/images/home/sliders/en/desktop/en-sliders-3.jpg",
+          "mobileImage": "/images/home/sliders/en/mobile/en-sliders-3.jpg",
           "alt": "Yunshang rice noodle promotion"
         },
         {
-          "desktopImage": "/images/home/en/hero-sliders/slider-5.jpg",
-          "mobileImage": "/images/home/en/hero-sliders/slider-5.jpg",
+          "desktopImage": "/images/home/sliders/en/desktop/en-sliders-4.jpg",
+          "mobileImage": "/images/home/sliders/en/mobile/en-sliders-4.jpg",
+          "alt": "Yunshang rice noodle promotion"
+        },
+        {
+          "desktopImage": "/images/home/sliders/en/desktop/en-sliders-5.jpg",
+          "mobileImage": "/images/home/sliders/en/mobile/en-sliders-5.jpg",
           "alt": "Yunshang rice noodle promotion"
         }
       ],
       "slideAlts": [
+        "Yunshang rice noodle promotion",
         "Yunshang rice noodle promotion",
         "Yunshang rice noodle promotion",
         "Yunshang rice noodle promotion",

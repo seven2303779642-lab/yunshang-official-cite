@@ -773,14 +773,6 @@ button {
   .menu-item-card__description {
     line-height: 1.55;
   }
-
-  .menu-items--en .menu-item-card__title {
-    line-height: 1.05;
-  }
-
-  .menu-items--en .menu-item-card__description {
-    line-height: 1.38;
-  }
 }
 
 .menu-item-tag {
@@ -803,6 +795,24 @@ button {
   height: 25px;
   flex-shrink: 0;
   object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .menu-items--en h3.menu-item-card__title {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.05;
+  }
+
+  .menu-items--en p.menu-item-card__description {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.38;
+  }
+
+  .menu-items--en .menu-item-tag {
+    padding: 3px 12px;
+  }
 }
 
 .locations-filter-select {
@@ -2995,6 +3005,15 @@ button {
 
   .about-features .feature-card__content--about {
     --feature-content-padding: 16px 24px 32px;
+  }
+
+  .about-features .feature-card__text--about {
+    padding-inline: 8px;
+    text-wrap: pretty;
+  }
+
+  .about-features--en .feature-card__text--about {
+    padding-inline: 12px;
   }
 }
 

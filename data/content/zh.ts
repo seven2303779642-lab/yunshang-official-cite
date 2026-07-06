@@ -24,28 +24,28 @@ export const zhContent: SiteContent = {
     heroSlider: {
       slides: [
         {
-          desktopImage: "/images/home/hero-sliders/desktop/slider-1.jpg",
-          mobileImage: "/images/home/hero-sliders/mobile/slider-1.jpg",
+          desktopImage: "/images/home/sliders/zh/desktop/zh-sliders-1.jpg",
+          mobileImage: "/images/home/sliders/zh/mobile/zh-sliders-1.jpg",
           alt: "云尚首页轮播图 1",
         },
         {
-          desktopImage: "/images/home/hero-sliders/desktop/slider-2.jpg",
-          mobileImage: "/images/home/hero-sliders/mobile/slider-2.jpg",
+          desktopImage: "/images/home/sliders/zh/desktop/zh-sliders-2.jpg",
+          mobileImage: "/images/home/sliders/zh/mobile/zh-sliders-2.jpg",
           alt: "云尚首页轮播图 2",
         },
         {
-          desktopImage: "/images/home/hero-sliders/desktop/slider-3.jpg",
-          mobileImage: "/images/home/hero-sliders/mobile/slider-3.jpg",
+          desktopImage: "/images/home/sliders/zh/desktop/zh-sliders-3.jpg",
+          mobileImage: "/images/home/sliders/zh/mobile/zh-sliders-3.jpg",
           alt: "云尚首页轮播图 3",
         },
         {
-          desktopImage: "/images/home/hero-sliders/desktop/slider-4.jpg",
-          mobileImage: "/images/home/hero-sliders/mobile/slider-4.jpg",
+          desktopImage: "/images/home/sliders/zh/desktop/zh-sliders-4.jpg",
+          mobileImage: "/images/home/sliders/zh/mobile/zh-sliders-4.jpg",
           alt: "云尚首页轮播图 4",
         },
         {
-          desktopImage: "/images/home/hero-sliders/desktop/slider-5.jpg",
-          mobileImage: "/images/home/hero-sliders/mobile/slider-5.jpg",
+          desktopImage: "/images/home/sliders/zh/desktop/zh-sliders-5.jpg",
+          mobileImage: "/images/home/sliders/zh/mobile/zh-sliders-5.jpg",
           alt: "云尚首页轮播图 5",
         },
       ],
