@@ -156,7 +156,7 @@ function EventCard({ event, locale }: { event: EventItem; locale: Locale }) {
 }
 
 export default function EventsList({ locale }: EventsListProps) {
-  const events = getAllEvents();
+  const events = getAllEvents(locale);
 
   return (
     <section className="events-list bg-[#fff4ec] px-[18px] pb-[180px] pt-8 min-[768px]:px-10 min-[768px]:pb-[220px] min-[768px]:pt-10">

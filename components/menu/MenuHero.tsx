@@ -11,6 +11,7 @@ export default function MenuHero({ content }: MenuHeroProps) {
       title={content.title}
       imageSrc="/images/menu/banner/banner.jpg"
       imageAlt={content.title}
+      className="page-banner--menu"
     />
   );
 }

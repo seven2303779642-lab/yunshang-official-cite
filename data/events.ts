@@ -157,7 +157,11 @@ export function getEventsBannerImage(): string | undefined {
   return manifest.banner?.desktop ?? manifest.banner?.mobile;
 }
 
-export function getAllEvents(): EventItem[] {
+export function getAllEvents(locale: Locale): EventItem[] {
+  if (locale === "zh") {
+    return events.filter((event) => event.id !== "eighth-anniversary");
+  }
+
   return events;
 }
 
