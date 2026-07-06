@@ -54,6 +54,14 @@ const downloads = [
     url: `${base}/event-7th-eng.jpg`,
     dest: "public/images/events/en/cards/events-7th-anniversary-en.jpg",
   },
+  {
+    url: `${base}/button%E7%BA%A2%E8%83%8C%E6%99%AF-%E7%99%BD%E6%A1%86%E7%BA%A2%E5%BA%95.png`,
+    dest: "public/images/home/order-banner/en/mobile/order-banner-en-mobile-default.png",
+  },
+  {
+    url: `${base}/button%E7%BA%A2%E8%83%8C%E6%99%AF-%E7%99%BD%E6%A1%86%E7%BA%A2%E7%99%BD%E5%BA%95.png`,
+    dest: "public/images/home/order-banner/en/mobile/order-banner-en-mobile-hover.png",
+  },
 ];
 
 async function downloadFile(url, dest) {

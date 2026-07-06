@@ -441,6 +441,12 @@ button {
   margin-bottom: 40px;
 }
 
+@media (max-width: 767px) {
+  .home-page--en .order-banner__actions--mobile {
+    gap: 0;
+  }
+}
+
 @media (min-width: 1025px) {
   .home-page--en .order-banner__actions {
     margin-bottom: 56px;

@@ -31,7 +31,7 @@ export default function HomePage({ content, locale }: HomePageProps) {
         <div id="menu-showcase">
           <MenuShowcase content={content.home.menuShowcase} locale={locale} />
         </div>
-        <OrderBanner content={content.home.orderBanner} />
+        <OrderBanner content={content.home.orderBanner} locale={locale} />
       </main>
       <Footer />
     </>

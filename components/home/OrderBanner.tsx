@@ -1,12 +1,14 @@
 "use client";
 
 import BrandButton from "@/components/ui/BrandButton";
-import type { SiteContent } from "@/data/siteContent";
+import type { Locale, SiteContent } from "@/data/siteContent";
 import { scrollRevealClass, useScrollReveal } from "@/hooks/useScrollReveal";
 import { Fragment } from "react";
+import OrderBannerImageButton from "./OrderBannerImageButton";
 
 type OrderBannerProps = {
   content: SiteContent["home"]["orderBanner"];
+  locale: Locale;
 };
 
 function OrderBannerHighlightLine({ line }: { line: string }) {
@@ -24,7 +26,7 @@ function OrderBannerHighlightLine({ line }: { line: string }) {
   );
 }
 
-export default function OrderBanner({ content }: OrderBannerProps) {
+export default function OrderBanner({ content, locale }: OrderBannerProps) {
   const { ref, isVisible } = useScrollReveal<HTMLHeadingElement>();
   const hasTitleText = Boolean(content.titleLines?.length);
   const desktopTitleLines = content.titleLines ?? [];
@@ -35,6 +37,7 @@ export default function OrderBanner({ content }: OrderBannerProps) {
   const hasResponsiveCopy = Boolean(
     content.mobileTitleLines?.length || content.mobileHeadingLines?.length,
   );
+  const useEnMobileImageButtons = locale === "en" && hasTitleText;
 
   return (
     <section
@@ -105,14 +108,35 @@ export default function OrderBanner({ content }: OrderBannerProps) {
           )}
         </h2>
 
-        <div className="order-banner__actions mt-10 flex flex-col items-center gap-5 min-[768px]:flex-row min-[768px]:gap-[120px]">
-          <BrandButton href={content.pickupButtonHref}>
-            {content.pickupButton}
-          </BrandButton>
-          <BrandButton href={content.deliveryButtonHref}>
-            {content.deliveryButton}
-          </BrandButton>
-        </div>
+        {useEnMobileImageButtons ? (
+          <>
+            <div className="order-banner__actions order-banner__actions--desktop mt-10 hidden flex-col items-center gap-5 min-[768px]:flex min-[768px]:flex-row min-[768px]:gap-[120px]">
+              <BrandButton href={content.pickupButtonHref}>
+                {content.pickupButton}
+              </BrandButton>
+              <BrandButton href={content.deliveryButtonHref}>
+                {content.deliveryButton}
+              </BrandButton>
+            </div>
+            <div className="order-banner__actions order-banner__actions--mobile mt-10 flex flex-col items-center min-[768px]:hidden">
+              <OrderBannerImageButton href={content.pickupButtonHref}>
+                {content.pickupButton}
+              </OrderBannerImageButton>
+              <OrderBannerImageButton href={content.deliveryButtonHref}>
+                {content.deliveryButton}
+              </OrderBannerImageButton>
+            </div>
+          </>
+        ) : (
+          <div className="order-banner__actions mt-10 flex flex-col items-center gap-5 min-[768px]:flex-row min-[768px]:gap-[120px]">
+            <BrandButton href={content.pickupButtonHref}>
+              {content.pickupButton}
+            </BrandButton>
+            <BrandButton href={content.deliveryButtonHref}>
+              {content.deliveryButton}
+            </BrandButton>
+          </div>
+        )}
       </div>
     </section>
   );
