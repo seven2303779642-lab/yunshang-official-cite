@@ -4,205 +4,235 @@
     "description": "A rich bone broth simmered for 12 hours, paired with 12 flavourful toppings and rice noodles. The broth is delicious and nutrient-rich.",
     "tags": [
       "Classic"
-    ]
+    ],
+    "filename": "menu-item-1.jpg"
   },
   "crossing-spicy-sichuan": {
     "name": "Spicy Crossing-the-Bridge Rice Noodle Soup",
-    "description": "Made with a signature Sichuan spicy base, featuring a rich and bold broth paired with 12 fresh ingredients and rice noodles.",
+    "description": "Made with a signature Sichuan spicy base, featuring a rich and bold broth paired with 12 fresh ingredients and rice noodles. Full of spice and aroma, it offers a unique Sichuan flavour experience.",
     "tags": [
       "Medium Spicy"
-    ]
+    ],
+    "filename": "menu-item-2.jpg"
   },
   "crossing-tomato": {
     "name": "Tomato Crossing-the-Bridge Rice Noodle Soup",
-    "description": "Made with a tangy-sweet broth from fresh tomatoes, paired with 12 fresh ingredients and rice noodles.",
+    "description": "Made with a tangy-sweet broth from fresh tomatoes, paired with 12 fresh ingredients and rice noodles. The broth is tangy and delicious.",
     "tags": [
       "Signature",
       "Vegetarian Option Available"
-    ]
+    ],
+    "filename": "menu-item-3.jpg"
   },
   "crossing-green-peppercorn": {
     "name": "Green Peppercorn Rice Noodle Soup",
-    "description": "Made with a broth of Sichuan peppercorns and spicy flavours, paired with 12 fresh ingredients and rice noodles.",
+    "description": "Made with a broth of Sichuan peppercorns and spicy flavours, paired with 12 fresh ingredients and rice noodles, it offers a fragrant, spicy taste with a numbing aroma and refreshing flavour.",
     "tags": [
       "Medium Spicy"
-    ]
+    ],
+    "filename": "menu-item-4.jpg"
   },
   "crossing-coconut-curry": {
-    "name": "Coconut Curry Crossing-the-Bridge Rice Noodle Soup",
-    "description": "A fragrant coconut milk and curry broth paired with 12 fresh ingredients and rice noodles.",
+    "name": "Curry Coconut Crossing-the-Bridge Rice Noodle Soup",
+    "description": "Made with a rich broth combining fragrant coconut milk and curry, paired with 12 fresh ingredients and rice noodles. The broth is flavourful and aromatic.",
     "tags": [
       "Mild Spicy"
-    ]
+    ],
+    "filename": "menu-item-5.jpg"
   },
   "specialty-smoked-intestine": {
-    "name": "Fruitwood Smoked Pork Intestine Rice Noodle Soup",
-    "description": "Fruitwood-smoked pork intestine in a rich, spicy broth with tofu and konjac.",
+    "name": "Braised Pork Intestine & Red Konjac in Rice Noodle Soup",
+    "description": "Featuring braised pork intestine & red konjac, paired with a unique spicy broth and rice noodles.",
     "tags": [
-      "Must Try",
-      "Medium Spicy"
-    ]
+      "Medium Spicy",
+      "Must Try"
+    ],
+    "filename": "menu-item-6.jpg"
   },
   "specialty-sauerkraut-fish": {
     "name": "Chinese Sauerkraut Fish Rice Noodle Soup",
-    "description": "Made with sauerkraut and fresh fish slices, paired with a unique sauerkraut broth.",
+    "description": "Made with sauerkraut and fresh fish slices as the main ingredients, paired with a unique sauerkraut broth.",
     "tags": [
-      "Must Try",
-      "Medium Spicy"
-    ]
+      "Medium Spicy",
+      "Must Try"
+    ],
+    "filename": "menu-item-7.jpg"
   },
   "specialty-sour-beef-enoki": {
     "name": "Spicy & Sour Rice Noodle Soup With Beef & Enoki Mushroom",
-    "description": "Featuring a bold, tangy, and spicy broth with tender beef slices and enoki mushrooms.",
+    "description": "Featuring a bold, tangy, and spicy broth, complemented by tender beef slices and delicate enoki mushrooms.",
     "tags": [
-      "Signature",
-      "Hot"
-    ]
+      "Hot",
+      "Signature"
+    ],
+    "filename": "menu-item-8.jpg"
   },
   "specialty-sichuan-fish-peppercorn": {
-    "name": "Sichuan Green Peppercorn Fish Rice Noodle Soup",
-    "description": "Fresh fish slices in a numbing peppercorn broth with silky rice noodles.",
+    "name": "Green Peppercorn Fish Rice Noodle Soup with Mixed Vege",
+    "description": "Made with fresh Sichuan peppercorns and a spicy broth, paired with tender fish slices and rice noodles. The broth is rich in numbing aroma.",
     "tags": [
       "Medium Spicy"
-    ]
+    ],
+    "filename": "menu-item-9.jpg"
   },
   "specialty-tomato-beef-enoki": {
-    "name": "Tomato Rice Noodle Soup with Beef & Enoki Mushroom",
-    "description": "A sweet and savory tomato broth with tender beef and enoki mushrooms.",
+    "name": "Tomato Rice Noodle Soup With Beef & Enoki Mushroom",
+    "description": "Using a tangy and sweet tomato broth, paired with tender slices of fatty beef and crispy enoki mushrooms. The broth is refreshing and light.",
     "tags": [
       "Must Try"
-    ]
+    ],
+    "filename": "menu-item-10.jpg"
   },
   "cold-couple-lung-slices": {
-    "name": "Beef with Chili Sauce and Cilantro",
-    "description": "Premium beef and offal in a signature spicy chili oil sauce.",
+    "name": "Sliced Beef and Ox Tongue in Chili Sauce",
+    "description": "Premium beef and offal are paired with a special spicy chili oil, offering a fresh and spicy flavour.",
     "tags": [
-      "Must Try",
-      "Medium Spicy"
-    ]
+      "Medium Spicy",
+      "Must Try"
+    ],
+    "filename": "menu-item-11.jpg"
   },
   "cold-mouthwatering-chicken": {
     "name": "Cold Cut Chicken with Chili Sauce",
-    "description": "Tender chicken topped with a bold, fragrant chili sauce.",
+    "description": "Tender chicken is drizzled with a custom-made chili oil sauce, offering a numbing and aromatic spice.",
     "tags": [
-      "Signature",
-      "Mild Spicy"
-    ]
+      "Mild Spicy",
+      "Signature"
+    ],
+    "filename": "menu-item-12.jpg"
   },
   "cold-yanbian-beef": {
-    "name": "Yanbian Beef",
-    "description": "Carefully selected beef with a distinctive cured flavour.",
+    "name": "Beef with Chili Sauce and Cilantro",
+    "description": "Tender slices of beef are tossed in a flavourful chili sauce and garnished with fresh cilantro.",
     "tags": [
       "Medium Spicy"
-    ]
+    ],
+    "filename": "menu-item-13.jpg"
   },
   "cold-smoked-intestine": {
-    "name": "Fruitwood Smoked Pork Intestine",
-    "description": "Fruitwood-smoked pork intestine with a savoury, aromatic finish.",
+    "name": "Braised Pork Intestine",
+    "description": "Pork intestines are smoked with fruitwood, delivering a rich aroma and tender texture.",
     "tags": [
-      "House Specialty"
-    ]
+      "Special"
+    ],
+    "filename": "menu-item-14.jpg"
   },
   "cold-crispy-fish": {
-    "name": "Crispy Sea Bream in Special Sauce",
-    "description": "Crispy sea bream with a bright, tangy dipping sauce.",
+    "name": "Tilapia Fillets in House Special Chili Sauce",
+    "description": "Tilapia fillets are paired with a tangy and sweet dipping sauce, offering a refreshing and well-balanced sweet and spicy taste.",
     "tags": [
-      "New",
-      "Mild Spicy"
-    ]
+      "Mild Spicy",
+      "New"
+    ],
+    "filename": "menu-item-15.jpg"
   },
   "cold-celery-pig-ear": {
-    "name": "Celery with Pig Ear",
-    "description": "Crisp celery and pig ear with a light vinegar dressing.",
-    "tags": []
+    "name": "Celery and Pig's Ear with House Sauce",
+    "description": "Crisp celery and chewy pig ears are seasoned with fragrant vinegar, creating a tangy and refreshing flavour.",
+    "tags": [],
+    "filename": "menu-item-16.jpg"
   },
   "cold-potato-shreds": {
     "name": "Potato Slices with Chili Sauce",
-    "description": "Shredded potato with peppercorn chili oil for a tangy bite.",
+    "description": "Shredded potatoes are crunchy and refreshing, tossed in Sichuan pepper-infused chili oil for a tangy and spicy kick.",
     "tags": [
-      "Signature",
-      "Mild Spicy"
-    ]
+      "Mild Spicy",
+      "Signature"
+    ],
+    "filename": "menu-item-17.jpg"
   },
   "cold-tofu-sheets": {
-    "name": "Shredded Tofu with Chili Oil",
-    "description": "Fine shredded tofu in a rich chili oil dressing.",
+    "name": "Tofu Skin Slices with Chili Sauce",
+    "description": "Thinly sliced tofu skin dressed in a spicy chili sauce.",
     "tags": [
       "Mild Spicy"
-    ]
+    ],
+    "filename": "menu-item-18.png"
   },
   "cold-cucumber": {
-    "name": "Smashed Cucumber",
-    "description": "Fresh cucumber smashed and tossed with garlic and vinegar.",
-    "tags": []
+    "name": "Cucumber Salad with Garlic & Vinegar",
+    "description": "Fresh cucumbers are smashed and mixed with a garlic-infused vinegar dressing.",
+    "tags": [],
+    "filename": "menu-item-19.jpg"
   },
   "cold-seaweed": {
-    "name": "Seaweed Salad",
-    "description": "Seaweed tossed with garlic, vinegar, and chili.",
-    "tags": []
+    "name": "Fresh Seaweed with House Soy Sauce",
+    "description": "Fresh seaweed is paired with a garlic and chili vinegar dressing.",
+    "tags": [],
+    "filename": "menu-item-20.jpg"
   },
   "snack-salted-crispy-chicken": {
     "name": "Salty Popcorn Chicken",
-    "description": "Crispy popcorn chicken with a savoury seasoned crust.",
+    "description": "The chicken is crispy on the outside and tender on the inside, fried to a golden crisp.",
     "tags": [
       "Must Try"
-    ]
+    ],
+    "filename": "menu-item-21.png"
   },
   "snack-garlic-cartilage": {
-    "name": "Garlic Chicken Cartilage",
-    "description": "Crispy chicken cartilage with a fragrant garlic finish.",
+    "name": "Spicy Crispy Chicken Gristle with Garlic",
+    "description": "Crispy and spicy on the outside, with a tender interior, enhanced by a rich garlic flavour that adds depth and aroma to every bite.",
     "tags": [
       "Mild Spicy"
-    ]
+    ],
+    "filename": "menu-item-22.jpg"
   },
   "snack-fried-tofu": {
     "name": "Deep Fried Tofu with Garlic Sauce",
-    "description": "Golden fried tofu topped with garlic sauce.",
+    "description": "Fried to a golden crisp, with a tender inside, drizzled with garlic sauce.",
     "tags": [
       "Mild Spicy"
-    ]
+    ],
+    "filename": "menu-item-23.jpg"
   },
   "snack-fried-squid": {
-    "name": "Crispy Fried Squid Tentacles",
-    "description": "Lightly battered squid tentacles fried until crisp.",
+    "name": "Deep Fried Squid Tentacles",
+    "description": "Crispy on the outside and delightfully chewy inside, these golden-fried squid tentacles are bursting with flavour.",
     "tags": [
       "Signature"
-    ]
+    ],
+    "filename": "menu-item-24.png"
   },
   "snack-orleans-wings": {
     "name": "New Orleans Fried Chicken Wings",
-    "description": "Chicken wings marinated in New Orleans spices and fried to perfection.",
-    "tags": []
+    "description": "Marinated in New Orleans-style seasoning, the chicken wings have a bold, smoky flavour.",
+    "tags": [],
+    "filename": "menu-item-25.jpg"
   },
   "snack-roujiamo": {
-    "name": "Secret Recipe Chinese Burger (Pork)",
-    "description": "Slow-braised pork in a soft, freshly baked bun.",
+    "name": "Pork Rougam",
+    "description": "Select pork marinated in a secret blend of spices, paired with a soft and chewy bun.",
     "tags": [
       "Signature"
-    ]
+    ],
+    "filename": "menu-item-26.png"
   },
   "snack-crispy-ribs": {
-    "name": "Spicy Crispy Pork Ribs",
-    "description": "Crispy pork ribs tossed in a spicy, aromatic seasoning.",
+    "name": "Sichuan Style Spicy & Crispy Fried Pork Rib",
+    "description": "The pork ribs are crispy on the outside and tender on the inside, seasoned with spicy and aromatic flavours.",
     "tags": [
       "Medium Spicy"
-    ]
+    ],
+    "filename": "menu-item-27.jpg"
   },
   "dessert-coconut-ball": {
     "name": "Coconut Lava Ball",
-    "description": "Crispy shell with a warm coconut filling inside.",
+    "description": "Crispy on the outside, filled with rich and fragrant coconut milk",
     "tags": [
       "Must Try"
-    ]
+    ],
+    "filename": "menu-item-28.jpg"
   },
   "dessert-brown-sugar-cake": {
-    "name": "Brown Sugar Rice Cake",
-    "description": "Crispy glutinous rice cake with brown sugar syrup and soybean powder.",
-    "tags": []
+    "name": "Fried Rice Cake with Brown Sugar",
+    "description": "Rice cake is crispy on the outside and soft on the inside, coated with rich brown sugar syrup and sprinkled with delicate peanut powder, soft, chewy, and sweet.",
+    "tags": [],
+    "filename": "menu-item-29.jpg"
   },
   "dessert-red-bean-pumpkin": {
-    "name": "Red Bean Pumpkin Pancake",
-    "description": "Soft pumpkin pancake filled with sweet red bean paste.",
-    "tags": []
+    "name": "Deep Fried Pumpkin Pancake with Red Bean Paste",
+    "description": "Golden and crispy pumpkin pancake on the outside, filled with sweet red bean paste.",
+    "tags": [],
+    "filename": "menu-item-30.jpg"
   }
 }

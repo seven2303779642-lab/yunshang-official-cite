@@ -41,12 +41,14 @@ export const TAG_ICON_MAP: Record<string, string> = {
   New: "/images/menu/decorative/star.svg",
   "Vegetarian Option Available": "/images/menu/decorative/yezi.svg",
   "House Specialty": "/images/menu/decorative/heart108.svg",
+  Special: "/images/menu/decorative/heart108.svg",
 };
 
 type MenuTranslationEn = {
   name: string;
   description: string;
   tags: string[];
+  filename: string;
 };
 
 const menuTranslationMap = menuTranslationsEn as Record<
@@ -88,10 +90,14 @@ export function localizeMenuItem(item: MenuItem, locale: Locale): MenuItem {
     name: translation.name,
     description: translation.description,
     tags: translation.tags,
+    filename: translation.filename,
   };
 }
 
-export function getMenuImagePath(filename: string): string {
+export function getMenuImagePath(filename: string, locale: Locale = "zh"): string {
+  if (locale === "en") {
+    return `/images/menu/en/${filename}`;
+  }
   return `/images/menu/items/${filename}`;
 }
 

@@ -56,12 +56,18 @@ function MenuTagPill({ tag }: { tag: string }) {
   );
 }
 
-function MenuItemCardContent({ item }: { item: MenuItem }) {
+function MenuItemCardContent({
+  item,
+  locale,
+}: {
+  item: MenuItem;
+  locale: Locale;
+}) {
   return (
     <>
       <div className="menu-item-card__image-wrap">
         <img
-          src={getMenuImagePath(item.filename)}
+          src={getMenuImagePath(item.filename, locale)}
           alt={item.name}
           className="menu-item-card__image"
           draggable={false}
@@ -90,11 +96,13 @@ function ExitingMenuCard({
   item,
   rect,
   disabled,
+  locale,
   onComplete,
 }: {
   item: MenuItem;
   rect: CardRect;
   disabled: boolean;
+  locale: Locale;
   onComplete: () => void;
 }) {
   return (
@@ -117,7 +125,7 @@ function ExitingMenuCard({
         style={{ transformOrigin: "center center" }}
         onAnimationComplete={onComplete}
       >
-        <MenuItemCardContent item={item} />
+        <MenuItemCardContent item={item} locale={locale} />
       </motion.div>
     </div>
   );
@@ -190,7 +198,7 @@ export default function MenuItemPreview({
                     }
                     style={{ transformOrigin: "center center" }}
                   >
-                    <MenuItemCardContent item={item} />
+                    <MenuItemCardContent item={item} locale={locale} />
                   </motion.div>
                 </motion.article>
               );
@@ -203,6 +211,7 @@ export default function MenuItemPreview({
                   item={item}
                   rect={rect}
                   disabled={disabled}
+                  locale={locale}
                   onComplete={() => removeExitingCard(key)}
                 />
               ))}
