@@ -1,88 +1,104 @@
 {
   "kids-month": {
-    "title": "Kids Month: Dine In and Receive a Cute Toy",
+    "title": "June Kids Month at Yunshang!",
     "paragraphs": [
-      "This June brings surprises for kids! Children dining in at participating stores can receive a cute toy with their meal."
+      "The surprises never stop at Yunshang! We're making June all about our youngest guests. 👦🏻👧🏻 From now on, kids dining in at participating Yunshang locations will receive a FREE toy with their meal! ✨"
     ],
-    "participatingStoresTitle": "Participating locations:",
+    "participatingStoresTitle": "📍 Participating Locations:",
     "participatingStores": [
-      "Warden",
-      "Bayview Hill",
-      "First Markham Place",
-      "Scarborough",
-      "Oakville",
-      "Unionville"
+      "✨ Warden",
+      "✨ Bayview Hill",
+      "✨ First Markham Place",
+      "✨ Scarborough",
+      "✨ Oakville",
+      "✨ Unionville"
     ],
-    "note": "While supplies last. One toy per child, per visit."
+    "note": "These toys are available while supplies last. First come, first served!"
   },
   "rice-noodle-festival-2026": {
     "title": "2026 Rice Noodle Festival | 2nd Bowl 50% Off",
     "paragraphs": [
-      "The annual Yunshang Rice Noodle Festival is back! From May 25 to May 31, 2026, VIP members who dine in and order any two rice noodle bowls in the same transaction will receive 50% off the lower-priced bowl.",
-      "Not a VIP member yet? Register in store for $20 + tax and enjoy this offer plus ongoing member savings."
+      "The annual Yunshang Rice Noodle Festival is back!",
+      "From May 25 to May 31, 2026, VIP members who dine in and order any two rice noodle bowls in the same transaction will receive 50% off the lower-priced bowl. All rice noodle bowls are included, and VIP members' 10% discount still applies.",
+      "Not a VIP member yet? Join in-store for $20 + tax and start saving immediately with this special offer, plus ongoing 10% off every visit."
     ],
     "compactLines": [
-      "Available at all Yunshang locations in Canada",
-      "Dine-in only",
-      "Promotion ends at 9:00 PM daily"
+      "📍 Available at all Yunshang Rice Noodle locations across Canada",
+      "🍜 Dine-in only",
+      "⏰ Offer valid daily until 9 PM"
     ]
   },
   "ninth-anniversary": {
     "title": "Yunshang 9th Anniversary",
     "paragraphs": [
-      "Nine amazing years, same delicious promise — and we are celebrating big! From August 30 to September 1, 2025, enjoy 9 of our most-loved noodle bowls for just $9.99 each."
-    ],
-    "compactLines": [
-      "Pick up a $90 coupon booklet with qualifying purchases",
-      "Available while supplies last"
+      "🎉 Yunshang Rice Noodle Turns 9!",
+      "Nine amazing years, same delicious promise — and we're celebrating big! 🥢✨",
+      "🍜 $9.99 Signature Bowls",
+      "📅 Aug 30 – Sept 1, 2025",
+      "For 3 days only, enjoy 9 of our most-loved noodle bowls for just $9.99 each!",
+      "Available all day until 9PM at all Canada locations.",
+      "🎁 Grab Your $90 Anniversary Voucher Pack",
+      "We're celebrating with you — and this year's thank-you gift is our biggest yet!",
+      "10 coupons worth $90 in savings: free appetizers & desserts, BOGO noodles, half-price braised chicken, and more!",
+      "📅 Available Aug 23 – Sept 1 with a pre-tax spend of $40+.",
+      "First come, first served — while supplies last!",
+      "💛 Thank you for 9 incredible years. Let's raise our chopsticks and celebrate over a warm, delicious bowl!"
     ]
   },
   "member-week-noodle-festival": {
-    "title": "Member Week | Yunshang Rice Noodle Festival",
+    "title": "Yunshang Rice Noodle Festival 2025",
     "paragraphs": [
-      "Yunshang's first Rice Noodle Festival is here with a full week of rewards.",
-      "Enjoy VIP member benefits including a second bowl at 50% off, plus scratch cards with prizes for qualifying dine-in orders of $40 or more.",
-      "June 23 to 29, 2025 at participating Yunshang locations across Canada."
-    ],
-    "note": "Join us for a week of great food, fun, and festival deals."
+      "Celebrate Yunshang's 1st Rice Noodle Festival! 🍜✨",
+      "For 7 days only (June 23rd~29th, 2025):",
+      "✨ VIP Members: Your second bowl 50% OFF - double the joy!",
+      "🎟️ Everyone Plays: Get a scratch card with every $40 spent - every card's a winner! Win free noodles, appetizers, desserts & more!",
+      "Date: June 23rd–29th, 2025",
+      "Available at all Yunshang locations across Canada",
+      "It's delicious, it's fun, it's full of surprises. Come celebrate with us!"
+    ]
   },
   "pork-tripe-trial": {
     "title": "New Dish Tasting Event",
     "paragraphs": [
-      "Our new fall-winter limited edition Chicken & Pork Tripe Rice Noodle Soup with Peppercorn is now available.",
-      "Redeem your New Dish Coupon and complete a survey to enjoy a complimentary tasting from November 15 to December 15, 2024."
+      "The New fall-winter limited edition—Chicken & Pork Tripe Rice Noodle Soup with Peppercorn is now available! Redeem Your New Dish Coupon & Complete a survey to enjoy a FREE TASTE of our autumn-winter rice noodle.",
+      "Dates:",
+      "November 15th, 2024 ~ December 15th, 2024"
     ],
-    "compactLinesTitle": "Event details:",
+    "compactLinesTitle": "More Details:",
     "compactLines": [
-      "Present your New Dish Coupon before ordering.",
-      "One coupon per table per visit.",
-      "Dine-in only.",
-      "Complete the tasting survey to qualify.",
-      "Cannot be combined with member discounts or other offers.",
-      "Available at participating Ontario locations."
+      "1. Please present the Free New Dish Coupon to our staff before ordering.",
+      "2. Limit one coupon per table per visit.",
+      "3. Dine-in only; not valid for takeout or delivery.",
+      "4. The survey must be fully completed to meet participation requirements.",
+      "5. All locations in Ontario are participating in this event."
+    ]
+  },
+  "eighth-anniversary": {
+    "title": "Yunshang 8th Anniversary",
+    "paragraphs": [
+      "Yunshang Rice Noodle is celebrating its 8th anniversary this August! We have prepared special events and gifts for you to enjoy. Come and join us in celebrating this exciting milestone!"
     ]
   },
   "family-day": {
     "title": "Free Coconut Lava Ball for Kids",
     "paragraphs": [
-      "Happy Family Day long weekend! From February 17 to 19, 2024, children under 12 years old will receive a complimentary Coconut Lava Ball dessert with dine-in orders.",
-      "One complimentary dessert per table. Available at participating Ontario locations while supplies last."
+      "Happy Family Day long weekend! From February 17th, 2024 to February 19th, 2024, children under 12 years old will receive a complimentary dessert!",
+      "This promo is available for dine-in only; One complimentary dessert will be provided per table. The promo is available at all Yunshang Rice Noodle stores in Ontario."
     ]
   },
   "christmas-2023": {
     "title": "2023 Holiday Celebration",
     "paragraphs": [
-      "Promotion runs from December 23, 2023 to January 1, 2024.",
-      "Valid for dine-in and pickup orders. Not valid on third-party delivery platforms.",
-      "Available at all Yunshang Rice Noodle and Yang's Braised Chicken locations in Canada.",
-      "Coupon books include $10 vouchers redeemable on orders of $35 before tax from January 2 to February 29, 2024."
+      "The promotion is valid from Dec. 23, 2023 until Jan. 1, 2024 for dine-in & takeout purchase. The promotion doesn't apply to 3rd party delivery orders.",
+      "- The promotion is available at all Yunshang Rice Noodles & Yang's Braised Chicken Rice stores in Canada.",
+      "- The voucher is valued at $10 each and can be used for in-store /takeout orders ($35 or more) from Jan. 2, 2024 until Feb. 29, 2024. The voucher can be used with VIP member discount but cannot be combined with any other offers."
     ]
   },
   "seventh-anniversary": {
-    "title": "Yunshang 7th Anniversary: Pay What You Wish",
+    "title": "7th Anniversary Celebration: Pay-What-You-Can Charity Event to Support SickKids",
     "paragraphs": [
-      "On August 19, 2023 from 11:00 AM to 8:00 PM, all Ontario Yunshang locations will host a pay-what-you-wish charity event benefiting SickKids.",
-      "VIP members can also receive a complimentary $85 member coupon booklet with qualifying purchases during the anniversary period."
+      "On August 19th, 2023, from 11am to 8pm, all of our Ontario stores will be offering a unique \"Support-SickKids Menu\" and we encourage you to order your favorite dishes and contribute an amount that feels comfortable for you. 100% of the proceeds collected on this day will be donated to the SickKids Foundation, providing crucial funding for new equipment, education for the next generation of SickKids caregivers, and research into innovative treatments and cures for illnesses and diseases.",
+      "To thank all Yunshang Rice Noodle VIP members for your love and support, we have also prepared a special gift – the \"7th Anniversary VIP Coupon Book\". This booklet includes 12 vouchers with a total value of $85, featuring $10 voucher, complimentary coupons for various appetizers, and more! All Yunshang Rice Noodle VIP members can get this booklet for free!"
     ]
   }
 }

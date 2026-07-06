@@ -18,7 +18,16 @@ export default function AboutIntro({ content }: AboutIntroProps) {
               aria-hidden="true"
               width={24}
               height={24}
-              className="about-intro__title-icon h-6 w-6 shrink-0 translate-y-[3px] select-none"
+              className="about-intro__title-icon about-intro__title-icon--mobile-top h-6 w-6 shrink-0 select-none"
+              draggable={false}
+            />
+            <img
+              src={ABOUT_INTRO_CLOUD_ICON}
+              alt=""
+              aria-hidden="true"
+              width={24}
+              height={24}
+              className="about-intro__title-icon about-intro__title-icon--desktop-before h-6 w-6 shrink-0 select-none"
               draggable={false}
             />
             <h2 className="about-intro__title">{content.title}</h2>
@@ -28,7 +37,7 @@ export default function AboutIntro({ content }: AboutIntroProps) {
               aria-hidden="true"
               width={24}
               height={24}
-              className="about-intro__title-icon h-6 w-6 shrink-0 translate-y-[3px] select-none"
+              className="about-intro__title-icon about-intro__title-icon--desktop-after h-6 w-6 shrink-0 select-none"
               draggable={false}
             />
           </div>

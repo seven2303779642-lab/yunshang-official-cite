@@ -88,7 +88,7 @@ export function getEventCompactLinesTitle(
 ): string | undefined {
   if (locale === "en") {
     const translation = getEventTranslation(event);
-    if (translation?.compactLinesTitle) {
+    if (translation) {
       return translation.compactLinesTitle;
     }
   }
@@ -102,8 +102,10 @@ export function getEventCompactLines(
 ): string[] | undefined {
   if (locale === "en") {
     const translation = getEventTranslation(event);
-    if (translation?.compactLines?.length) {
-      return translation.compactLines;
+    if (translation) {
+      return translation.compactLines?.length
+        ? translation.compactLines
+        : undefined;
     }
   }
 
@@ -116,7 +118,7 @@ export function getEventParticipatingStoresTitle(
 ): string | undefined {
   if (locale === "en") {
     const translation = getEventTranslation(event);
-    if (translation?.participatingStoresTitle) {
+    if (translation) {
       return translation.participatingStoresTitle;
     }
   }
@@ -130,8 +132,10 @@ export function getEventParticipatingStores(
 ): string[] | undefined {
   if (locale === "en") {
     const translation = getEventTranslation(event);
-    if (translation?.participatingStores?.length) {
-      return translation.participatingStores;
+    if (translation) {
+      return translation.participatingStores?.length
+        ? translation.participatingStores
+        : undefined;
     }
   }
 
@@ -141,7 +145,7 @@ export function getEventParticipatingStores(
 export function getEventNote(event: EventItem, locale: Locale): string | undefined {
   if (locale === "en") {
     const translation = getEventTranslation(event);
-    if (translation?.note) {
+    if (translation) {
       return translation.note;
     }
   }

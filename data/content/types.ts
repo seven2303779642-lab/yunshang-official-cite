@@ -110,7 +110,7 @@ export type LocationsContent = {
 export type EventsContent = {
   hero: {
     title: string;
-    subtitle: string;
+    subtitle?: string;
     desktopImage?: string;
     mobileImage?: string;
     imageAlt?: string;
@@ -247,8 +247,10 @@ export type SiteContent = {
     };
     orderBanner: {
       imageAlt: string;
-      titleText?: string;
-      headingLines: [string, string];
+      titleLines?: string[];
+      mobileTitleLines?: string[];
+      headingLines: string[];
+      mobileHeadingLines?: string[];
       pickupButton: string;
       deliveryButton: string;
       pickupButtonHref: string;

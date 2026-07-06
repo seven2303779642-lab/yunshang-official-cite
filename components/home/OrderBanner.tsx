@@ -10,11 +10,20 @@ type OrderBannerProps = {
 
 export default function OrderBanner({ content }: OrderBannerProps) {
   const { ref, isVisible } = useScrollReveal<HTMLHeadingElement>();
+  const hasTitleText = Boolean(content.titleLines?.length);
+  const desktopTitleLines = content.titleLines ?? [];
+  const mobileTitleLines = content.mobileTitleLines ?? content.titleLines ?? [];
+  const desktopHeadingLines = content.headingLines;
+  const mobileHeadingLines =
+    content.mobileHeadingLines ?? content.headingLines;
+  const hasResponsiveCopy = Boolean(
+    content.mobileTitleLines?.length || content.mobileHeadingLines?.length,
+  );
 
   return (
     <section
       className={`order-banner relative min-h-[460px] overflow-hidden bg-black text-white min-[1025px]:min-h-[500px]${
-        content.titleText ? " order-banner--with-title-text" : ""
+        hasTitleText ? " order-banner--with-title-text" : ""
       }`}
     >
       <img
@@ -27,16 +36,63 @@ export default function OrderBanner({ content }: OrderBannerProps) {
       <div className="absolute inset-0 bg-black/30" />
 
       <div className="order-banner__content relative z-20 flex min-h-[460px] flex-col items-center justify-center px-6 pb-[118px] pt-16 text-center min-[1025px]:min-h-[500px] min-[1025px]:pb-[135px] min-[1025px]:pt-20">
-        {content.titleText ? (
-          <p className="order-banner-title-text">{content.titleText}</p>
+        {hasTitleText ? (
+          hasResponsiveCopy ? (
+            <>
+              <p className="order-banner-title-text order-banner-title-text--desktop">
+                {desktopTitleLines.map((line) => (
+                  <span key={line} className="order-banner-title-text__line">
+                    {line}
+                  </span>
+                ))}
+              </p>
+              <p className="order-banner-title-text order-banner-title-text--mobile">
+                {mobileTitleLines.map((line) => (
+                  <span key={line} className="order-banner-title-text__line">
+                    {line}
+                  </span>
+                ))}
+              </p>
+            </>
+          ) : (
+            <p className="order-banner-title-text">
+              {desktopTitleLines.map((line) => (
+                <span key={line} className="order-banner-title-text__line">
+                  {line}
+                </span>
+              ))}
+            </p>
+          )
         ) : null}
 
         <h2
           ref={ref}
           className={`order-banner__title ${scrollRevealClass(isVisible)}`}
         >
-          <span className="order-banner__title-line">{content.headingLines[0]}</span>
-          <span className="order-banner__title-line">{content.headingLines[1]}</span>
+          {hasResponsiveCopy ? (
+            <>
+              <span className="order-banner__heading-set order-banner__heading-set--desktop">
+                {desktopHeadingLines.map((line) => (
+                  <span key={line} className="order-banner__title-line">
+                    {line}
+                  </span>
+                ))}
+              </span>
+              <span className="order-banner__heading-set order-banner__heading-set--mobile">
+                {mobileHeadingLines.map((line) => (
+                  <span key={line} className="order-banner__title-line">
+                    {line}
+                  </span>
+                ))}
+              </span>
+            </>
+          ) : (
+            content.headingLines.map((line) => (
+              <span key={line} className="order-banner__title-line">
+                {line}
+              </span>
+            ))
+          )}
         </h2>
 
         <div className="order-banner__actions mt-10 flex flex-col items-center gap-5 min-[768px]:flex-row min-[768px]:gap-[120px]">

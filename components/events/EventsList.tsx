@@ -159,7 +159,7 @@ export default function EventsList({ locale }: EventsListProps) {
   const events = getAllEvents();
 
   return (
-    <section className="events-list bg-[#fff4ec] px-[18px] pb-[120px] pt-8 min-[768px]:px-10 min-[768px]:pb-[160px] min-[768px]:pt-10">
+    <section className="events-list bg-[#fff4ec] px-[18px] pb-[180px] pt-8 min-[768px]:px-10 min-[768px]:pb-[220px] min-[768px]:pt-10">
       <div className="mx-auto max-w-[1320px]">
         <ul className="event-card-list">
           {events.map((event) => (

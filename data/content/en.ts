@@ -158,10 +158,22 @@ export const enContent: SiteContent = {
     },
     "orderBanner": {
       "imageAlt": "Yunshang hot broth and rice noodles",
-      "titleText": "your perfect noodle bowl awaits!",
+      "titleLines": [
+        "your perfect noodle bowl awaits!"
+      ],
+      "mobileTitleLines": [
+        "your perfect noodle",
+        "bowl awaits!"
+      ],
       "headingLines": [
         "AFTER A LONG DAY, SKIP THE COOKING",
         "AND ENJOY A WARM, HEARTY NOODLE BOWL!"
+      ],
+      "mobileHeadingLines": [
+        "AFTER A LONG DAY,",
+        "SKIP THE COOKING AND ENJOY",
+        "A WARM, HEARTY NOODLE",
+        "BOWL!"
       ],
       "pickupButton": "Pick Up",
       "deliveryButton": "Delivery",
@@ -344,7 +356,6 @@ export const enContent: SiteContent = {
   "events": {
     "hero": {
       "title": "Events",
-      "subtitle": "Discover Yunshang's latest promotions and brand events.",
       "desktopImage": "/images/events/hero/rice-noodle-festival-web.webp",
       "mobileImage": "/images/events/hero/rice-noodle-festival-mobile.webp",
       "imageAlt": "Yunshang event banner"
